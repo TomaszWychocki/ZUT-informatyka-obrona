@@ -163,7 +163,10 @@ Kompresja stratna, może dotyczyć różnych sygnałów (np. dzwięk, obraz), np
 - wykorzystanie układów FPGA, ASIC.
 
 ### Klasyfikacja usług internetowych
-_???_
+- pocztowe (POP3, SMTP),
+- transferu plików (FTP),
+- terminalowe (SSH),
+- serwisów informacyjnych (HTTP)
 
 ### Budowa procesora
 - ALU (jednostka arytmetyczno-logiczna)
@@ -227,8 +230,8 @@ TCP zapewnia niezmienioną (zachowana kolejność) i pełną (wszystkie pakiety 
 ### Rodzaje światłowodów
 _Odpowiedź niepewna_
 - plastikowy: tani, małe prędkości, małe odległości
-- szklany: ??
-- jednomodowy: bardzo drogi, duże odległości
+- krzemiankowy: nieco lepszy niż plastikowy
+- jednomodowy: bardzo drogi, duże odległości, trudny w obsłudze
 - wielomodoy: drogi, średnie odległości
 
 ### Scharakteryzować sieciowe systemy plików
@@ -248,13 +251,23 @@ Charakteryzuje je m.in.
 7. Aplikacji: protokoły aplikacji, interfejs pomiędzy oprogramowaniem a warstwami niżej
 
 ### Podstawowe cechy standardów sieci bezprzewodowych WiFi
-??
+- 802.11a - do 54mbps, 5ghz,
+- 802.11b - 11mbps, 2.4ghz, zasięg 30-120m,
+- 802.11g - 54mbps, 2.4ghz, najpopulardniejszy standard, wymaga silnego i stabilnego sygnału względem 802.11b,
+- 802.11n - 300mpbs, 5ghz lub 150mbps, 2.4ghz, wymaga silnego i stabilnego sygnału.
 
 ### Przedstawić budowę światłowodu
 rdzeń (włókno szklane), wokół płaszcz (materiał o niższym współczynniku załamania światła), dalej powłoka lakierowana (chroni płaszcz), dalej powłoka wzmacniająca (ochrona przed wpływem środowiska).
 
 ### Cechy charakterystyczne cyfrowych sieci ISDN
-??
+ISDN to sieć cyfrowa ze zintegrowanymi usługami. W sieciach ISDN nie występują pośredniczące
+urządzenia analogowe. Połączenia w ISDN są komutowane (zestawiane).
+Cechy to:
+- przekaz cyfrowy
+- gwarantowana przepływnosc, bez wzgledu na odległosc
+- szybkie zestawianie połaczen
+- można likwidowac połaczenia zaraz po realizacji sesji
+- szeroki zakres usług wideotelefonii
 
 ### Rodzaje i zastosowania macierzy dyskowych
 - RAID 0: bez redundancji danych, szybki odczyt i zapis, duża pojemność
@@ -264,7 +277,7 @@ rdzeń (włókno szklane), wokół płaszcz (materiał o niższym współczynnik
 - RAID 6: jak w RAID 5, dodatkowa suma kontrolna, zwiększona niezawodność
 
 ### Zasada działania systemów klastrowych
-??
+Każdy węzeł klastra dostaje własne zadanie bądź cały klaster pracuje nad tym samym zadaniem. W przypadku awarii jednego węzła, wykonywane przez niego zadanie jest przejmowane przez inny węzeł.
 
 ### Zasada działania systemów ekspertowych
 Oparte o bazy wiedzy (zasady jeżeli-to); wspomagają podejmowanie decyzji. Mogą wspomagać interpretację danych oraz przeprowadzać prognozę i diagnozę na ich podstawie.
@@ -507,13 +520,19 @@ Funkcje:
 - zarządzanie projektem.
 
 ### Wymienić i scharakteryzować podstawowe techniki w grafice komputerowej
+- antyaliasing,
+- oświetlenie, cieniowanie, raytracing, HDR,
+- teksturowanie, filtracja tekstur,
+- postprocessing,
+
+### Wymienić i scharakteryzować metody przetwarzania obrazów
 - operacje na histogramie,
 - operacje geometryczne,
 - operacje arytmetyczne/logiczne,
 - normalizacja,
 - filtracje,
-- wektoryzacja,
-- transformacja (na przykład dft),
+- wektoryzacja, rasteryzacja,
+- transformacja (na przykład dft).
 
 ### Zasady i metody tworzenia indeksów w bazach danych
 ??
@@ -585,10 +604,20 @@ Wyrażana wzorem P = 10log10(P/P0), gdzie P i P0 to wielkości mocy.
 Szerokość pasma -- różnica między górną a dolną częstotliwością pasma, które kanał jest zdolny przenieść z nierównomiernością nie gorszą niż 3dB.
 Przepływność kanału -- zdolność kanału do przenoszenia informacji (ilość przesłanych bitów na sekundę). Do obliczania przepływności stosuje się wzór 2B*log2(M), gdzie B to szerokość pasma, M to liczba dyskretnych poziomów (jezeli M = 2, każdy sygnał zawiera bit). Maksymalna teoretyczna przepływność kanału jest ograniczona prawem Shannona P = B*log2(1+S/N), gdzie S/N to stosunek mocy sygnału do szumu.
 
-### Omówić zagadnienie modulacji ze szczególnym uwzględnieniem modulacji cyfrowych
+### Omówić zagadnienie modulacji ze szczególnym uwzględnieniem modulacji cyfrowych. Omówić znane media transmisyjne
 Modulacja to proces zmiany cech pewnego sygnału (zwanego sygnałem nośnym) innym sygnałem (zwanym sygnałem modulującym) w celu zawarcia informacji w sygnale nośnym.
 
 Do modulacji cyfrowych należą ASK (amplituda fali nośnej jest modulowana kwadratowym sygnałem modulującym), PSK (to samo dla fazy), FSK (to samo dla częstotliwości), QAM (kodowanie amplitudą i fazą w celu zawarcia większej ilości informacji, często prezentowane przez diagramy konstelacyjne).
+
+Do mediów transmisyjnych należą:
+- przewodowe:
+	- kable symetryczne,
+	- kable współosiowe,
+	- kable światłowodowe,
+	- kable energetyczne,
+- bezprzewodowe:
+	- fale radiowe,
+	- fale świetlne
 
 ### Omówić problem uwierzytelniania na przykładach: uwierzytelniania SYK, uwierzytelniania SYH, uwierzytelniania SYA oraz pojęcia hasła, karty magnetycznej, karta elektronicznej, karty identyfikacyjnej SIM oraz omówić techniki biometryczne.
 Metody uwierzytelniania:
@@ -621,7 +650,7 @@ Mnożenie -- liczby są rozszerzane do do dwukrotnie większej reprezentacji (ni
 Dzielenie -- liczby są zamieniane na reprezentację bezznakową, po podzieleniu następuje przywrócenie znaku.
 
 ### Omówić zasady wykonania operacji na liczbach zmiennopozycyjnych
-Według standardu IEEE, dodawanie, odejmowanie, mnożenie i dzielenie wykonywane jest dokładnie a następnie jest zaokrąglane do najbliższej lub parzystej cyfry -- w praktyce jest to nieefektywne; ten sam efekt można uzyskać wykorzystując dodatkowe bity kontrolne (guard, round, sticky). Po zaokrągleniu wynik jest normalizowany. Przy dodawaniu i odejmowaniu, liczby sprowadzane są do tego samego wykładnika. Przy mnożeniu/dzieleniu wykładnik jest dodawany/odejmowany. Operacja jest dalej przeprowadzana na wartościach mantysy. Operacje dodawania i mnożenia są przemienne ale nie łączne ani rozdzielne, tj. `a + b = b + a` ale `a + (b + c) != (a + b) + c`, i `a * (b + c) != a * b + a * c`.
+Według standardu IEEE, dodawanie, odejmowanie, mnożenie i dzielenie wykonywane jest dokładnie a następnie jest zaokrąglane do najbliższej lub parzystej cyfry -- w praktyce jest to nieefektywne; ten sam efekt można uzyskać wykorzystując dodatkowe bity kontrolne (guard, round, sticky). Po zaokrągleniu wynik jest normalizowany. Przy dodawaniu i odejmowaniu, liczby sprowadzane są do tego samego wykładnika. Przy mnożeniu/dzieleniu wykładnik jest dodawany/odejmowany. Operacja jest dalej przeprowadzana na wartościach mantysy. Operacje dodawania i mnożenia są przemienne ale nie koniecznie łączne ani rozdzielne, tj. `a + b = b + a` ale  `a + (b + c) != (a + b) + c`, i `a * (b + c) != a * b + a * c` (równość tylko w pewnych przypadkach).
 
 ### Wymienić standardowe postacie wyrażeń boolowskich
 - DNF (disjunctive normal form) -- suma iloczynów logicznych,
@@ -645,7 +674,14 @@ Sekwencyjne układy logiczne zależą dodatkowo od stanu poprzedniego.
 Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.
 
 ### Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.
-??
+Akwizycja danych – w informatyce i analizie sygnałów pierwszy etap przetwarzania danych polegający
+na ich przygotowaniu do dalszej obróbki czy interpretacji; obejmuje on m.in. przechwytywanie,
+próbkowanie, czy kwantowanie danych w dowolnej postaci, często różnorakich sygnałów, np. w
+postaci falowej.
+
+Dane multimedialne maja zazwyczaj duży rozmiar. W aplikacji multimedialnej dane te sa
+kompresowane, transmitowane i prezentowane użytkownikowi. Akwizycja i kodowanie (w tym
+kompresja) sa potrzebne do efektywnej transmisji strumieniowej.
 
 ### Wymienić i omówić podstawowe parametry stosowane przy definiowaniu jakości usług
 _jakich usług... odpowiedź do weryfikacji_
