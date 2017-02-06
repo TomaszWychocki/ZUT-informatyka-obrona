@@ -28,6 +28,7 @@ Urządzenia służące do wydobywania/przekazywania informacji z/do komputera, n
 
 ### Wymienić i omówić metody wdrażania systemów informatycznych
 _Odpowiedź niepewna (źr. https://pl.wikipedia.org/wiki/Wdro%C5%BCenie_systemu )._
+
 1. Całościowa: stary system jest porzucany i wdrażany jest nowy (wysokie ryzyko, niskie koszty).
 2. Cząstkowa: stopniowe wdrażanie modułów systemu (średnie ryzyko, średnie koszty).
 3. Równoległa: wdrażanie nowego systemu, przy jednoczesnym podtrzymaniu starego (niskie ryzyko, wysokie koszty).
@@ -43,6 +44,7 @@ Obliczenia wykonywane są na wielu komputerach w potencjalnie różnych lokaliza
 
 ### Porównaj metody analizy obiektowej i strukturalnej w projektowaniu systemów informatycznych
 _Odpowiedź niepewna_
+
 W analizie obiektowej dane i operujące na nich funkcje rozważane są łącznie (diagram klas), w analizie strukturalnej -- osobno (diagram przepływu danych).
 
 ### Scharakteryzować standardowy język zapytań do baz danych
@@ -53,12 +55,14 @@ Polega na przedefiniowaniu metod klasy nadrzędnej w klasie pochodnej. Wywołani
 
 ### Wymienić i scharakteryzować metody testowania oprogramowania
 Ze względu na poziom szczegółowości:
+
 1. Testy jednostkowe: testowaniu podlegają najmniejsze elementy programu (np. pojedyncze funkcje).
 2. Testy integracyjne: testowaniu podlega komunikacja między komponentami systemu, w celu sprawdzenia poprawności interakcji między nimi.
 3. Testy systemowe: testowaniu podlega cały zintegrowany system w celu sprawdzenia, czy spełnia postawione mu wymagania.
 4. Testy akceptacyjne: sprawdzana jest gotowość systemu do wypuszczenia na rynek.
 
 Ze względu na szczegóły implementacyjne:
+
 1. Testy funkcjonalne (czarnej skrzynki): implementacja nie jest znana, testowana jest funkcjonalność i warstwa interfejsu systemu.
 2. Testy strukturalne (białej skrzynki): implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
 
@@ -102,11 +106,13 @@ System informatyczny: część systemu informacyjnego, wykorzystująca system ko
 
 ### Podać klasyfikację języków programowania
 Ze względu na generację:
+
 1. 1GL: język maszynowy,
 2. 2GL: język assembly,
 3. 3,4,5GL: języki o wyższym stopniu abstrakcji.
 
 Ze względu na paradygmat:
+
 1. deklaratywne, w tym
 	- logiczne
 	- funkcyjne
@@ -185,6 +191,7 @@ Przetwarzanie danych równolegle przez jeden lub więcej komputerów. Procesy wy
 
 ### Porównanie modeli odniesienia: ISO/OSI oraz TCP/IP
 ISO/OSI -- 7 warstw:
+
 1. Fizyczna
 2. Łącza danych
 3. Sieciowa
@@ -194,6 +201,7 @@ ISO/OSI -- 7 warstw:
 7. Aplikacji
 
 TCP/IP -- 4 warstwy:
+
 1. Host-sieć (OSI 1, 2)
 2. Internetowa (OSI 3)
 3. Transportowa (OSI 4)
@@ -286,6 +294,7 @@ Zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy
 
 ### Hierarchia pamięci w systemie komputerowym, stronicowanie oraz koncepcja pamięci wirtualnej
 Hierarchia:
+
 1. rejestry procesora
 2. pamięć podręczna procesora
 3. pamięć RAM
@@ -350,11 +359,17 @@ Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie `op
 
 ### Scharakteryzować instrukcje iteracyjne w przykładowym języku programowania
 Język C
-for (wyrażenie początkowe; wyrażenie logiczne; wyrażenie wykonywane co iterację) { ciało pętli }
+
+`for (wyrażenie początkowe; wyrażenie logiczne; wyrażenie wykonywane co iterację) { ciało pętli }`
+
 pętla wykonuje się do momentu, gdy wyrażenie logiczne zwróci fałsz (wartość 0).
-while (wyrażenie logiczne) { ciało pętli }
+
+`while (wyrażenie logiczne) { ciało pętli }`
+
 pętla wykonuje się dopóki wyrażenie logiczne zwraca prawdę (wartość różną od 0).
-do { ciało pętli } while (wyrażenie logiczne);
+
+`do { ciało pętli } while (wyrażenie logiczne);`
+
 pętla wykona się co najmniej raz, warunek sprawdzany jest pod koniec pętli.
 Jeżeli ciało pętli zawierają tylko jedno wyrażenie, nawiasy klamrowe mogą zostać opuszczone.
 
@@ -366,6 +381,7 @@ Zakładając język C++, do składowych statycznych odwołanie następuje wg sch
 
 ### Omów pojęcia agregacji i zawierania w diagramach UML
 _Odpowiedź niepewna_
+
 Agregacja oznacza, że obiekty klasy posiadają potencjalnie dzieloną referencję do innego obiektu
 Zawieranie oznacza, że obiekty klasy posiadają na własność inne obiekty, tj. odpowiadają za jego cykl życia.
 
@@ -524,15 +540,25 @@ PLA:
 
 ### Wymienić i omówić znanych światowych wynalazców w dziedzinie informatyki i telekomunikacji
 Michael Faraday - wprowadził do fizyki pojęcia takie jak: linie siły pola magnetycznego i elektrycznego. Odkrył, że płaszczyzna polaryzacji światła ulega zmianie po przejściu przez pole magnetyczne (wskazuje to na związek m-dzy światłem a elektromagnetyzmem).
+
 James Clerk Maxwell - na podstawie rozważań teoretycznych wyciągnął wniosek, że światło jest falą elektromagnetyczną.
+
 Thomas Alva Edison - wynalazca, stworzył m.in. żarówkę, fonograf, akumulator. Udoskonalił telefon Alexandra Bella.
+
 Heinrich Rudolf Hertz - na podstawie teorii Maxwella przeprowadził eksperyment potwierdzający jego teoretyczne rozważania. Pionier radiokomunikacji.
+
 Samuel Morse - malarz i wynalazca, skonstruował telegraf elektromagnetyczny i opracował dla niego specjalny alfabet złożony z kombinacji kresek i kropek.
+
 Alexandr Stiepanowicz Popow - na podstawie badań H. Hertza stworzył radiotelegraf.
+
 Marconi Guglielmo (??) - rozpoczął nawiązywanie łączności radiowej.
+
 Nikola Tesla - stworzył podstawy teoretyczne konstrukcji radia, był m.in twórcą pierwszych urządzeń bezprzewodowych.
+
 Alexander Graham Bell - wynalazca, opracował telefon. Podstawowe dzieło to praca dotycząca sposobu zapisywania i odtwarzania mowy.
+
 Jean Baudot - skonstruował aparat telegraficzny bodot. Od jego nazwiska pochodzi jednostka szybkości modulacji bod.
+
 Agner Krarup Erlang - opracował wzór (znany dziś jako wzór Erlanga) do obliczenia natężenia ruchu sieci telefonicznej. Pierwsza osoba, która zajęła się problemem sieci telefonicznych.
 
 ### Omówić sposoby prezentacji informacji oraz pojęcia informacji analogowej i cyfrowej sygnału analogowego oraz cyfrowego
@@ -571,8 +597,11 @@ Metody uwierzytelniania:
 - SYA (something you are): na podstawie tego, kim użytkownik jest (np. odcisk palca).
 
 Hasło to ciąg znaków.
+
 Karta magnetyczna -- karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
+
 Karta elektroniczna -- bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
+
 Karta identyfikacyjna SIM -- karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
 
 Techniki biometryczne:
@@ -603,6 +632,7 @@ Jedyne operacje dozwolone w tych postaciach to AND, OR i NOT.
 
 ### Omówić kombinacyjne i sekwencyjne układy logiczne
 Kombinacyjne układy logiczne to takie, których wyjście zależy jedynie od wartości na wejściach.
+
 Sekwencyjne układy logiczne zależą dodatkowo od stanu poprzedniego.
 
 ### Scharakteryzować poszczególne etapy procesu konwersji analogowo-cyfrowej
