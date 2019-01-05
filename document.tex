@@ -8,56 +8,98 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
+\usepackage{multicol}
 
 \title{Pytania i odpowiedzi na obronę pracy inżynierskiej}
 \author{
-    Zachodniopomorski Uniwersytet Technologiczny\\
-    Wydział Informatyki\\
-    Szczecin
+	Zachodniopomorski Uniwersytet Technologiczny\\
+	Wydział Informatyki\\
+	Szczecin
 }
 \date{\today}
 
 \begin{document}
-    \maketitle
+	\maketitle
 
 	\section{Co to jest algorytm - cechy i właściwości}
-	Odpowiedź
+	Algorytm jest skończonym, uporządkowanym ciągiem jasno zdefiniowanych czynności, koniecznych do wykonania postawionego  zadania.
+	Cechy algorytmów:
+	\begin{itemize}
+		\item \textbf{poprawność} - algorytm daje oczekiwane wyniki,
+		\item \textbf{jednoznaczność} - zawsze daje te same wyniki przy takich samych danych wejściowych,
+		\item \textbf{skończoność} - wykonuje się w skończonej liczbie kroków,
+		\item \textbf{sprawność} - czasowa - szybkość działania i pamięciowa.
+	\end{itemize}
+	Właściwości algorytmów:
+	\begin{itemize}
+		\item \textbf{efektywność} - algorytm powinien osiągać efekt końcowy możliwie niskim kosztem,
+		\item \textbf{zgodność ze specyfikacją},
+		\item \textbf{właściwość stopu} - algorytm powinien zatrzymać się w skończonym czasie (po wykonaniu lub mimo niewykonania postawionego zadania).
+	\end{itemize}
 
 	\section{Porównać pojęcia program, algorytm, procedura, funkcja, agent programowy.}
 	Odpowiedź
 
 	\section{Rodzaje zabezpieczeń systemów komputerowych}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{fizyczne} - wszelkie zabezpieczenia przed otwarciem pokrywy komputera, zamki, blokady, zabezpieczenia antykradzieżowe, kontrola dostępu do obiektów i pomieszczeń, systemy przeciwpożarowe,
+		\item \textbf{techniczne} - software, oprogramowanie antywirusowe, kontrola dostępu, szyfrowanie informacji
+		\item \textbf{organizacyjne} - regulaminy dla osób korzystających z systemów informatycznych, polityka bezpieczeństwa,
+		\item \textbf{personalne} - sprawdzanie pracowników dopuszczonych do danych o szczególnym znaczeniu, przestrzeganie odpowiednich procedur zwalniania i zatrudniania pracowników, szkolenia.
+	\end{itemize}
 
 	\section{Urządzenia wejścia i wyjścia}
 	Odpowiedź
 
-	\section{Scharakteryzować architekturę klient - serwer oraz klient-broker-serwer.}
-	Odpowiedź
+	\section{Scharakteryzować architekturę klient-serwer oraz klient-broker-serwer.}
+	\begin{itemize}
+		\item  \textbf{Klient-serwer} - program klienta (aktywny) wysyła żądania do serwera, który te zapytania przetwarza i dostarcza odpowiednią usługę. Z reguły serwer (pasywny) jest jeden i może obsługiwać wiele klientów.
+		\item \textbf{Klient-broker-serwer} - pomiędzy klientem a serwerem jest pośrednik (broker), który jest odpowiedzialny za odbieranie wszystkich wiadomości, ich filtrowanie, określanie kto jest odbiorcą wiadomości oraz ich przesyłanie. Odpowiada również za przechowywanie danych o sesjach oraz autoryzację klientów.
+	\end{itemize}
 
 	\section{Wymienić i omówić metody wdrażania systemów informatycznych.}
 	Odpowiedź
 
 	\section{Scharakteryzować podstawowe modele baz danych.}
-	Odpowiedź
+	\begin{itemize}
+		\item  \textbf{Hierarchiczny} - w tym modelu przechowywane dane są zorganizowane w postaci drzewa. Informacja jest zawarta w dokumentach oraz w strukturze drzewa (podobnej do drzewa folderów na dysku komputera).
+		\item  \textbf{Sieciowy} - uogólniony model hierarchiczny, rekordy mogą przyjmować strukturę dowolnego grafu.
+		\item  \textbf{Relacyjny} - rekordy są grupowane w relacje (tabele). Dla każdej relacji musi zostać wybrany klucz główny, jednoznacznie identyfikujący dany rekord. Klucz obcy pozwala na powiązanie relacji między sobą (skrót myślowy). Większość relacyjnych baz danych korzysta z języka zapytań SQL. W modelu relacyjnym abstrahujemy od kolejności wierszy (rekordów) i kolumn (pól w rekordzie). Wiersz reprezentuje jeden rekord informacji np. osobę. Liczba kolumn jest z góry ustalona. Z każdą kolumną jest związana jej nazwa oraz dziedzina, określająca zbiór wartości, jakie mogą wystąpić w kolumnie.
+		\item  \textbf{Obiektowy} - dane przyjmują postać obiektów. W przeciwieństwie do modelu relacyjnego, rekordy i relacje między nimi przechowywane są bezpośrednio (w formie obiektów, czyli struktur zwanych klasami), bez podziału na wiersze i kolumny.
+	\end{itemize}
 
 	\section{Czym wyróżnia się rozproszonych system informatycznych od innych.}
 	Odpowiedź
 
 	\section{Porównaj metody analizy obiektowej i strukturalnej w projektowaniu systemów informatycznych.}
-	Odpowiedź
+	\begin{itemize}
+		\item W podejściu \textbf{strukturalnym} dąży się do formalnej analizy systemu. W wyniku tej analizy tworzone są hierarchiczne struktury, których elementami są procesy, dane i związki zachodzące między nimi. Cechą charakterystyczną tego podejścia jest oddzielne modelowanie danych i procesów, wykorzystujące diagramowe i macierzowe metody i techniki.
+		\item Podstawową różnicą między podejściem strukturalnym a \textbf{obiektowym} jest zintegrowane, jednoczesne modelowanie danych i procesów dziedziny przedmiotowej. System w podejściu obiektowym stanowi kolekcję różnych rodzajów, wzajemnie powiązanych elementów zwanych obiektami, spełniających w nim określoną rolę. Pojęcia klasy i obiektu umożliwiły powiązanie atrybutów (danych) i operacji (usług) w elementy, które łatwo przenieść koncepcyjnie na obiekty świata rzeczywistego.
+	\end{itemize}
 
 	\section{Scharakteryzować standardowy język zapytań do baz danych.}
 	Odpowiedź
 
 	\section{Na czym polega polimorfizm metod w programowaniu obiektowym i po co się go stosuje?}
-	Odpowiedź
+	Polega na przedefiniowaniu metod klasy nadrzędnej w klasie pochodnej. Polimorfizm pozwala traktować różnorodne dane w ten sam sposób. Przykładowo mamy wiele klas (dziedziczących z jednej klasy abstrakcyjnej) dla różnych rodzajów figur geometrycznych a dla każdej z tych figur możemy policzyć jej pole. Polimorfizm pozwala nam w każdej z tych klas zaimplementować metodę wirtualną o takiej samej nazwie np. ObliczPole() i w zależności od typu obiektu w momencie wywołania metody zostanie wykonana ta prawidłowa. Pozwala to na odseparowanie implementacji od interfejsu, co z kolei ułatwia rozszerzanie funkcjonalności.
 
 	\section{Wymienić i scharakteryzować metody testowania oprogramowania.}
 	Odpowiedź
 
 	\section{Wymienić metody ochrony danych w systemach baz danych.}
-	Odpowiedź
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Kontrola dostępu,
+			\item audyt wykonywanych operacji,
+			\item uwierzytelnianie,
+			\item szyfrowanie danych,
+			\item kontrola integralności danych,
+			\item kopie zapasowe,
+			\item replikacja danych,
+			\item mechanizm transakcji,
+			\item ochrona w warstwie aplikacji.
+		\end{itemize}
+	\end{multicols}
 
 	\section{Rola sterowników w dostępie do baz danych.}
 	Odpowiedź
