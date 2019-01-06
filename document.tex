@@ -105,37 +105,158 @@
 	Odpowiedź
 
 	\section{Zarządzanie procesami w systemach operacyjnych.}
-	Odpowiedź
+	Procesami zarządza planista (scheduler), który jest odpowiedzialny za rozpoczynanie, wznawianie i kończenie procesów oraz przełączanie kontekstu pomiędzy procesami. System operacyjny dostarcza mechanizmy umożliwiające komunikację między procesami oraz synchronizację. Planowanie procesów polega na wskazywaniu procesu, któremu ma być w danej chwili przydzielony procesor. W szczególności oznacza to decydowanie, kiedy i który proces ma przejść ze stanu gotowy do stanu aktywny. W systemie w każdej chwili może być aktywnych co najwyżej tyle procesów ile jest procesorów. W każdej chwili proces jest w jakimś stanie. Ten stan zmienia się w miarę postępu wykonania procesu. Oto możliwe stany:
+	
+	\begin{itemize}
+		\item \textbf{Nowy} (proces właśnie utworzono) - może przejść jedynie do stanu gotowy. Dzieje się tak, gdy system załaduje program do pamięci.
+		\item \textbf{Aktywny} (proces jest właśnie wykonywany przez procesor) - może przejść do jednego z trzech stanów:
+		\begin{itemize}
+			\item gotowy - gdy planista odbierze procesowi procesor,
+			\item czekający - gdy proces rozpocznie oczekiwanie na jakieś zdarzenie, np. zleci operację wejścia-wyjścia i czeka na jej wykonanie,
+			\item zakończony - gdy proces zakończy działanie.
+		\end{itemize}
+		\item \textbf{Czekający} - proces czeka na zajście jakiegoś zdarzenia (np. wykonanie operacji wejścia-wyjścia) -  może przejść jedynie do stanu gotowy. Dzieje się tak, gdy nastąpi oczekiwane przezeń zdarzenie, np. ukończenie operacji wejścia-wyjścia.
+		\item \textbf{Gotowy} (proces czeka na przydzielenie mu procesora) - może przejść jedynie do stanu aktywny. Dzieje się tak, gdy moduł systemu operacyjnego zwany planistą przydzieli temu procesowi procesor.
+		\item \textbf{Zakończony} (proces zakończył działanie) - nie może już zmienić swojego stanu.
+	\end{itemize}
 
 	\section{Co to jest system komputerowy, informacyjny, informatyczny.}
 	Odpowiedź
 
 	\section{Powody tworzenia systemów rozproszonych.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{Dzielenie zasobów} (ang. resource sharing) – wielu użytkowników systemu może korzystać z danego zasobu (np. drukarek, plików, usług, itp.).
+		
+		\item \textbf{Otwartość} (ang. openness) – podatność na rozszerzenia, możliwość rozbudowy systemu zarówno pod względem sprzętowym, jak i oprogramowania.
+		
+		\item \textbf{Współbieżność} (ang. concurrency) – zdolność do przetwarzania wielu zadań jednocześnie.
+		
+		\item \textbf{Skalowalność} (ang. scalability) – cecha systemu umożliwiająca zachowanie podobnej wydajności systemu przy zwiększaniu skali systemu (np. liczby procesów, komputerów, itp.).
+		
+		\item \textbf{Tolerowanie awarii} (ang. fault tolerance) – właściwość systemu umożliwiająca działania systemu mimo pojawiania się błędów i (lub) uszkodzeń (np. przez utrzymywanie nadmiarowego sprzętu).
+		
+		\item \textbf{Przezroczystość} (ang. transparency) – właściwość systemu powodująca postrzeganie systemu przez użytkownika jako całości, a nie poszczególnych składowych.
+	\end{itemize}
 
 	\section{Środowiska programistyczne stosowane do obliczeń inżynierskich.}
 	Odpowiedź
 
 	\section{Rodzaje systemów operacyjnych (klasyfikacja i charakterystyka).}
-	Odpowiedź
+	\begin{itemize}
+		\item Klasyfikacja ze względu na sposób przetwarzania:
+		\begin{itemize}
+			\item Systemy przetwarzania bezpośredniego - użytkownik wprowadza zadanie do systemu i oczekuje na wyniki. W trakcie przetwarzania jest zatem możliwa interakcja pomiędzy użytkownikiem a systemem (aplikacją). Użytkownik może być na przykład poproszony o wprowadzenie jakiś danych na terminalu, wybranie czegoś z menu itp.
+			\item Systemy przetwarzania pośredniego -  zadanie jest realizowane w czasie wybranym przez system. Po przedłożeniu zadania ingerencja użytkownika jest niemożliwa. Wszystkie dane muszą być zatem dostępne w momencie przedkładania zadania, a jakikolwiek błąd programowy (np. niekompletność danych) oznacza konieczność przedłożenia i wykonania zadania ponownie.
+		\end{itemize}
+	
+		\item Klasyfikacja ze względu na liczbę wykonywanych programów:
+		\begin{itemize}
+			\item  Systemy jednozadaniowe — niedopuszczalne jest rozpoczęcie wykonywania następnego zadania użytkownika przed zakończeniem poprzedniego.
+			\item Systemy wielozadaniowe — dopuszczalne jest istnienie jednocześnie wielu zadań (procesów), którym zgodnie z pewną strategią przydzielany jest procesor.
+		\end{itemize}
+	
+		\item Klasyfikacja ze względu na liczbę użytkowników:
+		\begin{itemize}
+			\item Systemy dla jednego użytkownika — zasoby przeznaczone są dla jednego użytkownika (np. w przypadku komputerów osobistych), nie ma mechanizmów autoryzacji, a mechanizmy ochrony informacji są ograniczone.
+			\item Systemy wielodostępne — wielu użytkowników może korzystać ze zasobów systemu komputerowego, a system operacyjny gwarantuje ich ochronę przed nieupoważnioną ingerencją.
+		\end{itemize}
+	
+		\item Inne:
+		\begin{itemize}
+			\item Systemy czasu rzeczywistego (ang. real-time systems) zorientowane na przetwarzanie z uwzględnieniem czasu zakończenie zadania, tzw. linii krytycznej (ang. deadline).
+			\item Systemy sieciowe i rozproszone (ang. network and distributed systems) — umożliwiają zarządzanie zbiorem rozproszonych jednostek przetwarzających, czyli zbiorem jednostek (komputerów), które są zintegrowane siecią komputerową i nie współdzielą fizycznie zasobów.
+			\item Systemy operacyjne komputerów naręcznych — tworzone dla rozwiązań typu PDA, czy telefonów komórkowych, podlegają istotnym ograniczeniom zasobowym.
+		\end{itemize}
+	\end{itemize}
 
 	\section{Podać klasyfikację języków programowania.}
 	Odpowiedź
 
 	\section{Paradygmaty programowania obiektowego.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{Abstrakcja} - każdy obiekt w systemie służy jako model abstrakcyjnego "wykonawcy", który może wykonywać pracę, opisywać i zmieniać swój stan, oraz komunikować się z innymi obiektami w systemie, bez ujawniania, w jaki sposób zaimplementowano dane cechy.
+		
+		\item \textbf{Hermetyzacja} - oddzielenie „co” od „jak”. Enkapsulacja zapewnia, że obiekt nie może zmieniać stanu innych obiektów w nieokreślony sposób. Każdy typ obiektu dostarcza interfejsu, który określa sposób współpracy z innymi obiektami. Jedynie za pomocą określonych metod mamy możliwość zmienić stan obiektu, bezpośredni dostęp do zmiennych jest zabroniony.
+		
+		\item \textbf{Dziedziczenie(kompozycja)} - umożliwia stworzenie hierarchii obiektów w programie. Polega na przejęciu właściwości i funkcjonalności obiektów innej klasy i ewentualnej modyfikacji tych właściwości i funkcjonalności w taki sposób, by były one bardziej wyspecjalizowane.
+		
+		\item \textbf{Polimorfizm(wielopostaciowość)} - referencje i wskaźniki obiektów mogą dotyczyć obiektów różnego typu, a wywołanie metody dla referencji spowoduje zachowanie odpowiednie dla pełnego typu obiektu wywoływanego. Zazwyczaj można wyróżnić dwa rodzaje polimorfizmu: dynamiczne- wykonywane podczas działania programu, a także statyczne- na etapie kompilacji.
+	\end{itemize}
 
 	\section{Zadania systemu zarządzania bazami danych (DBMS).}
 	Odpowiedź
 
 	\section{Topologie sieci komputerowych.}
-	Odpowiedź
+	Budowa (topologia) warunkowana jest przez zastosowanie sieci. Najprostsze komunikowanie się sieci można zrealizować przez jedynie połączenie komputerów, w innych przypadkach używa się urządzeń kierujących ruchem.
+		
+	\begin{itemize}
+		\item \textbf{Topologia magistrali} (szyny, linii) - połączone jednym, współdzielonym medium.
+		\begin{itemize}
+			\item Zalety:
+			\begin{itemize}
+				\item Brak koncentratorów/przełączników
+				\item Awaria węzła nie powoduje paraliżu sieci
+			\end{itemize}
+			\item Wady:
+			\begin{itemize}
+				\item Awaria kabla powoduje paraliż sieci
+				\item Ograniczona możliwość rozbudowy
+				\item Niska przepustowość
+				\item Obsługuje tylko jeden kanał transmisyjny
+			\end{itemize}
+		\end{itemize}
+	
+		\item \textbf{Topologia gwiazdy} - posiada punkt centralny (switch, koncentrator) i gwiaździście połączone do niego komputery.
+		\begin{itemize}
+			\item Zalety:
+			\begin{itemize}
+				\item Bardzo łatwa rozbudowa sieci
+				\item Awaria węzła nie powoduje paraliżu sieci
+				\item Wysoka przepustowość
+			\end{itemize}
+			\item Wady:
+			\begin{itemize}
+				\item Ograniczenie odległości stacji roboczej od koncentratora
+				\item Uszkodzenie koncentratora powoduje całkowity paraliż sieci
+			\end{itemize}
+		\end{itemize}
+		
+		\item \textbf{Topologia pierścienia} - komputery połączone są za pomocą jednego nośnika informacji w układzie zamkniętym - okablowanie nie ma żadnych zakończeń (tworzy krąg).
+		\begin{itemize}
+			\item Zalety:
+			\begin{itemize}
+				\item Niskie koszty budowy
+			\end{itemize}
+			\item Wady:
+			\begin{itemize}
+				\item Niska przepustowość
+				\item Trudna do rozbudowy
+				\item Ciężka lokalizacja uszkodzeń
+				\item Uszkodzenie jednej stacji powoduje paraliż sieci
+			\end{itemize}
+		\end{itemize}
+		
+		\item \textbf{Rozszerzone topologie}:
+		\begin{itemize}
+			\item \textbf{Topologia siatki}
+			\item \textbf{Topologia gwiazdy rozszerzonej} – posiada punkt centralny (podobnie do topologii gwiazdy) i punkty poboczne (jedna z częstszych topologii fizycznych Ethernetu)
+			\item \textbf{Topologia podwójnego pierścienia} – poszczególne elementy są połączone pomiędzy sobą odcinkami tworząc dwa zamknięte pierścienie
+			\item \textbf{Topologia siatki} – oprócz koniecznych połączeń sieć zawiera połączenia nadmiarowe; rozwiązanie często stosowane w sieciach, w których wymagana jest bezawaryjność
+		\end{itemize}
+	\end{itemize}
 
 	\section{Podstawowe składniki sprzętowe w sieciach komputerowych.}
 	Odpowiedź
 
 	\section{Zastosowania mikroprocesorów.}
-	Odpowiedź
+	\begin{itemize}
+		\item elektronika przemysłowa - sterowniki PLC,
+		\item elektronika powszechnego użytku - telefony komórkowe, zegarki, komputery
+		\item telekomunikacja - routery, switche etc.,
+		\item technika samochodowa - piloty, sterowniki świateł, lusterek, radia, kontrolery wtrysku,
+		\item medycyna - ciśnieniomierze, EKG, USG, termometry, mierniki poziomu cukru we krwi,
+		\item automatyka budynków - sterowniki klimatyzacji i rolet.
+	\end{itemize}
 
 	\section{Metody kompresji danych.}
 	Odpowiedź
