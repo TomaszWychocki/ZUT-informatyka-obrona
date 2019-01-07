@@ -262,37 +262,98 @@
 	Odpowiedź
 
 	\section{Sprzętowe środki przyspieszania obliczeń.}
-	Odpowiedź
+	\begin{itemize}
+		\item Wykorzystanie wielu rdzeni procesora.
+		\item Wykorzystanie obliczeń na karcie graficznej GPGPU - (ang. general-purpose computation on graphics processing units) obliczenia ogólnego przeznaczenia na układach GPU, zwany także GPGP, rzadziej GP2. Technika, dzięki której GPU, zwykle zajmujący się tylko obliczeniami związanymi z grafiką komputerową, umożliwia wykonywanie obliczeń ogólnego przeznaczenia, tak jak CPU. Dzięki temu wiele obliczeń, głównie obliczenia równoległe, można przeprowadzić znacznie szybciej.
+		\item Wykorzystanie układów FPGA, ASIC
+		\begin{itemize}
+			\item FPGA (ang. Field-Programmable Gate Array) - jeden z rodzajów układów PLD. Układy FPGA zawierają w sobie matrycę programowalnych bloków logicznych i konfigurowalnych połączeń między nimi. Układy FPGA ze względu na poziom skomplikowania oraz możliwości tych układów określa się jako najbardziej zaawansowane ze wszystkich rodzin PLD.
+			\item ASIC (ang. Application Specific Integrated Circuit) - rodzaj układów scalonych, w których nie ma możliwości ich rekonfiguracji. Ich zaletami jest to, że wykonują funkcje szybciej i przy mniejszym użyciu zasobów niż w przypadku np. mikrokontrolerów. Układy ASIC mieszczą w sobie często kompletne funkcjonalności dla których byłoby konieczne użycie mikrokontrolera i dodatkowych układów, co umożliwia stworzenie kompletnego urządzenia w jednym chipie.
+		\end{itemize}
+	\end{itemize}
 
 	\section{Klasyfikacja usług internetowych.}
 	Odpowiedź
 
 	\section{Budowa procesora (CPU).}
-	Odpowiedź
+	Jeśli chodzi o budowę fizyczną, mikroprocesor to nic innego jak krzemowa płytka z milionem tranzystorów, które blokują lub umożliwiają przepływ prądu. Z tranzystorów budowane są bramki logiczne, a te z kolei są łączone w bardziej rozbudowane układy.
+	
+	\begin{itemize}
+		\item \textbf{ALU} (ang. Arithmetic Logic Unit) - wykonuje podstawowe operacje arytmetyczne (dodawanie, odejmowanie, dzielenie oraz mnożenie oraz logiczne (OR, AND, XOR, NOT) oraz przesunięcia bitowe. ALU współpracuje z roboczym rejestrem zwanym akumulatorem (lub wieloma akumulatorami), który przechowuje jeden z operandów (argumentów) wykonywanej operacji oraz wyniku tej operacji.
+		
+		\item \textbf{CU} (ang. Control Unit) - dekoduje zawartość rejestru rozkazów i generuje odpowiednie sygnały sterujące zapewniające prawidłowy przebieg operacji zdefiniowanej kodem rozkazu.
+		
+		\item \textbf{Rejestry} (ang. Register) - komórki pamięci do przechowywania tymczasowych wyników obliczeń, adresów lokacji w pamięci RAM itp. Rejestry są najszybszym rodzajem pamięci.
+		\begin{itemize}
+			\item \textbf{Rejestr instrukcji IR} (ang. Instruction Register) - przechowuje aktualnie wykonywaną instrukcję.
+			\item\textbf{ Licznik rozkazów PC} (ang. Program Counter) - przechowuje adres w pamięci, gdzie przechowywany jest kolejny rozkaz do pobrania. Rozkazy są przechowywane w postaci kodów binarnych.
+			\item \textbf{Akumulator A} (ang. Accumulator) - przechowuje argument (operand) do operacji ALU lub wynik operacji.
+			\item \textbf{Wskaźnik stosu SP} (ang. Stack Pointer) - wskazuje na szczyt stosu (adres ostatniej zapełnionej komórki stosu).
+			\item \textbf{Rejestr flagowy} - przechowuje informacje dotyczące operacji ALU np. flaga przeniesienia lub pożyczki CF (ang. Carry Flag), flaga parzystości PF (ang. Parity Flag), flaga przepełnienia OF (ang. Overflow Flag) itp.
+		\end{itemize}
+		
+		\item \textbf{Magistrale} (ang. Bus) - wewnętrzne szyny łączące.
+		\begin{itemize}
+			\item \textbf{szyna danych} (ang. data bus) - magistrala komunikacyjna wykorzystywana d przesyłania właściwych danych,
+			\item \textbf{szyna adresowa} (ang. address bus) - łączy CPU z pamięcią. Określa pod jaki adres mają zostać wysłane dane szyną danych. Szerokość magistrali (liczba linii) określa maksymalną pojemność pamięci systemu (przestrzeń adresową)
+			\item \textbf{szyna sterująca} (ang. control bus) - zapewnia regulację dostępu do szyny adresowej i szyny danych.
+		\end{itemize}
+	\end{itemize}
 
 	\section{Technologie tworzenia stron internetowych.}
 	Odpowiedź
 
 	\section{Czym różnią się portal i wortal internetowy.}
-	Odpowiedź
+	\textbf{Portal internetowy} jest to serwis informacyjny, na którym jest poruszanych wiele tematów z życia. Taki portal zawiera między innymi: aktualności z kraju i ze świata, prognozę pogody czy katalog wyszukiwarek.\\
+	Z kolei \textbf{wortale} internetowe są to takie strony, na których zazwyczaj poruszany jest jeden temat lub pewien zakres tematyczny.
 
 	\section{Przetwarzanie rozproszone – charakterystyka.}
 	Odpowiedź
 
 	\section{Przetwarzanie równoległe – charakterystyka.}
-	Odpowiedź
+	Przetwarzanie danych równolegle przez jeden lub więcej komputerów. Procesy wykonywane są równocześnie. W przypadku wykonywania zadania na jednym komputerze, konieczna jest utylizacja wielu procesorów. Ze względu na skalę można wyróżnić obliczenia równoległe na poziomie: bitów, instrukcji, danych, zadań. Do prowadzenia obliczeń równoległych, oprócz sprzętu, konieczne są również odpowiednie algorytmy nazywane równoległymi. Są one trudniejsze w implementacji niż sekwencyjne, ponieważ współbieżność wprowadza dodatkowe możliwości popełnienia błędu. Powstają również dodatkowe problemy w uzyskaniu wysokiej wydajności z powodu dodatkowych nakładów na komunikację i konieczność synchronizacji obliczeń.
 
 	\section{Grafika rastrowa a grafika wektorowa.}
 	Odpowiedź
 
 	\section{Porównanie modeli odniesienia: ISO/OSI oraz TCP/IP.}
-	Odpowiedź
+	Model TCP/IP określany jest jako model protokołów. Każda z jego warstw wykonuje konkretne zadania, do realizacji który wykorzystywane są konkretne protokoły. Model ISO/OSI natomiast zwany modelem odniesienia, stosowany jest raczej do analizy, która pozwala lepiej zrozumieć procesy komunikacyjne zachodzące w sieci oraz stanowi wzór do projektowania rozwiązań sieciowych zarówno sprzętowych jak i programowych.\\
+	Oba modele są do siebie dość podobne. Różnice jakie występują widoczne są w górnych warstwach gdzie w przypadku modelu ISO/OSI dokonano podziału, aż na 3 warstwy, a w przypadku modelu TCP/IP te same funkcje realizowane jest tylko poprzez jedną warstwę. Podobne różnice widać w dolnych warstwach, gdzie w modelu ISO/OSI mamy dwie oddzielne warstwy łącza danych i fizyczną, a w przypadku modelu TCP/IP tylko jedną, warstwę dostępu do sieci.
+	
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item \textbf{ISO/OSI}:
+			\begin{enumerate}
+				\item Aplikacji
+				\item Prezentacji
+				\item Sesji
+				\item Transportowa
+				\item Sieciowa
+				\item Łącza danych
+				\item Fizyczna	
+			\end{enumerate}
+		
+			\columnbreak
+			
+			\item \textbf{TCP/IP}:
+			\begin{enumerate}
+				\item Aplikacji (OSI 5, 6, 7)
+				\item Transportowa (OSI 4)
+				\item Internetowa (OSI 3)
+				\item Dostępu do sieci (OSI 1, 2)
+			\end{enumerate}
+		
+			\vfill\null
+		\end{itemize}
+	\end{multicols}
+	
 
 	\section{Zadania warstwy transportowej.}
 	Odpowiedź
 
 	\section{Charakterystyka warstwy fizycznej.}
-	Odpowiedź
+	Odbiera ramki danych z warstwy 2, czyli warstwy łącza danych, i przesyła szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne. Jest ona również odpowiedzialna za odbiór kolejnych bitów przychodzących strumieni danych.Określa w jaki sposób bity są przedstawiane w formie impulsów napięciowych, świetlnych czy też sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.\\	
+	W specyfikacji warstwy fizycznej są opisane takie cechy jak napięcia elektryczne, taktowania zegarów, szybkość i maksymalne odległości transmisji. Warstwa fizyczna używa czterech procesów (adresowanie, enkapsulacja, routing, dekapsulacja).
 
 	\section{Charakterystyka warstwy łącza danych.}
 	Odpowiedź
