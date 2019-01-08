@@ -38,7 +38,12 @@
 	\end{itemize}
 
 	\section{Porównać pojęcia program, algorytm, procedura, funkcja, agent programowy.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{Program} - zaimplementowany algorytm w sposób zrozumiały dla komputera/maszyny go wykonującej.
+		\item\textbf{ Procedura} - program w trakcie wykonania. Wykonuje operacje, ale nie zwraca wartości.
+		\item \textbf{Funkcja} - część składowa programu zwracająca wartość
+		\item \textbf{Agent programowy (zwany także systemem agentowym, agentem)} - system oparty na wiedzy. Definiuje się go jako autonomiczny program umieszczony w określonym otoczeniu (i będący jego częścią), który potrafi analizować to otoczenie i oddziaływać na nie w czasie, dążyć do wyznaczonych celów i symulować wpływ zmian tego otoczenia.
+	\end{itemize}
 
 	\section{Rodzaje zabezpieczeń systemów komputerowych}
 	\begin{itemize}
@@ -49,7 +54,7 @@
 	\end{itemize}
 
 	\section{Urządzenia wejścia i wyjścia}
-	Odpowiedź
+	Urządzenia służące do wydobywania/przekazywania informacji z/do komputera, na przykład: mysz komputerowa, klawiatura, monitor, drukarka, skaner.
 
 	\section{Scharakteryzować architekturę klient-serwer oraz klient-broker-serwer.}
 	\begin{itemize}
@@ -69,7 +74,7 @@
 	\end{itemize}
 
 	\section{Czym wyróżnia się rozproszonych system informatycznych od innych.}
-	Odpowiedź
+	W rozproszonych systemach informatycznych obliczenia wykonywane są na wielu komputerach, w potencjalnie różnych lokalizacjach.
 
 	\section{Porównaj metody analizy obiektowej i strukturalnej w projektowaniu systemów informatycznych.}
 	\begin{itemize}
@@ -84,7 +89,19 @@
 	Polega na przedefiniowaniu metod klasy nadrzędnej w klasie pochodnej. Polimorfizm pozwala traktować różnorodne dane w ten sam sposób. Przykładowo mamy wiele klas (dziedziczących z jednej klasy abstrakcyjnej) dla różnych rodzajów figur geometrycznych a dla każdej z tych figur możemy policzyć jej pole. Polimorfizm pozwala nam w każdej z tych klas zaimplementować metodę wirtualną o takiej samej nazwie np. ObliczPole() i w zależności od typu obiektu w momencie wywołania metody zostanie wykonana ta prawidłowa. Pozwala to na odseparowanie implementacji od interfejsu, co z kolei ułatwia rozszerzanie funkcjonalności.
 
 	\section{Wymienić i scharakteryzować metody testowania oprogramowania.}
-	Odpowiedź
+	Ze względu na poziom szczegółowości:
+		\begin{itemize}
+			\item Testy jednostkowe: testowaniu podlegają najmniejsze elementy programu (np. pojedyncze funkcje).
+			\item Testy integracyjne: testowaniu podlega komunikacja między komponentami systemu, w celu sprawdzenia poprawności interakcji między nimi.
+			\item Testy systemowe: testowaniu podlega cały zintegrowany system w celu sprawdzenia, czy spełnia postawione mu wymagania.
+			\item Testy akceptacyjne: sprawdzana jest gotowość systemu do wypuszczenia na rynek.
+		\end{itemize}
+Ze względu na szczegóły implementacyjne:
+		\begin{itemize}
+			\item Testy funkcjonalne (czarnej skrzynki): implementacja nie jest znana, testowana jest funkcjonalność i warstwa interfejsu systemu.
+			\item Testy strukturalne (białej skrzynki): implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
+		\end{itemize}
+
 
 	\section{Wymienić metody ochrony danych w systemach baz danych.}
 	\begin{multicols}{2}
@@ -102,7 +119,7 @@
 	\end{multicols}
 
 	\section{Rola sterowników w dostępie do baz danych.}
-	Odpowiedź
+	Sterowniki dla baz danych to programy implementujące protokół pozwalający na połączenie z bazą danych. Łączy interfejs użytkownika z konkretną bazą danych (np. JDBC, MySQL). Sterownik tłumaczy zapytania zadane przez użytkownika na język zrozumiały dla danego DBMS. Pozwala to na ujednolicenie interfejsu programistycznego komunikacji z systemami bazodanowymi.
 
 	\section{Zarządzanie procesami w systemach operacyjnych.}
 	Procesami zarządza planista (scheduler), który jest odpowiedzialny za rozpoczynanie, wznawianie i kończenie procesów oraz przełączanie kontekstu pomiędzy procesami. System operacyjny dostarcza mechanizmy umożliwiające komunikację między procesami oraz synchronizację. Planowanie procesów polega na wskazywaniu procesu, któremu ma być w danej chwili przydzielony procesor. W szczególności oznacza to decydowanie, kiedy i który proces ma przejść ze stanu gotowy do stanu aktywny. W systemie w każdej chwili może być aktywnych co najwyżej tyle procesów ile jest procesorów. W każdej chwili proces jest w jakimś stanie. Ten stan zmienia się w miarę postępu wykonania procesu. Oto możliwe stany:
@@ -121,7 +138,12 @@
 	\end{itemize}
 
 	\section{Co to jest system komputerowy, informacyjny, informatyczny.}
-	Odpowiedź
+	\begin{itemize}	
+		\item System komputerowy: sprzęt i oprogramowanie do przetwarzania danych. 
+		\item System informacyjny: system, który przetwarza dane w informacje, gromadzi je i przesyła. 
+		\item System informatyczny: część systemu informacyjnego, wykorzystująca system komputerowy.
+	\end{itemize}
+
 
 	\section{Powody tworzenia systemów rozproszonych.}
 	\begin{itemize}
@@ -139,7 +161,12 @@
 	\end{itemize}
 
 	\section{Środowiska programistyczne stosowane do obliczeń inżynierskich.}
-	Odpowiedź
+	\begin{itemize}
+		\item MathWorks MATLAB,
+		\item StatSoft Statistica,
+		\item Wolfram Mathematica,
+		\item język i środowisko R
+	\end{itemize}
 
 	\section{Rodzaje systemów operacyjnych (klasyfikacja i charakterystyka).}
 	\begin{itemize}
@@ -170,7 +197,36 @@
 	\end{itemize}
 
 	\section{Podać klasyfikację języków programowania.}
-	Odpowiedź
+	Ze względu na generację:	
+	\begin{itemize}
+		\item 1GL: poziom maszynowy,
+		\item 2GL: poziom niski (assemblerowy),
+		\item 3GL: języki wysokiego poziomu,
+		\item 4GL: języki zadaniowe (SQL, Excel), 
+		\item 5GL: wizualny interface.
+	\end{itemize}
+
+	Ze względu na paradygmat programowania:	
+	\begin{itemize}
+		\item deklaratywne
+		\begin{itemize}
+			\item logiczne
+			\item funkcyjne
+		\end{itemize}
+		\item imperatywne
+		\begin{itemize}
+			\item imperatywne
+			\item proceduralne
+			\item strukturalne
+			\item obiektowe
+		\end{itemize}
+	\end{itemize}
+	
+	Sposób wykonywania:
+		\begin{itemize}
+			\item interpretowane (JS, PHP)
+			\item kompilowane (C, C++, Java)
+		\end{itemize}
 
 	\section{Paradygmaty programowania obiektowego.}
 	\begin{itemize}
@@ -184,7 +240,14 @@
 	\end{itemize}
 
 	\section{Zadania systemu zarządzania bazami danych (DBMS).}
-	Odpowiedź
+	\begin{itemize}
+		\item tworzenie struktury bazy danych oraz tabel
+		\item realizacja zapytań
+		\item dodawanie, usuwanie i modyfikacja danych
+		\item kontrola redundancji danych
+		\item kontrola użytkowników i autoryzacja
+		\item zarządzanie transakcjami
+	\end{itemize}
 
 	\section{Topologie sieci komputerowych.}
 	Budowa (topologia) warunkowana jest przez zastosowanie sieci. Najprostsze komunikowanie się sieci można zrealizować przez jedynie połączenie komputerów, w innych przypadkach używa się urządzeń kierujących ruchem.
@@ -246,7 +309,16 @@
 	\end{itemize}
 
 	\section{Podstawowe składniki sprzętowe w sieciach komputerowych.}
-	Odpowiedź
+	\begin{itemize}
+		\item terminal,
+		\item urządzenia transmisji (np. kable)
+		\item karta sieciowa,
+		\item modem,
+		\item switch,
+		\item router,
+		\item hub,
+		\item most
+	\end{itemize}
 
 	\section{Zastosowania mikroprocesorów.}
 	\begin{itemize}
@@ -259,7 +331,10 @@
 	\end{itemize}
 
 	\section{Metody kompresji danych.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{bezstratna}, np. kodowanie Huffmana, PNG: w której z postaci skompresowanej można odzyskać identyczną postać pierwotną, bajty występujące częściej mają krótszą reprezentację niż te występujące rzadziej. 
+		\item \textbf{stratna} - w której takie odzyskanie jest niemożliwe, jednak główne właściwości zostają zachowane, może dotyczyć różnych sygnałów (np. dźwięk, obraz), np. kompresja falkowa,kodowanie transformatorowe, JPEG, mp3.
+	\end{itemize}
 
 	\section{Sprzętowe środki przyspieszania obliczeń.}
 	\begin{itemize}
@@ -273,7 +348,13 @@
 	\end{itemize}
 
 	\section{Klasyfikacja usług internetowych.}
-	Odpowiedź
+	\begin{itemize}
+		\item pocztowe (POP3, SMTP),
+		\item transferu plików (FTP),
+		\item terminalowe (SSH),
+		\item serwisów informacyjnych (HTTP)
+		\item telefonia internetowa (VoIP)
+	\end{itemize}
 
 	\section{Budowa procesora (CPU).}
 	Jeśli chodzi o budowę fizyczną, mikroprocesor to nic innego jak krzemowa płytka z milionem tranzystorów, które blokują lub umożliwiają przepływ prądu. Z tranzystorów budowane są bramki logiczne, a te z kolei są łączone w bardziej rozbudowane układy.
@@ -301,20 +382,35 @@
 	\end{itemize}
 
 	\section{Technologie tworzenia stron internetowych.}
-	Odpowiedź
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item PHP
+			\item HTML
+			\item CSS
+			\item JavaScript
+			\item MySQL
+			\item jQuery
+			\item Flash
+			\item WordPress
+			\item Joomla
+		\end{itemize}
+	\end{multicols}
 
 	\section{Czym różnią się portal i wortal internetowy.}
 	\textbf{Portal internetowy} jest to serwis informacyjny, na którym jest poruszanych wiele tematów z życia. Taki portal zawiera między innymi: aktualności z kraju i ze świata, prognozę pogody czy katalog wyszukiwarek.\\
 	Z kolei \textbf{wortale} internetowe są to takie strony, na których zazwyczaj poruszany jest jeden temat lub pewien zakres tematyczny.
 
 	\section{Przetwarzanie rozproszone – charakterystyka.}
-	Odpowiedź
+	Przetwarzanie danych równolegle przez wiele komputerów o możliwie różnej lokalizacji. Informacje między komputerami wymieniane są sporadycznie. Charakteryzuje się dużą wydajnością, skalowalnością i niezawodnością. Szczególny przypadek przetwarzania równoległego.
 
 	\section{Przetwarzanie równoległe – charakterystyka.}
 	Przetwarzanie danych równolegle przez jeden lub więcej komputerów. Procesy wykonywane są równocześnie. W przypadku wykonywania zadania na jednym komputerze, konieczna jest utylizacja wielu procesorów. Ze względu na skalę można wyróżnić obliczenia równoległe na poziomie: bitów, instrukcji, danych, zadań. Do prowadzenia obliczeń równoległych, oprócz sprzętu, konieczne są również odpowiednie algorytmy nazywane równoległymi. Są one trudniejsze w implementacji niż sekwencyjne, ponieważ współbieżność wprowadza dodatkowe możliwości popełnienia błędu. Powstają również dodatkowe problemy w uzyskaniu wysokiej wydajności z powodu dodatkowych nakładów na komunikację i konieczność synchronizacji obliczeń.
 
 	\section{Grafika rastrowa a grafika wektorowa.}
-	Odpowiedź
+	\begin{itemize}
+		\item rastrowa: obraz przedstawiony jest jako macierz pikseli,
+		\item wektorowa: obraz zdefiniowany jest jako zbiór opisanych matematycznie figur geometrycznych.
+	\end{itemize}
 
 	\section{Porównanie modeli odniesienia: ISO/OSI oraz TCP/IP.}
 	Model TCP/IP określany jest jako model protokołów. Każda z jego warstw wykonuje konkretne zadania, do realizacji który wykorzystywane są konkretne protokoły. Model ISO/OSI natomiast zwany modelem odniesienia, stosowany jest raczej do analizy, która pozwala lepiej zrozumieć procesy komunikacyjne zachodzące w sieci oraz stanowi wzór do projektowania rozwiązań sieciowych zarówno sprzętowych jak i programowych.\\
@@ -349,14 +445,28 @@
 	
 
 	\section{Zadania warstwy transportowej.}
-	Odpowiedź
+	\begin{itemize}
+		\item nawiązanie i obsługa połączeń (sesji) pomiędzy hostami,
+		\item śledzenie połączeń pomiędzy hostami,
+		\item segmentowanie danych,
+		\item identyfikowanie poszczególnych aplikacji,
+		\item kontrola przepływu danych,
+		\item retransmisja w przypadku utraty danych.
+		\item wykorzystywane protokoły TCP (Transmission Control Protocol) i UDP (user Datagram protocol)
+	\end{itemize}
 
 	\section{Charakterystyka warstwy fizycznej.}
 	Odbiera ramki danych z warstwy 2, czyli warstwy łącza danych, i przesyła szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne. Jest ona również odpowiedzialna za odbiór kolejnych bitów przychodzących strumieni danych.Określa w jaki sposób bity są przedstawiane w formie impulsów napięciowych, świetlnych czy też sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.\\	
 	W specyfikacji warstwy fizycznej są opisane takie cechy jak napięcia elektryczne, taktowania zegarów, szybkość i maksymalne odległości transmisji. Warstwa fizyczna używa czterech procesów (adresowanie, enkapsulacja, routing, dekapsulacja).
 
 	\section{Charakterystyka warstwy łącza danych.}
-	Odpowiedź
+	\begin{itemize}
+		\item zasadniczą rolą warstwy łącza danych jest zapewnienie warstwom górnym dostępu do medium transmisyjnego, umieszcza w nośniku dane pochodzące z warstw wyższych
+		\item nadzoruje jakość przekazywanych informacji w warstwie niższej (fizycznej)
+		\item rozpoznaje błędy związane z gubieniem pakietów i uszkodzeniem ramek oraz zajmuje się ich naprawą
+		\item zachodzi enkapsulacja pakietów z warstwy sieciowej tak, aby uzyskać ramki zgodne ze standardem
+		\item dodaje do pakietów adres MAC
+	\end{itemize}
 
 	\section{Do czego służy protokół TCP, a do czego IP?}
 	\begin{itemize}
@@ -365,7 +475,13 @@
 	\end{itemize}
 
 	\section{Rodzaje światłowodów - wady, zalety.}
-	Odpowiedź
+	\begin{itemize}
+		\item szklany: duże odległości, wielkie prędkości
+		\item plastikowy: tani, małe prędkości, małe odległości
+		\item krzemianowy: nieznacznie lepszy od plastikowego
+		\item jednomodowy: bardzo drogi, duże odległości, trudny w obsłudze
+		\item wielomodowy (fala o takiej samej długości fali może rozchodzić się wieloma drogami, zwanymi modami): drogi, średnie odległości
+	\end{itemize}
 
 	\section{Scharakteryzować sieciowe systemy plików.}
 	Umożliwia dostęp do danych komputerom zdalnym. Dane znajdują się na jednym lub wielu serwerach. Charakteryzuje je m.in.:
@@ -394,7 +510,14 @@
 	\end{itemize}
 
 	\section{Przedstawić budowę światłowodu.}
-	Odpowiedź
+	\begin{enumerate}
+		\item rdzeń (włókno szklane), 
+		\item płaszcz (materiał o niższym współczynniku załamania światła), 
+		\item powłoka lakierowana (chroni płaszcz), 
+		\item powłoka wzmacniająca (płaszcz ochronny) (ochrona przed wpływem środowiska)
+		\item wzmocnienie
+		\item osłona zewnętrzna
+	\end{enumerate}
 
 	\section{Cechy charakterystyczne cyfrowych sieci ISDN.}
 	ISDN to sieć cyfrowa ze zintegrowanymi usługami. W sieciach ISDN nie występują pośredniczące urządzenia analogowe. Połączenia w ISDN są komutowane (zestawiane). Cechy to:
@@ -426,7 +549,9 @@
 	W praktyce rozwiązania klastrowe mają charakter mieszany i wykonują dla pewnych aplikacji funkcje wydajnościowe, przy jednoczesnym odgrywaniu roli niezawodnościowej lub równoważenia obciążenia.
 
 	\section{Zasada działania systemów ekspertowych.}
-	Odpowiedź
+	Oparte o bazy wiedzy (zasady jeżeli-to); wspomagają podejmowanie decyzji. Mogą wspomagać interpretację danych oraz przeprowadzać prognozę i diagnozę na ich podstawie.
+Systemy ekspertowe rozwiązują złożone problemy na podstawie analizy baz wiedzy, a nie realizację prostego algorytmu.
+
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
 	\textbf{LCD} - zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
@@ -456,31 +581,41 @@
 	Odpowiedź
 
 	\section{Problem synchronizacji przy transmisji danych i transmisja asynchroniczna}
-	Odpowiedź
+	Synchroniczna i asynchroniczna metoda transmisji danych określają w jaki sposób dwie przeciwległe stacje, rozwiązują kwestię sygnalizacji nadawania danych. Bez takiej sygnalizacji, stacja odbiorcza nie byłaby w stanie odgadnąć, czy dane które akurat dotarły, to początek, koniec, czy środek transmisji.
+
+W transmisji asynchronicznej problem sygnalizacji początku i końca nadawania został rozwiązany dzięki temu, że została zawarta w przesyłanych danych. Czyli, to sama struktura porcji danych określa jej początek i koniec.
+W transmisji synchronicznej sygnalizacja początku i końca została rozwiązana za pomocą odrębnego kanału sygnalizującego/serwisowego. Kanał ten dyktuje takt, według którego są przesyłane dane. Natomiast dane są zwykle przesyłane odrębnymi kanałami.
 
 	\section{Uprawnienia plików na przykładzie systemu operacyjnego Unix/Linux.}
 	Odpowiedź
 
 	\section{Scharakteryzować sieciowe systemy plików.}
-	Odpowiedź
+	p. 41
 
 	\section{Co to jest cykl życia oprogramowania i z jakich faz się składa?}
 	Odpowiedź
 
 	\section{Wymienić rodzaje diagramów w UML}
-	Odpowiedź
+	\begin{itemize}
+		\item diagram klas - przedstawia strukturę aplikacji
+		\item diagram przypadków użycia - przedstawia funkcjonalność systemu wraz z jego otoczeniem, służy do zobrazowania usług, które są widoczne z zewnątrz systemu
+		\item diagram sekwencji - prezentowanie interakcji pomiędzy obiektami wraz z uwzględnieniem w czasie komunikatów
+		\item diagram aktywności - przedstawienie sekwencji kroków, które są wykonywane przez modelowany fragment systemu
+		\item diagram komponentów - służy do ilustracji organizacji i zależności pomiędzy komponentami; prezentuje system na wyższym poziomie abstrakcji niż diagram klas, gdyż każdy z komponentów może być implementacją jednej lub większej liczby klas
+	\end{itemize}
 
 	\section{Co oznaczają skróty ERD oraz DFD? Do czego się ich używa?}
 	Odpowiedź
 
 	\section{Przeciążanie funkcji i operatorów w języku C++.}
-	Odpowiedź
+	Przeciążanie funkcji polega na definicji funkcji o takiej samej nazwie co już istniejąca, o innych parametrach wejściowych lub wyjściowych (ale nie wyłącznie wyjściem). Przy wywołaniu funkcji, wybierana jest ta, o odpowiedniej liczbie i typach argumentów.
+Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich m.in. operator ':?' oraz '.'.
 
 	\section{Scharakteryzować instrukcje iteracyjne w przykładowym języku programowania}
 	Odpowiedź
 
 	\section{Omówić na czym polega przeciążanie funkcji i operatorów w języku C++.}
-	Odpowiedź
+	p.64
 
 	\section{Scharakteryzować mechanizmy dostępu do składowych klasy tworzonych statycznie i dynamicznie}
 	Odpowiedź
@@ -498,25 +633,29 @@
 	Odpowiedź
 
 	\section{Co to są drzewa decyzyjne i do czego służą?}
-	Odpowiedź
+	Jest to graficzna metoda wspomagania procesu decyzyjnego zawierającego decyzje i ich możliwe konsekwencje. Proces decyzyjny jest przedstawiony za pomocą grafu (drzewa), gdzie wierzchołki określają aktualny stan a krawędzie pewne decyzje.
 
 	\section{Rekurencja i jej implementacja w językach wysokiego poziomu}
 	Odpowiedź
 
 	\section{Co to są algorytmy zachłanne – podać przykład takiego algorytmu.}
-	Odpowiedź
+	Algorytmy podejmujące w każdym kroku taką decyzję, która w danej chwili wydaje się najkorzystniejsza. Dokonują zawsze wyborów lokalnie optymalnych licząc, że doprowadzi to do znalezienia rozwiązania globalnie optymalnego. Przykład: ciągły problem plecakowy (znajduje rozwiązanie optymalne), dyskretny problem plecakowy (nie gwarantuje optymalnego rozwiązania).
 
 	\section{Na czym polega haszowanie i gdzie ma ono zastosowanie?}
 	Odpowiedź
 
 	\section{Co to są problemy obliczeniowo trudne – podać przykład takiego problemu.}
-	Odpowiedź
+	Problemami klasy NP nazywamy problemy decyzyjne w których sprawdzenie poprawności określonego rozwiązania wymaga złożoności obliczeniowej wielomianowej. Z powyższego stwierdzenia wynika więc, że znalezienie rozwiązania dla problemów NP wymaga złożoności co najmniej wielomianowej. Np. problem komiwojażera, plecakowy.
 
 	\section{Maszynowa reprezentacja danych}
 	Odpowiedź
 
 	\section{Assembler, interpreter, kompilator – porównać i wyjaśnić pojęcia.}
-	Odpowiedź
+	\begin{itemize}	
+		\item \textbf{assembler}: program zamieniający kod w języku assembly na kod maszynowy,
+		\item \textbf{interpreter}: program interpretujący kod pewnego języka programowania w trakcie jego wykonywania,
+		\item \textbf{kompilator}: program zamieniający kod pewnego języka programowania na postać pośrednią (np. bytecode) lub kod maszynowy przed jego wykonaniem.
+\end{itemize}	
 
 	\section{Zarządzanie pamięcią w Unix/Linux.}
 	Odpowiedź
@@ -528,13 +667,34 @@
 	Odpowiedź
 
 	\section{Zasady przetwarzanie transakcji w DBMS.}
-	Odpowiedź
+	ACID:
+	\begin{itemize}
+		\item \textbf{Atomicity}: atomowość, transakcja odbywa się w całości albo w ogóle,
+		\item \textbf{Consistency}: spójność, transakcje nie naruszają integralności danych,
+		\item \textbf{Isolation}: transakcje odbywają się bez wiedzy o innych,
+		\item \textbf{Durability}: trwałość, wyniki zatwierdzonych transakcji nie mogą zostać utracone.
+	\end{itemize}
 
 	\section{Narzędzia i środowiska wytwarzania oprogramowania.}
 	Odpowiedź
 
 	\section{Wzorce projektowe i programowe.}
-	Odpowiedź
+	Określają pewne schematy postępowania przy projektowaniu systemów bazowanych na obiektach. Podział na wzorce
+	\begin{itemize}
+		\item kreacyjne
+			\item opisujące proces tworzenia nowych obiektów; ich zadaniem jest tworzenie, inicjalizacja oraz konfiguracja obiektów, klas oraz innych typów danych
+			\item np. budowniczy, fabryka abstrakcyjna, prototyp, singleton
+		\item strukturalne
+		\begin{itemize}
+			\item opisujące struktury powiązanych ze sobą obiektów
+			\item np. adapter, dekorator, most
+		\end{itemize}
+		\item czynnościowe
+		\begin{itemize}
+			\item opisujące zachowanie i odpowiedzialność współpracujących ze sobą obiektów
+			\item np. iterator, obserwator, strategia
+		\end{itemize}
+	\end{itemize}
 
 	\section{Metody podnoszenia niezawodności systemów wbudowanych.}
 	Odpowiedź
@@ -570,7 +730,21 @@
 	Odpowiedź
 
 	\section{Omówić sposoby prezentacji informacji oraz pojęcia informacji analogowej i cyfrowej, sygnału analogowego oraz cyfrowego.}
-	Odpowiedź
+	\textbf{Informacja}:
+	\begin{itemize}
+		\item Analogowa - informacje w tej postaci mogą być:
+		\begin{itemize}
+			\item Prosta - mocno wyróżniona jedna częstotliwość i niewielki zestaw harmonicznych (np. dźwięk jednego klawisza pianina)
+			\item Złożona - składają się z wielu częstotliwości o różnym natężeniu (np. głos ludzki).
+		\end{itemize}
+		\item Cyfrowa - informacja z postaci impulsów elektrycznych (wartości binarnych), dyskretna.
+	\end{itemize}
+	\textbf{Sygnał}:
+	\begin{itemize}
+		\item Analogowy - jest ciągły w czasie. Jest to sinusoidalna fala o określonej częstotliwości amplitudzie i fazie. Musi być dodatkowo wzmacniany przy przesyle na większą odległość.
+		\item Cyfrowy - zapisany jako zakodowane skwantyzowane wartości w pewnych odstępach czasu. Transmisje sygnału cyfrowego cechują się większym stopniem niezawodności niż analogowe zwłaszcza na dłuższych dystansach. Jeżeli nastąpi potrzeba wzmocnienia, sygnał jest regenerowany cyfrowo, co nie zwiększa mocy szumu ani zniekształceń.
+	\end{itemize}
+
 
 	\section{Zdefiniować pojęcie widma sygnału oraz omówić numeryczne metody jego obliczania.}
 	Odpowiedź
@@ -606,13 +780,18 @@
 	Odpowiedź
 
 	\section{Omówić kombinacyjne i sekwencyjne układy logiczne.}
-	Odpowiedź
+	Kombinacyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy wyłącznie od stanu wejść.
+
+	Sekwencyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy od stanu wejść układu oraz od poprzedniego stanu, zwanego stanem wewnętrznym, pamiętanego w zespole rejestrów (pamięci).
 
 	\section{Scharakteryzować poszczególne etapy procesu konwersji analogowo-cyfrowej.}
 	Odpowiedź
 
 	\section{Omówić ogólną charakterystykę filtrów w cyfrowych.}
-	Odpowiedź
+	Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.
+
+Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
+
 
 	\section{Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.}
 	Odpowiedź
@@ -627,7 +806,7 @@
 	Odpowiedź
 
 	\section{Scharakteryzować kod Graya jako przykład elementu wchodzącego w skład metod cyfrowej modulacji sygnału.}
-	Odpowiedź
+	Kod Graya charakteryzuje się tym, że dwa kolejne słowa kodowe różnią się jednym bitem. Stosowane są w korekcji błędów. Np. w modulacji cyfrowej QAM, gdzie dane są transmitowane w 4-bitowych symbolach, diagram konstelacji sygnału jest tak stworzony, aby kombinacje bitów w przylegających symbolach na konstelacji różniły się tylko jednym bitem. Po połączeniu tego z , która może korygować jednobitowe błędy, odbiornik może korygować błędy , które sprawiają, że punkty konstelacji odchylają się w stronę przyległych punktów. Dzięki temu system transmisji jest mniej podatny na zakłócenia.
 
 	\section{Różnica między kodami detekcyjnymi i korekcyjnymi - przykłady zastosowań.}
 	Odpowiedź
