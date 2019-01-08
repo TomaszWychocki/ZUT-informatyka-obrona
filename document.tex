@@ -359,37 +359,77 @@
 	Odpowiedź
 
 	\section{Do czego służy protokół TCP, a do czego IP?}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{TCP} - Aplikacje, które wymagają od protokołu transportowego niezawodnego dostarczania danych, używają protokołu TCP. Protokół ten sprawdza, czy dane dokładnie dotarły do miejsca przeznaczenia i czy zrobił to we właściwej kolejności. TCP zapewnia niezawodność za pomocą mechanizmu zwanego pozytywne potwierdzenie z retransmisją – wysyła on dane ponownie, dopóki nie otrzyma informacji, że dane zostały poprawnie odebrane. Jednostka danych wymieniana między współpracującymi modułami TCP nosi nazwę segmentu.
+		\item \textbf{IP} - jest protokołem komunikacyjnym warstwy Internet w modelu TCP/IP (odpowiada warstwie sieciowej modelu OSI). Protokół ten definiuje zasady i sposoby postępowania urządzeń sieciowych w celu nawiązania połączenia, utrzymania go i samej transmisji danych. Protokół IP stosowany jest w większości rodzajów sieci, w tym w sieci lokalnej i sieci Internet (każdy host, np. komputer, posiada swój własny, unikalny dla sieci adres IP). Dane z użyciem protokołu IP transmitowane są w pakietach (paczkach danych). Nie gwarantuje on jednak dotarcia danych do celu czy utrzymania kolejności pakietów. Może się zdążyć, ze odbiorca otrzyma kilkukrotnie ten sam pakiet z całej paczki danych, pakiety dotrą w innej kolejności lub nie dotrą w ogóle. W celu zapewnienia prawidłowej transmisji stosuje się różne techniki w wyższej warstwie, np. z użyciem protokołu TCP.
+	\end{itemize}
 
 	\section{Rodzaje światłowodów - wady, zalety.}
 	Odpowiedź
 
 	\section{Scharakteryzować sieciowe systemy plików.}
-	Odpowiedź
+	Umożliwia dostęp do danych komputerom zdalnym. Dane znajdują się na jednym lub wielu serwerach. Charakteryzuje je m.in.:
+	\begin{itemize}
+		\item przeźroczystość dostępu: dostęp do plików jest taki sam jak dla plików lokalnych
+		\item przeźroczystość lokacji: pliki zdalne i lokalne łączy jedna przestrzeń -- nazwa pliku nie określa jego lokacji
+		\item przeźroczystość współbieżności: stan systemu plików jest taki sam dla wszystkich klientów
+	\end{itemize}
+
+	Przykładowe sieciowe systemy plików:
+	\begin{itemize}
+		\item \textbf{NCP} - służy do uzyskiwania dostępu do plików, katalogów, drukarek sieciowych, synchronizacji zegara systemowego, zarządzania pocztą elektroniczną, zdalnego wywoływania poleceń w trybie terminalowym i innych usług sieciowych. W Novell eDirectory NCP używany jest do synchronizacji wymiany danych między serwerami.
+		\item \textbf{NFS} – oparty na UDP lub TCP protokół zdalnego udostępniania systemu plików. Z NFS wiąże się wiele problemów – przede wszystkim bardzo trudno zapewnić, że dana operacja została wykonana. Jeśli między odebraniem żądania a wysłaniem potwierdzenia wystąpi błąd, klient może się nie dowiedzieć, czy operacja została wykonana.
+	\end{itemize}
 
 	\section{Wymień i opisz warstwy modelu OSI.}
 	Odpowiedź
 
 	\section{Podstawowe cechy standardów sieci bezprzewodowych WiFi.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{802.11a} - do 54mbps, 5ghz. 802.11a obejmuje 12 niezachodzących kanałów, 8 przeznaczonych do pracy w budynkach oraz 4 przeznaczone do pracy między dwoma punktami (ang. point to point). 
+		\item \textbf{802.11b} - 11mbps, 2.4ghz, zasięg 30-120m. Standard 802.11b wykorzystuje algorytmy do usuwania zakłóceń generowanych przez sygnały zagłuszające oraz unikania kolizji podczas komunikacji wielu radiowych kart sieciowych.
+		\item \textbf{802.11g} - 54mbps, 2.4ghz, najpopulardniejszy standard, wymaga silnego i stabilnego sygnału względem 802.11b,
+		\item \textbf{802.11n} - 300mpbs, 5ghz lub 150mbps, 2.4ghz, wymaga silnego i stabilnego sygnału.
+		\item \textbf{802.11ac} - Według specyfikacji IEEE 802.11ac przepustowość przy zastosowaniu wielu stacji ma być na poziomie przynajmniej 1 Gbit/s, a pojedynczej stacji 500 Mbit/s. Urządzenia standardu 802.11ac pracują na częstotliwości 5 GHz. MIMO, beamforming, 256-QAM.
+	\end{itemize}
 
 	\section{Przedstawić budowę światłowodu.}
 	Odpowiedź
 
 	\section{Cechy charakterystyczne cyfrowych sieci ISDN.}
-	Odpowiedź
+	ISDN to sieć cyfrowa ze zintegrowanymi usługami. W sieciach ISDN nie występują pośredniczące urządzenia analogowe. Połączenia w ISDN są komutowane (zestawiane). Cechy to:
+	
+	\begin{itemize}
+		\item przekaz cyfrowy
+		\item gwarantowana przepływnosc, bez wzgledu na odległosc
+		\item szybkie zestawianie połaczen
+		\item można likwidowac połaczenia zaraz po realizacji sesji
+		\item szeroki zakres usług wideotelefonii
+		\item transmisja z komutacją obwodów oraz pakietów
+		\item korzystanie ze standardowych (istniejących i komutowanych) linii telefonicznych dla dostępu podstawowego
+	\end{itemize}
 
 	\section{Rodzaje i zastosowania macierzy dyskowych.}
 	Odpowiedź
 
 	\section{Zasada działania systemów klastrowych.}
-	Odpowiedź
+	Klaster to grupa połączonych jednostek komputerowych, które współpracują ze sobą w celu udostępnienia zintegrowanego środowiska pracy. W istniejących rozwiązaniach klastrowych można wyodrębnić trzy podstawowe klasy wynikające z celów budowy takich rozwiązań:
+	
+	\begin{itemize}
+		\item klastry wydajnościowe: pracujące jako zespół komputerów, z których każdy wykonuje własne zadania obliczeniowe. Celem ich budowy jest powiększenie mocy obliczeniowej, w sytuacji kiedy różne komputery w klastrze pracują nad odrębnymi podzadaniami pojedynczego dużego zadania obliczeniowego.
+	
+		\item klastry niezawodnościowe: pracujące jako zespół komputerów wykonujące każdy swoje zadanie. W razie awarii jednego z węzłów, następuje automatyczne przejęcie jego funkcji przez inne węzły.
+		
+		\item klastry równoważenia obciążenia: pracujące jako zespół komputerów, z których każdy wykonuje własne zadanie z puli zadań skierowanych do całego klastra. W takiej sytuacji pojedynczy komputer może wykonywać niezależne zadanie lub współpracować z kilkoma innymi węzłami klastra wykonując podzadanie większego zadania obliczeniowego.
+	\end{itemize}
+	
+	W praktyce rozwiązania klastrowe mają charakter mieszany i wykonują dla pewnych aplikacji funkcje wydajnościowe, przy jednoczesnym odgrywaniu roli niezawodnościowej lub równoważenia obciążenia.
 
 	\section{Zasada działania systemów ekspertowych.}
 	Odpowiedź
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
-	Odpowiedź
+	\textbf{LCD} - zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
 
 	\section{Wymienić i scharakteryzować rodzaje pamięci półprzewodnikowych}
 	Odpowiedź
