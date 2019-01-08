@@ -1,3 +1,9 @@
+# PYTANIA W TRAKCIE OPRACOWYWANIA
+
+Dokładniejsze i obszerniejsze odpowiedzi znajdują się w pliku [document.tex](document.tex). Jest to dokument LaTeX, który [TUTAJ](https://www.tutorialspoint.com/online_latex_editor.php) może zostać skompilowany do formatu *.pdf.
+
+# Starsze odpowiedzi pobrane [stąd](https://github.com/brejman/odpowiedzi)
+
 ### Co to jest algorytm -- cechy i właściwości
 Skończony ciąg jednoznacznie zdefiniowanych kroków koniecznych do wykonania pewnego zadania.
 Cechy: 
