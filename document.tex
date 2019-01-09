@@ -9,6 +9,15 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{hyperref}
+
+
+\hypersetup{
+	colorlinks   = true,    % Colours links instead of ugly boxes
+	urlcolor     = blue,    % Colour for external hyperlinks
+	linkcolor    = blue,    % Colour of internal links
+	citecolor    = red      % Colour of citations
+}
 
 \title{Pytania i odpowiedzi na obronę pracy inżynierskiej}
 \author{
@@ -96,7 +105,7 @@
 			\item Testy systemowe: testowaniu podlega cały zintegrowany system w celu sprawdzenia, czy spełnia postawione mu wymagania.
 			\item Testy akceptacyjne: sprawdzana jest gotowość systemu do wypuszczenia na rynek.
 		\end{itemize}
-Ze względu na szczegóły implementacyjne:
+	Ze względu na szczegóły implementacyjne:
 		\begin{itemize}
 			\item Testy funkcjonalne (czarnej skrzynki): implementacja nie jest znana, testowana jest funkcjonalność i warstwa interfejsu systemu.
 			\item Testy strukturalne (białej skrzynki): implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
@@ -484,6 +493,7 @@ Ze względu na szczegóły implementacyjne:
 	\end{itemize}
 
 	\section{Scharakteryzować sieciowe systemy plików.}
+	\label{sec:siecsysplik}
 	Umożliwia dostęp do danych komputerom zdalnym. Dane znajdują się na jednym lub wielu serwerach. Charakteryzuje je m.in.:
 	\begin{itemize}
 		\item przeźroczystość dostępu: dostęp do plików jest taki sam jak dla plików lokalnych
@@ -550,7 +560,7 @@ Ze względu na szczegóły implementacyjne:
 
 	\section{Zasada działania systemów ekspertowych.}
 	Oparte o bazy wiedzy (zasady jeżeli-to); wspomagają podejmowanie decyzji. Mogą wspomagać interpretację danych oraz przeprowadzać prognozę i diagnozę na ich podstawie.
-Systemy ekspertowe rozwiązują złożone problemy na podstawie analizy baz wiedzy, a nie realizację prostego algorytmu.
+	Systemy ekspertowe rozwiązują złożone problemy na podstawie analizy baz wiedzy, a nie realizację prostego algorytmu.
 
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
@@ -560,40 +570,74 @@ Systemy ekspertowe rozwiązują złożone problemy na podstawie analizy baz wied
 	Odpowiedź
 
 	\section{Przedstaw tablice prawdy AND, OR, XOR, zilustruj oznaczenie bramki, wymień przykładowe zastosowanie.}
-	Odpowiedź
+	\begin{center}
+		\includegraphics[width=0.3\linewidth]{images/bramki}
+	\end{center}
+	
 
 	\section{Wątki a procesy - na podstawie wybranego systemu. Wymienić wady, zalety.}
 	Odpowiedź
 
 	\section{Budowa typowego układu FPGA.}
-	Odpowiedź
+	Cechą charakterystyczną architektury FPGA jest duża liczba regularnie rozmieszczonych (w formie matrycy) konfigurowalnych komórek logicznych opartych na tablicach LUT (Look up Table), określanych generatorami funkcji. Układ FPGA zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy połączeń. Bloki mogą być skomplikowanymi układami lub pojedynczymi bramkami logicznymi. Bloki zawierają również elementy pamięciowe (np. przerzutniki).
 
 	\section{Podstawowe tryby adresowania systemów mikroprocesorowych}
 	Odpowiedź
 
 	\section{Hierarchia pamięci w systemie komputerowym, stronicowanie oraz koncepcja pamięci wirtualnej.}
-	Odpowiedź
+	\begin{itemize}
+		\item Rejestry wewnętrzne procesora
+		\item Pamięć podręczna „cache”
+		\item Pamięć operacyjna
+		\item Pamięć wirtualna (dyski twarde)
+	\end{itemize}
+
+	\textbf{Stronicowanie} to metoda implementacji pamięci wirtualnej. Pamięć fizyczna dzielona jest na bloki (strony) o równych wielkościach. Adresy logiczne następnie mapowane są na odpowiednie strony oraz fizyczne adresy.
+	
+	\textbf{Pamięć wirtualna} pozwala na traktowanie pamięci komputera w jednolity sposób. Jeżeli program wymaga większej pamięci niż tej dostępnej, system operacyjny może wykorzystać pamięć dyskową, jednak postępowanie pozostaje bez zmian.
 
 	\section{Omówić strukturę i funkcjonowanie systemu transmisyjnego.}
 	Odpowiedź
 
 	\section{Różnice między pamięcią statyczną i dynamiczną.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{SRAM} - bez zegara, bez konieczności odświeżania, niskie zużycie mocy, każda komórka składa się z 6 tranzystorów -- pamięć szybka, wysoka cena, wykorzystywana w małych ilościach (cache procesora). 
+		\item \textbf{DRAM} -  wymagane cykliczne odświeżanie, każda komórka składa się z 1 tranzystora -- pamięć wolniejsza, niska cena (pamięć RAM).
+	\end{itemize}
 
 	\section{Problem synchronizacji przy transmisji danych i transmisja asynchroniczna}
 	Synchroniczna i asynchroniczna metoda transmisji danych określają w jaki sposób dwie przeciwległe stacje, rozwiązują kwestię sygnalizacji nadawania danych. Bez takiej sygnalizacji, stacja odbiorcza nie byłaby w stanie odgadnąć, czy dane które akurat dotarły, to początek, koniec, czy środek transmisji.
 
-W transmisji asynchronicznej problem sygnalizacji początku i końca nadawania został rozwiązany dzięki temu, że została zawarta w przesyłanych danych. Czyli, to sama struktura porcji danych określa jej początek i koniec.
-W transmisji synchronicznej sygnalizacja początku i końca została rozwiązana za pomocą odrębnego kanału sygnalizującego/serwisowego. Kanał ten dyktuje takt, według którego są przesyłane dane. Natomiast dane są zwykle przesyłane odrębnymi kanałami.
+	W transmisji asynchronicznej problem sygnalizacji początku i końca nadawania został rozwiązany dzięki temu, że została zawarta w przesyłanych danych. Czyli, to sama struktura porcji danych określa jej początek i koniec.
+	W transmisji synchronicznej sygnalizacja początku i końca została rozwiązana za pomocą odrębnego kanału sygnalizującego/serwisowego. Kanał ten dyktuje takt, według którego są przesyłane dane. Natomiast dane są zwykle przesyłane odrębnymi kanałami.
 
 	\section{Uprawnienia plików na przykładzie systemu operacyjnego Unix/Linux.}
-	Odpowiedź
+	Nadawaniepraw odbywa się poprzez komendę \textit{chmod}. Uprawnienia plików dotyczą trzech grup:
+	\begin{itemize}
+		\item właściciela pliku,
+		\item grupy, do której należy właściciel,
+		\item pozostałych, niespełniających poprzednich warunków.
+	\end{itemize}
+	
+	Uprawnienia dotyczą:
+	\begin{itemize}
+		\item odczytu,
+		\item zapisu,
+		\item wykonania plików
+	\end{itemize}
 
 	\section{Scharakteryzować sieciowe systemy plików.}
-	p. 41
+	p. \ref{sec:siecsysplik}
 
 	\section{Co to jest cykl życia oprogramowania i z jakich faz się składa?}
-	Odpowiedź
+	Ciąg działań projektowo-programowych, obejmujący zakres od powstania zapotrzebowania na oprogramowanie aż do jego wycofania z eksploatacji. Podstawowe czynności związane z tworzeniem oprogramowania:
+	\begin{itemize}
+		\item Określanie wymagań i specyfikacji
+		\item Projektowanie
+		\item Implementacja
+		\item Testowanie – walidacja (atestowanie) i weryfikacja
+		\item Konserwacja (pielęgnacja)
+	\end{itemize}
 
 	\section{Wymienić rodzaje diagramów w UML}
 	\begin{itemize}
@@ -608,14 +652,15 @@ W transmisji synchronicznej sygnalizacja początku i końca została rozwiązana
 	Odpowiedź
 
 	\section{Przeciążanie funkcji i operatorów w języku C++.}
+	\label{sec:przecfuncpp}
 	Przeciążanie funkcji polega na definicji funkcji o takiej samej nazwie co już istniejąca, o innych parametrach wejściowych lub wyjściowych (ale nie wyłącznie wyjściem). Przy wywołaniu funkcji, wybierana jest ta, o odpowiedniej liczbie i typach argumentów.
-Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich m.in. operator ':?' oraz '.'.
+	Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich m.in. operator ':?' oraz '.'.
 
 	\section{Scharakteryzować instrukcje iteracyjne w przykładowym języku programowania}
 	Odpowiedź
 
 	\section{Omówić na czym polega przeciążanie funkcji i operatorów w języku C++.}
-	p.64
+	p. \ref{sec:przecfuncpp}
 
 	\section{Scharakteryzować mechanizmy dostępu do składowych klasy tworzonych statycznie i dynamicznie}
 	Odpowiedź
@@ -790,7 +835,7 @@ Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie ope
 	\section{Omówić ogólną charakterystykę filtrów w cyfrowych.}
 	Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.
 
-Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
+	Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
 
 
 	\section{Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.}
