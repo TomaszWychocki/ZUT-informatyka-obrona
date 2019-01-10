@@ -10,6 +10,9 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{subcaption}
 
 
 \hypersetup{
@@ -564,16 +567,73 @@
 
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
+	\label{sec:zasdziallcd}
 	\textbf{LCD} - zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
 
 	\section{Wymienić i scharakteryzować rodzaje pamięci półprzewodnikowych}
 	Odpowiedź
 
 	\section{Przedstaw tablice prawdy AND, OR, XOR, zilustruj oznaczenie bramki, wymień przykładowe zastosowanie.}
-	\begin{center}
-		\includegraphics[width=0.3\linewidth]{images/bramki}
-	\end{center}
-	
+	\begin{figure}[h!]
+		\begin{subfigure}[b]{.33\linewidth}
+			\centering
+			\begin{circuitikz}  
+				\draw (0,0) node[and port] (and1) {};
+			\end{circuitikz}
+			\caption{AND}\label{fig2a}
+		\end{subfigure}\hfill
+		\begin{subfigure}[b]{.33\linewidth}
+			\centering
+			\begin{circuitikz}  
+				\draw (0,0) node[or port] (or1) {};
+			\end{circuitikz}
+			\caption{OR}\label{fig2b}
+		\end{subfigure}\hfill
+		\begin{subfigure}[b]{.33\linewidth}
+			\centering
+			\begin{circuitikz}  
+				\draw (0,0) node[xor port] (xor1) {};
+			\end{circuitikz}
+			\caption{XOR}\label{fig2c}
+		\end{subfigure}%
+	\end{figure}
+
+	\begin{table}[!h]
+		\centering
+		\begin{subtable}{0.33\textwidth}
+			\centering
+			\begin{tabular}{ cc|c } 
+				a & b & y \\ 
+				\hline
+				0 & 0 & 0 \\ 
+				0 & 1 & 0 \\ 
+				1 & 0 & 0 \\ 
+				1 & 1 & 1 \\ 
+			\end{tabular}
+		\end{subtable}%  
+		\begin{subtable}{0.33\textwidth}
+			\centering
+			\begin{tabular}{ cc|c } 
+				a & b & y \\ 
+				\hline
+				0 & 0 & 0 \\ 
+				0 & 1 & 1 \\ 
+				1 & 0 & 1 \\ 
+				1 & 1 & 1 \\ 
+			\end{tabular}
+		\end{subtable}%  
+		\begin{subtable}{0.33\textwidth}
+			\centering
+			\begin{tabular}{ cc|c } 
+				a & b & y \\ 
+				\hline
+				0 & 0 & 0 \\ 
+				0 & 1 & 1 \\ 
+				1 & 0 & 1 \\ 
+				1 & 1 & 0 \\ 
+			\end{tabular}
+		\end{subtable}%  
+	\end{table} 
 
 	\section{Wątki a procesy - na podstawie wybranego systemu. Wymienić wady, zalety.}
 	Odpowiedź
@@ -649,7 +709,10 @@
 	\end{itemize}
 
 	\section{Co oznaczają skróty ERD oraz DFD? Do czego się ich używa?}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{ERD} - Entity-Relationship Diagram - rodzaj graficznego przedstawienia związków pomiędzy encjami używany w projektowaniu systemów informacyjnych (np. beaz danych) do zademonstrowania konceptualnych modeli danych używanych w systemie.
+		\item \textbf{DFD} - Data Flow Diagram - Przedstawia on, w jaki sposób dane przepływają w systemie oraz opisuje procesy przetwarzające dane. Tworzenie diagramu DFD opiera się na następujących kategoriach pojęciowych: proces, przepływ danych, magazyn danych, terminator.
+	\end{itemize}
 
 	\section{Przeciążanie funkcji i operatorów w języku C++.}
 	\label{sec:przecfuncpp}
@@ -657,31 +720,48 @@
 	Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich m.in. operator ':?' oraz '.'.
 
 	\section{Scharakteryzować instrukcje iteracyjne w przykładowym języku programowania}
-	Odpowiedź
+	Język C:
+	\begin{itemize}
+		\item \textbf{for (wyrażenie początkowe; wyrażenie logiczne; wyrażenie wykonywane co iterację) \{ ciało pętli \}}\\
+		pętla wykonuje się do momentu, gdy wyrażenie logiczne zwróci fałsz (wartość 0).
+	
+		\item \textbf{while (wyrażenie logiczne) \{ ciało pętli \}}\\	
+		pętla wykonuje się dopóki wyrażenie logiczne zwraca prawdę (wartość różną od 0).
+		
+		\item \textbf{do \{ ciało pętli \} while (wyrażenie logiczne);}\\
+		pętla wykona się co najmniej raz, warunek sprawdzany jest pod koniec pętli. Jeżeli ciało pętli zawierają tylko jedno wyrażenie, nawiasy klamrowe mogą zostać opuszczone.
+	\end{itemize}
 
 	\section{Omówić na czym polega przeciążanie funkcji i operatorów w języku C++.}
 	p. \ref{sec:przecfuncpp}
 
 	\section{Scharakteryzować mechanizmy dostępu do składowych klasy tworzonych statycznie i dynamicznie}
-	Odpowiedź
+	Zakładając język C++, do składowych statycznych odwołanie następuje wg schematu nazwa-klasy::nazwa-składowej lub nazwa-obiektu.nazwa-składowej lub nazwa-wskaźnika->nazwa-składowej. Dla składowych klasy tworzonych dynamicznie tak jak wyżej z pominięciem przypadku z operatorem ::.
 
 	\section{Omów pojęcia agregacji i zawierania w diagramach UML.}
 	Odpowiedź
 
 	\section{Budowa i zasady działania wybranego urządzenia (drukarka laserowa, dysk twardy, pamięć USB, streamer, ect.)}
-	Odpowiedź
+	p. \ref{sec:zasdziallcd}
 
 	\section{Metody komunikacji człowiek-komputer.}
 	Odpowiedź
 
 	\section{Wymienić metody ekstrakcji wiedzy z danych.}
-	Odpowiedź
+	\begin{itemize}
+		\item streszczanie
+		\item poszukiwanie asocjacji
+		\item analiza jakościowa danych
+		\item analiza ilościowa danych
+		\item klasyfikacja
+		\item grupowanie
+	\end{itemize}
 
 	\section{Co to są drzewa decyzyjne i do czego służą?}
 	Jest to graficzna metoda wspomagania procesu decyzyjnego zawierającego decyzje i ich możliwe konsekwencje. Proces decyzyjny jest przedstawiony za pomocą grafu (drzewa), gdzie wierzchołki określają aktualny stan a krawędzie pewne decyzje.
 
 	\section{Rekurencja i jej implementacja w językach wysokiego poziomu}
-	Odpowiedź
+	Rekurencja jest to sytuacja, w której funkcja wywołuje samą siebie w celu rozwiązania pewnego problemu. Każda funkcja rekurencyjna musi posiadać warunek zatrzymania (warunek stopu) – stan danych, dla którego nie dojdzie do ponownego wywołania funkcji. W przeciwnym razie będzie się wywoływała do momentu przepełnienia stosu.
 
 	\section{Co to są algorytmy zachłanne – podać przykład takiego algorytmu.}
 	Algorytmy podejmujące w każdym kroku taką decyzję, która w danej chwili wydaje się najkorzystniejsza. Dokonują zawsze wyborów lokalnie optymalnych licząc, że doprowadzi to do znalezienia rozwiązania globalnie optymalnego. Przykład: ciągły problem plecakowy (znajduje rozwiązanie optymalne), dyskretny problem plecakowy (nie gwarantuje optymalnego rozwiązania).
