@@ -767,29 +767,52 @@
 	Algorytmy podejmujące w każdym kroku taką decyzję, która w danej chwili wydaje się najkorzystniejsza. Dokonują zawsze wyborów lokalnie optymalnych licząc, że doprowadzi to do znalezienia rozwiązania globalnie optymalnego. Przykład: ciągły problem plecakowy (znajduje rozwiązanie optymalne), dyskretny problem plecakowy (nie gwarantuje optymalnego rozwiązania).
 
 	\section{Na czym polega haszowanie i gdzie ma ono zastosowanie?}
-	Odpowiedź
+	Haszowanie jest metodą szybkiego wyszukiwania danych w tablicach. Polega to na tym, iż mamy tzw. funkcję haszującą, która dla danego zestawu danych tworzy liczbę zwaną haszem. Liczbę tą używamy jako indeks w tablicy haszowanej do dostępu do danych. Podstawowym problemem haszowania jest kolizyjność. Polega ona na tym, iż funkcja haszująca tworzy te same wartości dla wielu różnych danych. Takie ograniczenie jest konieczne, ponieważ w przypadku przeciwnym hasz przyjmowałby wartości z bardzo dużego zakresu, a to z kolei przekładałoby się na tablicę o bardzo dużym rozmiarze, zwykle większym, niż może pomieścić pamięć komputera.
 
 	\section{Co to są problemy obliczeniowo trudne – podać przykład takiego problemu.}
 	Problemami klasy NP nazywamy problemy decyzyjne w których sprawdzenie poprawności określonego rozwiązania wymaga złożoności obliczeniowej wielomianowej. Z powyższego stwierdzenia wynika więc, że znalezienie rozwiązania dla problemów NP wymaga złożoności co najmniej wielomianowej. Np. problem komiwojażera, plecakowy.
 
 	\section{Maszynowa reprezentacja danych}
-	Odpowiedź
+	Ciąg bitów, często o rozmiarze $2^n$ bitów. Może reprezentować liczby całkowite bez znaku (bezpośrednia reprezentacja, kod BCD lub kod Graya), liczby całkowite ze znakiem (np. kod uzupełnień do 2 U2), liczby stałoprzecinkowe (np. bezpośrednia reprezentacja, z separatorem ustalonym na danej pozycji), liczby zmiennoprzecinkowe (np. standard IEEE 754 -- bit znaku, bity cechy i mantysy), znaki (7-bitowa reprezentacja ASCII lub inne kodowanie, np. UTF-8 mapowane na znaki Unicode).
 
 	\section{Assembler, interpreter, kompilator – porównać i wyjaśnić pojęcia.}
 	\begin{itemize}	
 		\item \textbf{assembler}: program zamieniający kod w języku assembly na kod maszynowy,
 		\item \textbf{interpreter}: program interpretujący kod pewnego języka programowania w trakcie jego wykonywania,
 		\item \textbf{kompilator}: program zamieniający kod pewnego języka programowania na postać pośrednią (np. bytecode) lub kod maszynowy przed jego wykonaniem.
-\end{itemize}	
+	\end{itemize}	
 
 	\section{Zarządzanie pamięcią w Unix/Linux.}
-	Odpowiedź
+	Podsystem zarządzania pamięcią zapewnia:
+	\begin{itemize}
+		\item 	dużą przestrzeń adresową: wykorzystując pamięć wirtualną, system operacyjny sprawia wrażenie posiadania znacznie większej ilości pamięci,
+		\item ochronę pamięci (segmentacja): każdy proces ma do dyspozycji własną wirtualną przestrzeń adresową. Przestrzenie te są odseparowane i jedna aplikacja nie może wpłynąć na inną. Pamięć może także być oznaczona jako chroniona przed zapisem.
+		\item mapowanie pamięci: zawartość pliku może być bezpośrednio włączona w przestrzeń adresową procesu
+		\item alokację pamięci fizycznej: każdy może posiadać dostateczny kawałek pamięci fizycznej
+		\item dzieloną pamięć wirtualną: możliwość dzielenia pamięci pomiędzy procesami.
+		\item stronicowanie: podział pamieci na bloki ustalonego rozmiaru oraz odwoływanie się do nich nie bezpośrednio, lecz poprzez tablice mapujące
+		\item 
+	\end{itemize}
 
 	\section{Zasady korzystanie z kluczy i pakietów kryptograficznych PGP (Pretty Good Privacy)}
 	Odpowiedź
 
 	\section{Metody reprezentacji wiedzy i wnioskowanie.}
-	Odpowiedź
+	\begin{itemize}
+		\item Rachunek zdań i predykatów -  systemem wyrażeń będących formułami prawdziwymi, w którym nie stosuje się konkretnych zdań, lecz posługuje się tzw. zmiennymi zdaniowymi reprezentującymi zdania. Cała teoria opiera się na klasycznej logice dwuwartościowej.
+		
+		\item Zapis stwierdzeń - dotyczą takich zagadnień jak zdarzenia, zjawiska, objawy, czynności. (OBIEKT, ATRYBUT, WARTOŚĆ).
+		
+		\item Systemy regułowe - ogólna postać: IF przesłanka THEN konkluzja1 ELSE konkluzja2.
+		
+		\item Sieci semantyczne - sieć stwiedzeń, gdzie węzły odpowiadają kompletnym opisom pojęć lub obiektów. Relacje między obiektami przedstawione są w postaci rysunku.
+		
+		\item Oparte na ramach - grupowanie informacji dotyczących wybranego fragmentu wiedzy w postaci jednej ramy, co uprascza późniejszą weryfikację.
+		
+		\item Używające modeli obliczeniowych - rozwięzywanie prostych problemów z dziedzin elementarnych. Składają się ze zmiennych i zbioru relacji wiążących te zmienne.
+	\end{itemize}
+
+	\textbf{Wnioskowanie} to proces myślowy, w którym na podstawie zdań już uznanych za prawdziwe (przesłanek) dochodzi się się do nowego dotąd nie uznanego zdania (wniosku), bądź wzmacnia się pewność innego zdania w jakimś stopniu już uznanego.
 
 	\section{Zasady przetwarzanie transakcji w DBMS.}
 	ACID:
@@ -801,7 +824,7 @@
 	\end{itemize}
 
 	\section{Narzędzia i środowiska wytwarzania oprogramowania.}
-	Odpowiedź
+	Eclipse, Visual Studio, Qt Creator, Git, SVN, GDB, Gerrit, Jenkins \dots
 
 	\section{Wzorce projektowe i programowe.}
 	Określają pewne schematy postępowania przy projektowaniu systemów bazowanych na obiektach. Podział na wzorce
@@ -822,7 +845,7 @@
 	\end{itemize}
 
 	\section{Metody podnoszenia niezawodności systemów wbudowanych.}
-	Odpowiedź
+	Testowanie, ograniczenie złożoności zadań, rozdzielanie zadań na mniejsze systemy, redundancja (jedno urządzenie przejmuje zadania drugiego w przypadku jego awarii). Stosoanie urządzen typu \textit{watchdog} - wykrywający błędne działanie systemu, próbujący je naprawić bez udziału człowieka i zapobiec poważniejszej awarii.
 
 	\section{Ryzyko i odpowiedzialność związana z systemami informatycznymi}
 	Odpowiedź
