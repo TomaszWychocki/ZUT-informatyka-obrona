@@ -812,7 +812,8 @@
 		\item Używające modeli obliczeniowych - rozwięzywanie prostych problemów z dziedzin elementarnych. Składają się ze zmiennych i zbioru relacji wiążących te zmienne.
 	\end{itemize}
 
-	\textbf{Wnioskowanie} to proces myślowy, w którym na podstawie zdań już uznanych za prawdziwe (przesłanek) dochodzi się się do nowego dotąd nie uznanego zdania (wniosku), bądź wzmacnia się pewność innego zdania w jakimś stopniu już uznanego.
+	\textbf{Wnioskowanie} to proces myślowy, w którym na podstawie zdań już uznanych za prawdziwe (przesłanek) dochodzi się się do nowego dotąd nie uznanego zdania (wniosku), bądź wzmacnia się pewność innego zdania w jakimś stopniu już uznanego.
+
 
 	\section{Zasady przetwarzanie transakcji w DBMS.}
 	ACID:
@@ -851,31 +852,88 @@
 	Odpowiedź
 
 	\section{Klasyfikacja systemów oprogramowania użytkowego.}
-	Odpowiedź
+	\begin{itemize}
+		\item akcesoria (słowniki, kompresory),
+		\item bezpieczeństwo (antywirusy),
+		\item biuro (edytory),
+		\item grafika (edytory),
+		\item internet (przeglądarki),
+		\item multimedia (odtwarzacze).
+	\end{itemize}
 
 	\section{Systemy wspomagające wytwarzanie oprogramowania – klasyfikacja, przykłady, funkcje.}
 	Odpowiedź
 
 	\section{Wymienić i scharakteryzować podstawowe techniki w grafice komputerowej.}
-	Odpowiedź
+	\begin{itemize}
+		\item antyaliasing - wygładza krawędzie aby nie były poszarpane,
+		\item oświetlenie - sposób obliczania rozchodzenia się światła w danym otoczeniu prowadzący do wyznaczenia kolorów powierzchni, 
+		\item cieniowanie - sposób obliczania barwy pikseli należących do zrasteryzowanego wielokąta,
+		\item raytracing - technika generowania fotorealistycznych obrazów scen trójwymiarowych opierająca się na analizowaniu tylko tych promieni światła, które trafiają bezpośrednio do obserwatora, 
+		\item teksturowanie - przedstawienie szczegółów powierzchni obiektów przestrzennych za pomocą obrazów bitmapowych (tekstur) lub funkcji matematycznych (tekstur proceduralnych),
+		\item filtracja tekstur - stosowanie mipmap, czyli tych samych tekstur, ale generowanych w niższej rozdzielczości,
+		\item postprocessing - efekty nakładane na obraz już po wyrenderowaniu klatki.
+	\end{itemize}
 
 	\section{Wymienić i scharakteryzować metody przetwarzania obrazów.}
 	Odpowiedź
 
 	\section{Zasady i metody tworzenia indeksów w bazach danych?}
-	Odpowiedź
+	Warto indeksować:
+	\begin{itemize}
+		\item klucze podstawowe i obce (często są indeksowane automatycznie)
+		\item pola, po których często następuje wyszukiwanie
+		\item pola, do których dostęp następuje w ustalonej, uporządkowanej kolejności
+	\end{itemize}
+	Nie należy indeksować:
+	\begin{itemize}
+		\item pól, do których rzadko odwołują się zapytania
+		\item pól, które zawierają tylko kilka wartości unikatowych
+		\item pól zawierających dane typu image, bit czy obiekt OLE 
+	\end{itemize}
+
+	Podział (metody tworzenia?) indeksów:
+	\begin{itemize}
+		\item Indeks gęsty (dense) – zawiera wpis dla każdej wartości klucza wyszukiwania, czyli dla każdego rekordu.
+		\item Indeks rzadki (sparse) – posiada wpis jedynie dla niektórych wartości wyszukiwania (np. bloków).
+		\item Indeks podstawowy (primary index) – założony na atrybucie porządkującym unikalnym
+		\item Indeks zgrupowany (clustering index) – założony na atrybucie porządkującym nieunikalnym
+		\item Indeks wtórny (secondary index) – założony na atrybucie nieporządkującym
+		\item Indeksy jednopoziomowe – jeden plik indeksu dla jednego pliku danych
+		\item Indeksy wielopoziomowe – indeks do indeksu
+	\end{itemize}
 
 	\section{Rodzaje i sposób działania przerzutników.}
 	Odpowiedź
 
 	\section{Różnica pomiędzy automatem Mealy'ego a automatem Moore'a.}
-	Odpowiedź
+	Wyjścia w automacie Mealy'ego zależą od stanu wewnętrznego i sygnałów wejściowych, w automacie Moore'a wyjścia zależą wyłącznie od stanu wewnętrznego. Automaty te są równoważne - jeden można zamienić bezstratnie w drugi.
 
 	\section{Różnica pomiędzy układami typu PLA a układami PAL.}
 	Odpowiedź
 
 	\section{Wymienić i omówić znanych światowych wynalazców w dziedzinie informatyki i telekomunikacji}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{Michael Faraday} - wprowadził do fizyki pojęcia takie jak: linie siły pola magnetycznego i elektrycznego. Odkrył, że płaszczyzna polaryzacji światła ulega zmianie po przejściu przez pole magnetyczne (wskazuje to na związek m-dzy światłem a elektromagnetyzmem).
+	
+		\item \textbf{James Clerk Maxwell} - na podstawie rozważań teoretycznych wyciągnął wniosek, że światło jest falą elektromagnetyczną.
+		
+		\item \textbf{Thomas Alva Edison} - wynalazca, stworzył m.in. żarówkę, fonograf, akumulator. Udoskonalił telefon Alexandra Bella.
+		
+		\item \textbf{Heinrich Rudolf Hertz} - na podstawie teorii Maxwella przeprowadził eksperyment potwierdzający jego teoretyczne rozważania. Pionier radiokomunikacji.
+		
+		\item \textbf{Samuel Morse} - malarz i wynalazca, skonstruował telegraf elektromagnetyczny i opracował dla niego specjalny alfabet złożony z kombinacji kresek i kropek.
+		
+		\item \textbf{Alexandr Stiepanowicz Popow} - na podstawie badań H. Hertza stworzył radiotelegraf.
+		
+		\item \textbf{Nikola Tesla} - stworzył podstawy teoretyczne konstrukcji radia, był m.in twórcą pierwszych urządzeń bezprzewodowych.
+		
+		\item \textbf{Alexander Graham Bell} - wynalazca, opracował telefon. Podstawowe dzieło to praca dotycząca sposobu zapisywania i odtwarzania mowy.
+		
+		\item \textbf{Jean Baudot} - skonstruował aparat telegraficzny bodot. Od jego nazwiska pochodzi jednostka szybkości modulacji bod.
+		
+		\item \textbf{Agner Krarup Erlang} - opracował wzór (znany dziś jako wzór Erlanga) do obliczenia natężenia ruchu sieci telefonicznej. Pierwsza osoba, która zajęła się problemem sieci telefonicznych.
+	\end{itemize}
 
 	\section{Omówić sposoby prezentacji informacji oraz pojęcia informacji analogowej i cyfrowej, sygnału analogowego oraz cyfrowego.}
 	\textbf{Informacja}:
@@ -895,7 +953,11 @@
 
 
 	\section{Zdefiniować pojęcie widma sygnału oraz omówić numeryczne metody jego obliczania.}
-	Odpowiedź
+	Widmo sygnału – przedstawienie sygnału w dziedzinie częstotliwości lub pulsacji. Do numerycznych metod obliczania należą:
+	\begin{itemize}
+		\item \textbf{Dyskretna transformata Fouriera} - ustala wzajemny związek między czasowej i częstotliwościowej reprezentacje sygnału przy jego  rozkładzie na szereg składowych harmonicznych. W rzeczywistych warunkach nie jest możliwa realizacja nieskończonego sumowania, gdyż nigdy nie osiągnęlibyśmy wyniku końcowego.Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest ograniczona.
+		\item \textbf{Szybka transformacja Fouriera} – $O(N\log _{2}N)$ - algorytm wyznaczania dyskretnej transformaty Fouriera oraz transformaty do niej odwrotnej. Oblicza widmo na podstawie spróbkowanego sygnału. Wartości zwracane to liczby zespolone, (po normalizacji) moduł przedstawia amplitudę danej częstotliwości, argument określa fazę danej częstotliwości.
+	\end{itemize}
 
 	\section{Omówić skalę decybelewą.}
 	Odpowiedź
