@@ -660,6 +660,7 @@
 	Odpowiedź
 
 	\section{Różnice między pamięcią statyczną i dynamiczną.}
+	\label{sec:statdyn}
 	\begin{itemize}
 		\item \textbf{SRAM} - bez zegara, bez konieczności odświeżania, niskie zużycie mocy, każda komórka składa się z 6 tranzystorów -- pamięć szybka, wysoka cena, wykorzystywana w małych ilościach (cache procesora). 
 		\item \textbf{DRAM} -  wymagane cykliczne odświeżanie, każda komórka składa się z 1 tranzystora -- pamięć wolniejsza, niska cena (pamięć RAM).
@@ -955,39 +956,65 @@
 	\section{Zdefiniować pojęcie widma sygnału oraz omówić numeryczne metody jego obliczania.}
 	Widmo sygnału – przedstawienie sygnału w dziedzinie częstotliwości lub pulsacji. Do numerycznych metod obliczania należą:
 	\begin{itemize}
-		\item \textbf{Dyskretna transformata Fouriera} - ustala wzajemny związek między czasowej i częstotliwościowej reprezentacje sygnału przy jego  rozkładzie na szereg składowych harmonicznych. W rzeczywistych warunkach nie jest możliwa realizacja nieskończonego sumowania, gdyż nigdy nie osiągnęlibyśmy wyniku końcowego.Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest ograniczona.
+		\item \textbf{Dyskretna transformata Fouriera} - ustala wzajemny związek między czasowej i częstotliwościowej reprezentacje sygnału przy jego  rozkładzie na szereg składowych harmonicznych. W rzeczywistych warunkach nie jest możliwa realizacja nieskończonego sumowania, gdyż nigdy nie osiągnęlibyśmy wyniku końcowego.
+Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest ograniczona.
 		\item \textbf{Szybka transformacja Fouriera} – $O(N\log _{2}N)$ - algorytm wyznaczania dyskretnej transformaty Fouriera oraz transformaty do niej odwrotnej. Oblicza widmo na podstawie spróbkowanego sygnału. Wartości zwracane to liczby zespolone, (po normalizacji) moduł przedstawia amplitudę danej częstotliwości, argument określa fazę danej częstotliwości.
 	\end{itemize}
 
-	\section{Omówić skalę decybelewą.}
-	Odpowiedź
+	\section{Omówić skalę decybelową.}
+	Skala decybelowa opisuje relację między 2 dowolnymi wielkościami, np. natężeniem mierzonego dźwięku i poziomem odniesienia.
+	
+	$$L_{dB} = 10 \cdot log_{10}\left( \frac{P_1}{P_2} \right) $$
 
-	\section{Co to jest szerokości pasma oraz przepływności kanału transmisyjnego.}
-	Odpowiedź
+	\section{Co to jest szerokość pasma oraz przepływności kanału transmisyjnego.}
+	\textbf{Szerokość pasma} - różnica między górną a dolną częstotliwością pasma, które kanał jest zdolny przenieść z nierównomiernością nie gorszą niż 3dB.\\
+	\textbf{Przepływność kanału} - zdolność kanału do przenoszenia informacji (ilość przesłanych bitów na sekundę). Do obliczania przepływności stosuje się wzór $P = 2B \cdot log_{2}M$, gdzie B to szerokość pasma, M to liczba dyskretnych poziomów (jezeli M = 2, każdy sygnał zawiera bit). Maksymalna teoretyczna przepływność kanału jest ograniczona prawem Shannona $P = B \cdot log_{2}\left( 1+ \frac{S}{N} \right)$, gdzie $\frac{S}{N}$ to stosunek mocy sygnału do szumu.
 
 	\section{Omówić zagadnienie modulacji, ze szczególnym uwzględnieniem modulacji cyfrowych}
 	Odpowiedź
 
 	\section{Wymienić znane media transmisyjne.}
-	Odpowiedź
+	\begin{itemize}
+		\item przewodowe:
+		\begin{itemize}
+			\item kable symetryczne - składają się z dwóch przewodów, w których płyną prądy o takim samym natężeniu, ale w przeciwnych kierunkach,
+			\item kable niesymetryczne - prąd płynie przez przewód sygnałowy. Drugi przewód jest uziemieniem,
+			\item kable koncentryczne - składa się z dwóch koncentrycznych przewodów co zapewnia większą odporność na zakłócenia – tym samym wyższą jakość transmisji,
+			\item kable światłowodowe - przezroczysta zamknięta struktura z włókna szklanego wykorzystywana do propagacji światła jako nośnika informacji
+		\end{itemize}
+		\item bezprzewodowe:
+		\begin{itemize}
+			\item fale z zakresu podczerwieni,
+			\item fale radiowe,
+		\end{itemize}
+	\end{itemize}
 
 	\section{Omówić problem uwierzytelniania na przykładach: uwierzytelniania SYK, uwierzytelniania SYH, uwierzytelniania SYA oraz pojęcia hasła, karty magnetycznej, karta elektronicznej, karty identyfikacyjnej SIM oraz omówić techniki biometryczne.}
 	Odpowiedź
 
 	\section{Formaty danych liczbowych.}
-	Odpowiedź
+	\begin{itemize}
+		\item Liczby całkowite bez znaku/ze znakiem (kod U2), 
+		\item liczby stałoprzecinkowe - zakłada określenie ile bitów tworzy część całkowitą liczby, a ile część ułamkową. 
+		\item liczby zmiennoprzecinkowe - zapisujemy w pamięci przy pomocy trzech składowych: znaku, wykładnika, mantysy
+	\end{itemize}
 
 	\section{Omówić zasady wykonania operacji arytmetycznych w kodzie U2.}
 	Odpowiedź
 
 	\section{Omówić zasady wykonania operacji na liczbach zmiennopozycyjnych.}
-	Odpowiedź
+	Według standardu IEEE, dodawanie, odejmowanie, mnożenie i dzielenie wykonywane jest dokładnie a następnie jest zaokrąglane do najbliższej lub parzystej cyfry - w praktyce jest to nieefektywne; ten sam efekt można uzyskać wykorzystując dodatkowe bity kontrolne (guard, round, sticky). Po zaokrągleniu wynik jest normalizowany. Przy dodawaniu i odejmowaniu, liczby sprowadzane są do tego samego wykładnika. Przy mnożeniu/dzieleniu wykładnik jest dodawany/odejmowany. Operacja jest dalej przeprowadzana na wartościach mantysy. Operacje dodawania i mnożenia są przemienne ale nie koniecznie łączne ani rozdzielne,\\tj. a + b = b + a ale a + (b + c) != (a + b) + c, i a * (b + c) != a * b + a * c (równość tylko w pewnych przypadkach).
 
 	\section{Różnice między pamięcią statyczną i dynamiczną.}
-	Odpowiedź
+	p. \ref{sec:statdyn}
 
 	\section{Wymienić standardowe postacie wyrażeń boolowskich.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{DNF} (disjunctive normal form) -- suma iloczynów logicznych,
+		\item \textbf{FDNF} (full DNF) -- suma iloczynów logicznych, gdzie w każdej sumie znajduje się każda zmienna dokładnie raz,
+		\item \textbf{CNF} (conjunctive normal form) -- iloczyn sum logicznych,
+		\item \textbf{FCNF} -- analogicznie do FDNF. Jedyne operacje dozwolone w tych postaciach to AND, OR i NOT.
+	\end{itemize}
 
 	\section{Omówić kombinacyjne i sekwencyjne układy logiczne.}
 	Kombinacyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy wyłącznie od stanu wejść.
@@ -995,7 +1022,12 @@
 	Sekwencyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy od stanu wejść układu oraz od poprzedniego stanu, zwanego stanem wewnętrznym, pamiętanego w zespole rejestrów (pamięci).
 
 	\section{Scharakteryzować poszczególne etapy procesu konwersji analogowo-cyfrowej.}
-	Odpowiedź
+	\begin{enumerate}
+		\item Filtrowanie (szumów itp.),
+		\item Próbkowanie (pobieranie wartości co pewien okres czasu),
+		\item Kwantyzacja (zaokrąglanie wartości do skończonych reprezentacji),
+		\item Kodowanie (zamiana sygnału w kod zrozumiały dla urządzenia).
+	\end{enumerate}
 
 	\section{Omówić ogólną charakterystykę filtrów w cyfrowych.}
 	Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.
