@@ -52,7 +52,7 @@
 	\section{Porównać pojęcia program, algorytm, procedura, funkcja, agent programowy.}
 	\begin{itemize}
 		\item \textbf{Program} - zaimplementowany algorytm w sposób zrozumiały dla komputera/maszyny go wykonującej.
-		\item\textbf{ Procedura} - program w trakcie wykonania. Wykonuje operacje, ale nie zwraca wartości.
+		\item\textbf{Procedura} - program w trakcie wykonania. Wykonuje operacje, ale nie zwraca wartości.
 		\item \textbf{Funkcja} - część składowa programu zwracająca wartość
 		\item \textbf{Agent programowy (zwany także systemem agentowym, agentem)} - system oparty na wiedzy. Definiuje się go jako autonomiczny program umieszczony w określonym otoczeniu (i będący jego częścią), który potrafi analizować to otoczenie i oddziaływać na nie w czasie, dążyć do wyznaczonych celów i symulować wpływ zmian tego otoczenia.
 	\end{itemize}
@@ -114,7 +114,6 @@
 			\item Testy strukturalne (białej skrzynki): implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
 		\end{itemize}
 
-
 	\section{Wymienić metody ochrony danych w systemach baz danych.}
 	\begin{multicols}{2}
 		\begin{itemize}
@@ -151,11 +150,10 @@
 
 	\section{Co to jest system komputerowy, informacyjny, informatyczny.}
 	\begin{itemize}	
-		\item System komputerowy: sprzęt i oprogramowanie do przetwarzania danych. 
-		\item System informacyjny: system, który przetwarza dane w informacje, gromadzi je i przesyła. 
-		\item System informatyczny: część systemu informacyjnego, wykorzystująca system komputerowy.
+		\item \textbf{System komputerowy} - sprzęt i oprogramowanie do przetwarzania danych. 
+		\item \textbf{System informacyjny} - system, który przetwarza dane w informacje, gromadzi je i przesyła. 
+		\item \textbf{System informatyczny} - część systemu informacyjnego, wykorzystująca system komputerowy.
 	\end{itemize}
-
 
 	\section{Powody tworzenia systemów rozproszonych.}
 	\begin{itemize}
@@ -211,27 +209,26 @@
 	\section{Podać klasyfikację języków programowania.}
 	Ze względu na generację:	
 	\begin{itemize}
-		\item 1GL: poziom maszynowy,
-		\item 2GL: poziom niski (assemblerowy),
-		\item 3GL: języki wysokiego poziomu,
-		\item 4GL: języki zadaniowe (SQL, Excel), 
-		\item 5GL: wizualny interface.
+		\item 1GL: poziom maszynowy; języki maszynowe, czyli języki procesorów. Instrukcje są w nich zapisywane w postaci liczb binarnych. 
+		\item 2GL: poziom niski (assemblerowy); języki symboliczne, asemblery. Języki niskiego poziomu, pod względem składni tożsame z maszynowymi.
+		\item 3GL: języki wysokiego poziomu; proceduralne (imperatywne). W językach tych jedna instrukcja jest tłumaczona na kilka instrukcji procesora, najczęściej od 5 do 10. Pierwszym językiem tego typu był ALGOL. Do tej grupy należą między innymi: FORTH, BASIC - języki niestrukturalne, Pascal, C, FORTRAN - języki strukturalne, C++, Java - języki zorientowane obiektowo. 
+		\item 4GL: języki zadaniowe (SQL, Excel);  języki bardzo wysokiego poziomu, nieproceduralne (deklaratywne). Korzystając z tych języków programista skupia się na problemie, a nie na sposobie jego rozwiązania (języki zorientowane problemowo, ang. task oriented languages). Syntaktyka wielu języków czwartej generacji przypomina składnię języka naturalnego. Są one często używane do dostępu do baz danych. Przykładem języka z tej grupy jest: SQL. 
+		\item 5GL: wizualny interface;  języki sztucznej inteligencji, języki systemów ekspertowych. Języki najbardziej zbliżone do języka naturalnego. Przykładem języka piątej generacji jest PROLOG.
 	\end{itemize}
 
 	Ze względu na paradygmat programowania:	
 	\begin{itemize}
-		\item deklaratywne
+		\item deklaratywne - programista opisuje warunki, jakie musi spełniać końcowe rozwiązanie (co chcemy osiągnąć), a nie szczegółową sekwencję kroków, które do niego prowadzą (jak to zrobić). Przykładami są takie języki jak Prolog, SQL i VDM (SQL jest właściwie proceduralno-deklaratywny, hybrydowy). Przykład (na bazie SQL): \textit{select nazwisko from pracownicy where salary < 3000}
 		\begin{itemize}
-			\item logiczne
-			\item funkcyjne
+			\item logiczne - metoda programowania, będąca odmianą programowania deklaratywnego, w której program podawany jest jako pewien zestaw zależności, a obliczenia są dowodem pewnego twierdzenia w oparciu o te zależności.
+			\item funkcyjne - filozofia i metodyka programowania będąca odmianą programowania deklaratywnego, w której funkcje należą do wartości podstawowych, a nacisk kładzie się na wartościowanie (często rekurencyjnych) funkcji, a nie na wykonywanie poleceń.
 		\end{itemize}
-		\item imperatywne
+		\item imperatywne - opisuje proces wykonywania jako sekwencję instrukcji zmieniających stan programu. Programy imperatywne składają się z ciągu komend do wykonania przez komputer. Przykłady: FORTRAN i ALGOL (niektórzy też wliczają Pascal, C, Ada).
 		\begin{itemize}
-			\item imperatywne
-			\item proceduralne
-			\item strukturalne
-			\item obiektowe
-		\end{itemize}
+			\item proceduralne - paradygmat programowania zalecający dzielenie kodu na procedury, czyli fragmenty wykonujące ściśle określone operacje. Procedury nie powinny korzystać ze zmiennych globalnych (w miarę możliwości), lecz pobierać i przekazywać wszystkie dane (czy też wskaźniki do nich) jako parametry wywołania. Dane i procedury nie są ze sobą bezpośrednio związane
+			\item obiektowe - programy definiuje się za pomocą obiektów – elementów łączących stan (pola) i zachowanie (metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.
+		\end{itemize}			
+		\item strukturalne - paradygmat programowania opierający się na podziale kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych w postaci instrukcji wyboru i pętli. 
 	\end{itemize}
 	
 	Sposób wykonywania:
@@ -455,7 +452,6 @@
 		\end{itemize}
 	\end{multicols}
 	
-
 	\section{Zadania warstwy transportowej.}
 	\begin{itemize}
 		\item nawiązanie i obsługa połączeń (sesji) pomiędzy hostami,
@@ -464,7 +460,7 @@
 		\item identyfikowanie poszczególnych aplikacji,
 		\item kontrola przepływu danych,
 		\item retransmisja w przypadku utraty danych.
-		\item wykorzystywane protokoły TCP (Transmission Control Protocol) i UDP (user Datagram protocol)
+		\item wykorzystywane protokoły TCP (Transmission Control Protocol) i UDP (User Datagram protocol)
 	\end{itemize}
 
 	\section{Charakterystyka warstwy fizycznej.}
@@ -511,7 +507,15 @@
 	\end{itemize}
 
 	\section{Wymień i opisz warstwy modelu OSI.}
-	Odpowiedź
+	\begin{enumerate}
+	\item \textbf{Warstwa fizyczna.} Jest odpowiedzialna za transmisję strumienia bitów między węzłami sieci. Definiuje protokoły opisujące interfejsy fizyczne. Do funkcji tej warstwy należą: sprzęgniecie z medium transmisji danych, dekodowanie sygnałów, określanie zakresu amplitudy prądu lub napięcia i określanie parametrów mechanicznych łączówek (kształtu, wymiarów i liczby styków) oraz inne kwestie związane z transmisją bitów. 
+	\item \textbf{Warstwa łącza danych.} Zapewnia niezawodne łącze pomiędzy sąsiednimi węzłami. Nadzoruje przepływ informacji przez łącze i w związku z podatnością warstwy fizycznej na zakłócenia i wynikające stąd błędy oferuje własne mechanizmy kontroli błędów w przesyłanych ramkach lub pakietach.
+	\item \textbf{Warstwa sieciowa.} Dostarcza środków do ustanawiania, utrzymania i rozłączania połączeń sieciowych miedzy systemami otwartymi, w których rezydują komunikujące się aplikacje, i odpowiada, za obsługę błędów komunikacji. Ponadto warstwa sieciowa jest odpowiedzialna za funkcje routingu, który wyznacza optymalną pod względem liczby połączeń drogę przesyłania pakietu przez sieć.
+	\item \textbf{Warstwa transportowa.} Zapewnia przezroczysty transfer danych między stacjami sesyjnymi, odciąża je od zajmowania się problemami niezawodnego i efektywnego pod względem kosztów transferu danych. Warstwa ta zapewnia usługi połączeniowe. Wszystkie protokoły w warstwie transportowej są typu end-to-end. Oznacza to, że działają one tylko między końcowymi systemami otwartymi.
+	\item \textbf{Warstwa sesji.} Umożliwia aplikacjom organizację dialogu oraz wymianę danych między nimi. Do najważniejszych usług warstwy sesji należą: sterowanie wymianą danych, ustalanie punktów synchronizacji danych (dla celów retransmisji w wypadku przemijających przekłamań na łączach) oraz umożliwienie odzyskania danych (utraconych w wyniku przerwy w łączności) przez ponowne ich przesłanie.
+	\item \textbf{Warstwa prezentacji.} Zapewnia możliwość reprezentowania informacji, którą się posługują stacje aplikacyjne podczas komunikacji Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składnię.
+	\item \textbf{Warstwa aplikacji.} Dostarcza procesom aplikacyjnym metod dostępu do środowiska OSI, pełni rolę okna między współdziałającymi procesami aplikacyjnymi.
+	\end{enumerate}
 
 	\section{Podstawowe cechy standardów sieci bezprzewodowych WiFi.}
 	\begin{itemize}
@@ -523,6 +527,7 @@
 	\end{itemize}
 
 	\section{Przedstawić budowę światłowodu.}
+	Od najbardziej wewnętrznej warstwy:	
 	\begin{enumerate}
 		\item rdzeń (włókno szklane), 
 		\item płaszcz (materiał o niższym współczynniku załamania światła), 
@@ -537,16 +542,26 @@
 	
 	\begin{itemize}
 		\item przekaz cyfrowy
-		\item gwarantowana przepływnosc, bez wzgledu na odległosc
-		\item szybkie zestawianie połaczen
-		\item można likwidowac połaczenia zaraz po realizacji sesji
+		\item gwarantowana przepływność, bez względu na odległość
+		\item szybkie zestawianie połączeń
+		\item można likwidować połączenia zaraz po realizacji sesji
 		\item szeroki zakres usług wideotelefonii
 		\item transmisja z komutacją obwodów oraz pakietów
 		\item korzystanie ze standardowych (istniejących i komutowanych) linii telefonicznych dla dostępu podstawowego
 	\end{itemize}
 
 	\section{Rodzaje i zastosowania macierzy dyskowych.}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{RAID 0.} Charakteryzuje się przyśpieszeniem pracy systemu. W RAID 0 łączymy ze sobą dwa (lub więcej) dyski fizyczne w jeden logiczny napęd. Przykładowo łącząc ze sobą dwa dyski po 500 GB, otrzymamy jeden dysk wielkości 1000 GB, a dane będą zapisywane jednocześnie na obu dyskach, co znacznie przyśpieszy prędkość i odczyt danych. Wadą RAID 0 jest to, że dane nie są zabezpieczone w żaden sposób. Jeśli jeden dysk ulegnie uszkodzeniu, traci się wszystkie dane.
+		\item \textbf{RAID 1.} Składa się również z dwóch dysków twardych połączonych ze sobą. Ale w przeciwieństwie do RAID 0, dane na dyskach są zapisywane równolegle na każdym dysku. Czyli towrzy się tak jakby lustro (mirror) danych. Jest to podstawowe zabezpieczenie przed utratą danych - jeśli jeden z dysków ulegnie awarii, wtedy system nadal może działać, gdyż takie same dane są na drugim działającym dysku. Utworzona macierz ma pojemność równą wielkości najmniejszego dysku.
+		\item \textbf{RAID 0+1.} Jest to kombinacja dwóch pierwszych rodzajów macierzy. Dwie macierze RAID 0 połączone są ze sobą przez RAID 1, dzięki czemu łączymy zalety obydwu sposobów. Macierz ta jest dwukrotnie szybsza i bezpieczna. Uszkodzenie jednego z dysków nie powoduje utraty danych, a cała macierz automatycznie przekształca się w RAID 0.
+		\item \textbf{RAID 1+0.} Na pierwszy rzut oka ta macierz jest podobna do RAID 0+1 i rzeczywiście jest w tym sporo prawdy. Charakteryzuje sie również bezpieczeństwem danych i zwiększoną szybkością, ale trochę inną filozofią działania. Nawet gdy dwa dyski z różnych mirrorów (RAID 1) ulegną awarii, macierz nadal będzie działać.
+		\item \textbf{RAID 2.} Poziom 2 jest rzadko stosowanym poziomem ochrony, w którym podziału danych dokonuje się już na poziomie bitów zapamiętanych z wykorzystaniem kodu Hamminga. Następnie zakodowane dane rozmieszczane są w sposób równomierny na wszystkich dyskach macierzy. W obecnych czasach poziom ten stracił na znaczeniu, ponieważ obecnie produkowane dyski wyposażone są w logikę ECC - Error Correction Code, co bezpośrednio prowadzi do stosowania ochrony z poziomu RAID 3. Inne funkcje poziomu 2 są identyczne jak w przypadku poziomu 3.
+		\item \textbf{RAID 3.} Dane przechowywane są na n-1 dyskach, a jeden z dysków przechowuje tzw. sumy kontrolne obliczane przed dedykowany procesor. Dlatego do spięcia dysków w ten sposób wykorzystywana jest odrębna karta sprzętowa RAID, aby cała operacja nie obciążała procesora głównego komputera. Zasada działania tej konfiguracji przypomina RAID 0 z tą różnicą, że awarii może ulec jeden z dysków, którego dane zostaną odczytane z sum kontrolnych, kosztem szybkości.
+		\item \textbf{RAID 4.} RAID 4 działa na podobnej zasadzie co RAID 3. Z tą różnicą, że dane są zapisywane na segmenty liczące 16, 32, 64, lub 128 kB. Ta metoda przydatna jest przy przechowywaniu plików o dużych rozmiarach.
+		\item \textbf{RAID 5.} Bardzo popularna metoda łączenia dysków w macierze stosowana w środowiskach serwerowych. Do RAID 5 potrzebne są co najmniej 3 dyski twarde, na których zapisywane są dane wraz sumami kontrolnymi. Np. łącząc 3 dyski po 500GB otrzymamy pojemność 1000GB. Gdy uszkodzi się jeden z dysków, system nadal będzie działał.
+		\item \textbf{RAID 6.} RAID 6 to rozbudowana wersja RAID 5, gdyż pojemność tej macierzy wynosi n-2 razy pojemność najmniejszego z dysków. Na dysku zapisywane są dwie sumy kontrolne, więc awarii mogą ulec aż dwa HDD bez uszczerbku w działaniu systemu.
+	\end{itemize}
 
 	\section{Zasada działania systemów klastrowych.}
 	Klaster to grupa połączonych jednostek komputerowych, które współpracują ze sobą w celu udostępnienia zintegrowanego środowiska pracy. W istniejących rozwiązaniach klastrowych można wyodrębnić trzy podstawowe klasy wynikające z celów budowy takich rozwiązań:
@@ -564,7 +579,6 @@
 	\section{Zasada działania systemów ekspertowych.}
 	Oparte o bazy wiedzy (zasady jeżeli-to); wspomagają podejmowanie decyzji. Mogą wspomagać interpretację danych oraz przeprowadzać prognozę i diagnozę na ich podstawie.
 	Systemy ekspertowe rozwiązują złożone problemy na podstawie analizy baz wiedzy, a nie realizację prostego algorytmu.
-
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
 	\label{sec:zasdziallcd}
@@ -641,8 +655,15 @@
 	\section{Budowa typowego układu FPGA.}
 	Cechą charakterystyczną architektury FPGA jest duża liczba regularnie rozmieszczonych (w formie matrycy) konfigurowalnych komórek logicznych opartych na tablicach LUT (Look up Table), określanych generatorami funkcji. Układ FPGA zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy połączeń. Bloki mogą być skomplikowanymi układami lub pojedynczymi bramkami logicznymi. Bloki zawierają również elementy pamięciowe (np. przerzutniki).
 
-	\section{Podstawowe tryby adresowania systemów mikroprocesorowych}
-	Odpowiedź
+	\section{Podstawowe tryby adresowania systemów mikroprocesorowych.}
+	\begin{itemize}
+		\item \textbf{natychmiastowy (immediate)} - pole adresowe zawiera bezpośrednio operand czyli daną dla rozkazu. Ten tryb adresowania stosujemy, gdy np. chcemy bezpośrednio z rozkazu (bez odwoływania się do pamięci) załadować do rejestru prostą daną - bajt lub parę bajtów.
+		\item \textbf{bezpośredni (direct)} - zawartość pola adresowego stanowi już finalny adres argumentu rozkazu w pamięci operacyjnej i nie podlega przekształceniu. Stosowany, gdy nie zależy nam na tym, aby program był przesuwalny w pamięci operacyjnej, lecz jest przeznaczony do wykonania przy zapisie w ściśle określone miejsce w pamięci.
+		\item \textbf{pośredni (indirect)} - rozkaz zawiera adres komórki pamięci operacyjnej, w której zawarty jest finalny adres operandu rozkazu. W tym przypadku komórka pamięci wskazana przez adres rozkazu pośredniczy w określeniu finalnego adresu. Stosujemy, aby finalny adres operandu rozkazu mógł być dynamicznie wstawiony do komórki pośredniczącej w adresowaniu w czasie wykonywania programu.
+		\item \textbf{rejestrowy (register)} - stosuje się, gdy dana dla rozkazu jest przechowywana w rejestrze. Część adresowa rejestru zawiera wtedy jedno lub więcej pól, w których znajdują się identyfikatory rejestrów. Adresowanie rejestrowe jest często stosowane w tym samym rozkazie razem z innymi trybami adresowania dotyczącymi pamięci operacyjnej. Wówczas rozkaz dotyczy zarówno pamięci operacyjnej jak i rejestrów procesora.
+		\item \textbf{rejestrowy pośredni (register indirect)} - jako miejsce pobrania finalnego adresu operandu rozkazu stosuje się rejestr procesora, którego identyfikator umieszczony jest w polu adresowym rozkazu. Przy pomocy tego trybu adresowania można dynamicznie określić finalny adres operandu poprzez odpowiednie załadowanie zawartości rejestru, w zależności od przebiegu obliczeń w programie.
+		\item \textbf{z przesunieciem (indeksowanie) (displacement (indexed))} - wykorzystuje się specjalne rejestry procesora, które zawierają przesunięcie, które trzeba dodać do adresu istniejącego w rozkazie, aby wyliczyć adres finalny operandu. Używając tego trybu we wszystkich rozkazach programu, można osiągnąć możliwość wykonania programu przy załadowaniu w dowolne miejsce pamięci. W tym celu należy napisać program wstawiając do rozkazów programu adresy, które odpowiadają umieszczeniu pierwszej instrukcji programu pod adresem zerowym w pamięci. Wiedząc, pod jakim adresem jest umieszczony pierwszy rozkaz programu, umieszczamy ten adres w rejestrze indeksowym. Dzięki operacji temu, wszystkie adresy operandów zostaną przesunięte o tę sama wartość.
+	\end{itemize}
 
 	\section{Hierarchia pamięci w systemie komputerowym, stronicowanie oraz koncepcja pamięci wirtualnej.}
 	\begin{itemize}
@@ -673,7 +694,7 @@
 	W transmisji synchronicznej sygnalizacja początku i końca została rozwiązana za pomocą odrębnego kanału sygnalizującego/serwisowego. Kanał ten dyktuje takt, według którego są przesyłane dane. Natomiast dane są zwykle przesyłane odrębnymi kanałami.
 
 	\section{Uprawnienia plików na przykładzie systemu operacyjnego Unix/Linux.}
-	Nadawaniepraw odbywa się poprzez komendę \textit{chmod}. Uprawnienia plików dotyczą trzech grup:
+	Nadawanie praw odbywa się poprzez komendę \textit{chmod}. Uprawnienia plików dotyczą trzech grup:
 	\begin{itemize}
 		\item właściciela pliku,
 		\item grupy, do której należy właściciel,
