@@ -1057,13 +1057,20 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 
 
 	\section{Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.}
-	Odpowiedź
+	\textbf{Akwizycja danych} – w informatyce i analizie sygnałów pierwszy etap przetwarzania danych polegający na ich przygotowaniu do dalszej obróbki czy interpretacji; obejmuje on m.in. przechwytywanie, próbkowanie, czy kwantowanie danych w dowolnej postaci, często różnorakich sygnałów, np. w postaci falowej.\\
+	Dane multimedialne maja zazwyczaj duży rozmiar. W aplikacji multimedialnej dane te sa kompresowane, transmitowane i prezentowane użytkownikowi. Akwizycja i kodowanie (w tym kompresja) sa potrzebne do efektywnej transmisji strumieniowej.
 
 	\section{Wymienić i omówić podstawowe parametry stosowane przy definiowaniu jakości usług.}
 	Odpowiedź
 
 	\section{Wymienić i omówić podstawowe metody szeregowania pakietów.}
-	Odpowiedź
+	\begin{itemize}
+		\item kolejki FIFO: w przypadku przeciążenia, nowe pakiety mogą zostać odrzucone,
+		\item kolejki priorytetowe: jest kilka (4?) kolejek o różnych priorytetach, kolejki opróżniane są w kolejności od najwyższego priorytetu,
+		\item kolejki cykliczne i ważone WFQ: zapewnia sprawiedliwy przydział łącza wszystkim rodzajom ruchu, stosowany w przypadkach, gdy w sieci znajdują się źródła o dużym zróżnicowaniu natężeń,
+		\item kolejkowanie custom queuing: gwarantuje, że żaden typ ruchu nie przekroczy skonfigurowanego procenta przydzielonej mu przepustowości,
+		\item round-robin: każdy użytkownik obsługiwany jest cyklicznie.
+	\end{itemize}
 
 	\section{Różnica między standardami JPEG i JPEG2000, rodzaje transformacji obrazu wykorzystywane w kodowaniu obrazów.}
 	Odpowiedź
