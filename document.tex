@@ -75,7 +75,13 @@
 	\end{itemize}
 
 	\section{Wymienić i omówić metody wdrażania systemów informatycznych.}
-	Odpowiedź
+	Odpowiedź niepewna (źr. \href{https://pl.wikipedia.org/wiki/Wdro\%C5\%BCenie_systemu}{Wikipedia}).
+
+	\begin{enumerate}
+		\item Całościowa: stary system jest porzucany i wdrażany jest nowy (wysokie ryzyko, niskie koszty).
+		\item Cząstkowa: stopniowe wdrażanie modułów systemu (średnie ryzyko, średnie koszty).
+		\item Równoległa: wdrażanie nowego systemu, przy jednoczesnym podtrzymaniu starego (niskie ryzyko, wysokie koszty).	
+	\end{enumerate}
 
 	\section{Scharakteryzować podstawowe modele baz danych.}
 	\begin{itemize}
@@ -95,7 +101,33 @@
 	\end{itemize}
 
 	\section{Scharakteryzować standardowy język zapytań do baz danych.}
-	Odpowiedź
+	\textbf{SQL} (\textit{Structured Query Language}) – strukturalny język zapytań używany do tworzenia, modyfikowania baz danych oraz do umieszczania i pobierania danych z baz danych. Język SQL jest językiem deklaratywnym. Decyzję o sposobie przechowywania i pobrania danych pozostawia się systemowi zarządzania bazą danych (DBMS).\\
+
+	Użycie SQL, zgodnie z jego nazwą, polega na zadawaniu zapytań do bazy danych. Zapytania można zaliczyć do jednego z czterech głównych podzbiorów:
+	\begin{itemize}
+		\item SQL DML (ang. Data Manipulation Language – „język manipulacji danymi”)
+			\begin{itemize}
+				\item insert - umieszczenie danych
+				\item update - zmiana danych
+				\item delete - usunięcie danych
+			\end{itemize}
+		\item SQL DDL (ang. Data Definition Language – „język definicji danych”)
+			\begin{itemize}
+				\item create - utworzenie struktury
+				\item drop - usunięcie struktury
+				\item alter - zmiana struktury
+			\end{itemize}
+		\item SQL DCL (ang. Data Control Language – „język kontroli nad danymi”)
+			\begin{itemize}
+				\item grant - nadawanie uprawnień użytkownikowi 
+				\item revoke - odbieranie wskazanych uprawnień konkretnemu użytkownikowi
+				\item deny - zabranianie wykonywania operacji
+			\end{itemize}
+		\item SQL DQL (ang. Data Query Language – „język definiowania zapytań”)
+			\begin{itemize}
+				\item select
+			\end{itemize}
+	\end{itemize}
 
 	\section{Na czym polega polimorfizm metod w programowaniu obiektowym i po co się go stosuje?}
 	Polega na przedefiniowaniu metod klasy nadrzędnej w klasie pochodnej. Polimorfizm pozwala traktować różnorodne dane w ten sam sposób. Przykładowo mamy wiele klas (dziedziczących z jednej klasy abstrakcyjnej) dla różnych rodzajów figur geometrycznych a dla każdej z tych figur możemy policzyć jej pole. Polimorfizm pozwala nam w każdej z tych klas zaimplementować metodę wirtualną o takiej samej nazwie np. ObliczPole() i w zależności od typu obiektu w momencie wywołania metody zostanie wykonana ta prawidłowa. Pozwala to na odseparowanie implementacji od interfejsu, co z kolei ułatwia rozszerzanie funkcjonalności.
@@ -103,15 +135,15 @@
 	\section{Wymienić i scharakteryzować metody testowania oprogramowania.}
 	Ze względu na poziom szczegółowości:
 		\begin{itemize}
-			\item Testy jednostkowe: testowaniu podlegają najmniejsze elementy programu (np. pojedyncze funkcje).
-			\item Testy integracyjne: testowaniu podlega komunikacja między komponentami systemu, w celu sprawdzenia poprawności interakcji między nimi.
-			\item Testy systemowe: testowaniu podlega cały zintegrowany system w celu sprawdzenia, czy spełnia postawione mu wymagania.
-			\item Testy akceptacyjne: sprawdzana jest gotowość systemu do wypuszczenia na rynek.
+			\item \textbf{Testy jednostkowe} - testowaniu podlegają najmniejsze elementy programu (np. pojedyncze funkcje).
+			\item \textbf{Testy integracyjne} - testowaniu podlega komunikacja między komponentami systemu, w celu sprawdzenia poprawności interakcji między nimi.
+			\item \textbf{Testy systemowe} - testowaniu podlega cały zintegrowany system w celu sprawdzenia, czy spełnia postawione mu wymagania.
+			\item \textbf{Testy akceptacyjne} - sprawdzana jest gotowość systemu do wypuszczenia na rynek.
 		\end{itemize}
 	Ze względu na szczegóły implementacyjne:
 		\begin{itemize}
-			\item Testy funkcjonalne (czarnej skrzynki): implementacja nie jest znana, testowana jest funkcjonalność i warstwa interfejsu systemu.
-			\item Testy strukturalne (białej skrzynki): implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
+			\item \textbf{Testy funkcjonalne (czarnej skrzynki)} - implementacja nie jest znana, testowana jest funkcjonalność i warstwa interfejsu systemu.
+			\item \textbf{Testy strukturalne (białej skrzynki)} - implementacja jest znana, testowane są ścieżki przepływu sterowania (np. warunki).
 		\end{itemize}
 
 	\section{Wymienić metody ochrony danych w systemach baz danych.}
@@ -209,26 +241,26 @@
 	\section{Podać klasyfikację języków programowania.}
 	Ze względu na generację:	
 	\begin{itemize}
-		\item 1GL: poziom maszynowy; języki maszynowe, czyli języki procesorów. Instrukcje są w nich zapisywane w postaci liczb binarnych. 
-		\item 2GL: poziom niski (assemblerowy); języki symboliczne, asemblery. Języki niskiego poziomu, pod względem składni tożsame z maszynowymi.
-		\item 3GL: języki wysokiego poziomu; proceduralne (imperatywne). W językach tych jedna instrukcja jest tłumaczona na kilka instrukcji procesora, najczęściej od 5 do 10. Pierwszym językiem tego typu był ALGOL. Do tej grupy należą między innymi: FORTH, BASIC - języki niestrukturalne, Pascal, C, FORTRAN - języki strukturalne, C++, Java - języki zorientowane obiektowo. 
-		\item 4GL: języki zadaniowe (SQL, Excel);  języki bardzo wysokiego poziomu, nieproceduralne (deklaratywne). Korzystając z tych języków programista skupia się na problemie, a nie na sposobie jego rozwiązania (języki zorientowane problemowo, ang. task oriented languages). Syntaktyka wielu języków czwartej generacji przypomina składnię języka naturalnego. Są one często używane do dostępu do baz danych. Przykładem języka z tej grupy jest: SQL. 
-		\item 5GL: wizualny interface;  języki sztucznej inteligencji, języki systemów ekspertowych. Języki najbardziej zbliżone do języka naturalnego. Przykładem języka piątej generacji jest PROLOG.
+		\item \textbf{1GL}: poziom maszynowy; języki maszynowe, czyli języki procesorów. Instrukcje są w nich zapisywane w postaci liczb binarnych. 
+		\item \textbf{2GL}: poziom niski (assemblerowy); języki symboliczne, asemblery. Języki niskiego poziomu, pod względem składni tożsame z maszynowymi.
+		\item \textbf{3GL}: języki wysokiego poziomu; proceduralne (imperatywne). W językach tych jedna instrukcja jest tłumaczona na kilka instrukcji procesora, najczęściej od 5 do 10. Pierwszym językiem tego typu był ALGOL. Do tej grupy należą między innymi: FORTH, BASIC - języki niestrukturalne, Pascal, C, FORTRAN - języki strukturalne, C++, Java - języki zorientowane obiektowo. 
+		\item \textbf{4GL}: języki zadaniowe (SQL, Excel);  języki bardzo wysokiego poziomu, nieproceduralne (deklaratywne). Korzystając z tych języków programista skupia się na problemie, a nie na sposobie jego rozwiązania (języki zorientowane problemowo, ang. task oriented languages). Syntaktyka wielu języków czwartej generacji przypomina składnię języka naturalnego. Są one często używane do dostępu do baz danych. Przykładem języka z tej grupy jest: SQL. 
+		\item \textbf{5GL}: wizualny interface;  języki sztucznej inteligencji, języki systemów ekspertowych. Języki najbardziej zbliżone do języka naturalnego. Przykładem języka piątej generacji jest PROLOG.
 	\end{itemize}
 
 	Ze względu na paradygmat programowania:	
 	\begin{itemize}
-		\item deklaratywne - programista opisuje warunki, jakie musi spełniać końcowe rozwiązanie (co chcemy osiągnąć), a nie szczegółową sekwencję kroków, które do niego prowadzą (jak to zrobić). Przykładami są takie języki jak Prolog, SQL i VDM (SQL jest właściwie proceduralno-deklaratywny, hybrydowy). Przykład (na bazie SQL): \textit{select nazwisko from pracownicy where salary < 3000}
+		\item \textbf{deklaratywne} - programista opisuje warunki, jakie musi spełniać końcowe rozwiązanie (co chcemy osiągnąć), a nie szczegółową sekwencję kroków, które do niego prowadzą (jak to zrobić). Przykładami są takie języki jak Prolog, SQL i VDM (SQL jest właściwie proceduralno-deklaratywny, hybrydowy). Przykład (na bazie SQL): \textit{select nazwisko from pracownicy where salary < 3000}
 		\begin{itemize}
-			\item logiczne - metoda programowania, będąca odmianą programowania deklaratywnego, w której program podawany jest jako pewien zestaw zależności, a obliczenia są dowodem pewnego twierdzenia w oparciu o te zależności.
-			\item funkcyjne - filozofia i metodyka programowania będąca odmianą programowania deklaratywnego, w której funkcje należą do wartości podstawowych, a nacisk kładzie się na wartościowanie (często rekurencyjnych) funkcji, a nie na wykonywanie poleceń.
+			\item \textbf{logiczne} - metoda programowania, będąca odmianą programowania deklaratywnego, w której program podawany jest jako pewien zestaw zależności, a obliczenia są dowodem pewnego twierdzenia w oparciu o te zależności.
+			\item \textbf{funkcyjne} - filozofia i metodyka programowania będąca odmianą programowania deklaratywnego, w której funkcje należą do wartości podstawowych, a nacisk kładzie się na wartościowanie (często rekurencyjnych) funkcji, a nie na wykonywanie poleceń.
 		\end{itemize}
-		\item imperatywne - opisuje proces wykonywania jako sekwencję instrukcji zmieniających stan programu. Programy imperatywne składają się z ciągu komend do wykonania przez komputer. Przykłady: FORTRAN i ALGOL (niektórzy też wliczają Pascal, C, Ada).
+		\item \textbf{imperatywne} - opisuje proces wykonywania jako sekwencję instrukcji zmieniających stan programu. Programy imperatywne składają się z ciągu komend do wykonania przez komputer. Przykłady: FORTRAN i ALGOL (niektórzy też wliczają Pascal, C, Ada).
 		\begin{itemize}
-			\item proceduralne - paradygmat programowania zalecający dzielenie kodu na procedury, czyli fragmenty wykonujące ściśle określone operacje. Procedury nie powinny korzystać ze zmiennych globalnych (w miarę możliwości), lecz pobierać i przekazywać wszystkie dane (czy też wskaźniki do nich) jako parametry wywołania. Dane i procedury nie są ze sobą bezpośrednio związane
-			\item obiektowe - programy definiuje się za pomocą obiektów – elementów łączących stan (pola) i zachowanie (metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.
+			\item \textbf{proceduralne} - paradygmat programowania zalecający dzielenie kodu na procedury, czyli fragmenty wykonujące ściśle określone operacje. Procedury nie powinny korzystać ze zmiennych globalnych (w miarę możliwości), lecz pobierać i przekazywać wszystkie dane (czy też wskaźniki do nich) jako parametry wywołania. Dane i procedury nie są ze sobą bezpośrednio związane
+			\item \textbf{obiektowe} - programy definiuje się za pomocą obiektów – elementów łączących stan (pola) i zachowanie (metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.
 		\end{itemize}			
-		\item strukturalne - paradygmat programowania opierający się na podziale kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych w postaci instrukcji wyboru i pętli. 
+		\item \textbf{strukturalne} - paradygmat programowania opierający się na podziale kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych w postaci instrukcji wyboru i pętli. 
 	\end{itemize}
 	
 	Sposób wykonywania:
@@ -417,8 +449,8 @@
 
 	\section{Grafika rastrowa a grafika wektorowa.}
 	\begin{itemize}
-		\item rastrowa: obraz przedstawiony jest jako macierz pikseli,
-		\item wektorowa: obraz zdefiniowany jest jako zbiór opisanych matematycznie figur geometrycznych.
+		\item \textbf{rastrowa} - obraz przedstawiony jest jako macierz pikseli
+		\item \textbf{wektorowa} - obraz zdefiniowany jest jako zbiór opisanych matematycznie figur geometrycznych
 	\end{itemize}
 
 	\section{Porównanie modeli odniesienia: ISO/OSI oraz TCP/IP.}
@@ -567,11 +599,11 @@
 	Klaster to grupa połączonych jednostek komputerowych, które współpracują ze sobą w celu udostępnienia zintegrowanego środowiska pracy. W istniejących rozwiązaniach klastrowych można wyodrębnić trzy podstawowe klasy wynikające z celów budowy takich rozwiązań:
 	
 	\begin{itemize}
-		\item klastry wydajnościowe: pracujące jako zespół komputerów, z których każdy wykonuje własne zadania obliczeniowe. Celem ich budowy jest powiększenie mocy obliczeniowej, w sytuacji kiedy różne komputery w klastrze pracują nad odrębnymi podzadaniami pojedynczego dużego zadania obliczeniowego.
+		\item \textbf{klastry wydajnościowe}: pracujące jako zespół komputerów, z których każdy wykonuje własne zadania obliczeniowe. Celem ich budowy jest powiększenie mocy obliczeniowej, w sytuacji kiedy różne komputery w klastrze pracują nad odrębnymi podzadaniami pojedynczego dużego zadania obliczeniowego.
 	
-		\item klastry niezawodnościowe: pracujące jako zespół komputerów wykonujące każdy swoje zadanie. W razie awarii jednego z węzłów, następuje automatyczne przejęcie jego funkcji przez inne węzły.
+		\item \textbf{klastry niezawodnościowe}: pracujące jako zespół komputerów wykonujące każdy swoje zadanie. W razie awarii jednego z węzłów, następuje automatyczne przejęcie jego funkcji przez inne węzły.
 		
-		\item klastry równoważenia obciążenia: pracujące jako zespół komputerów, z których każdy wykonuje własne zadanie z puli zadań skierowanych do całego klastra. W takiej sytuacji pojedynczy komputer może wykonywać niezależne zadanie lub współpracować z kilkoma innymi węzłami klastra wykonując podzadanie większego zadania obliczeniowego.
+		\item \textbf{klastry równoważenia obciążenia}: pracujące jako zespół komputerów, z których każdy wykonuje własne zadanie z puli zadań skierowanych do całego klastra. W takiej sytuacji pojedynczy komputer może wykonywać niezależne zadanie lub współpracować z kilkoma innymi węzłami klastra wykonując podzadanie większego zadania obliczeniowego.
 	\end{itemize}
 	
 	W praktyce rozwiązania klastrowe mają charakter mieszany i wykonują dla pewnych aplikacji funkcje wydajnościowe, przy jednoczesnym odgrywaniu roli niezawodnościowej lub równoważenia obciążenia.
@@ -767,7 +799,15 @@
 	p. \ref{sec:zasdziallcd}
 
 	\section{Metody komunikacji człowiek-komputer.}
-	Odpowiedź
+	\begin{itemize}
+		\item język poleceń
+		\item formularze
+		\item menu
+		\item manipulacja bezpośrednia
+		\item komunikacja w języku naturalnym
+		\item interfejsy multimedialne
+		\item sprzęgi rzeczywistości wirtualnej
+	\end{itemize}
 
 	\section{Wymienić metody ekstrakcji wiedzy z danych.}
 	\begin{itemize}
@@ -812,12 +852,11 @@
 		\item mapowanie pamięci: zawartość pliku może być bezpośrednio włączona w przestrzeń adresową procesu
 		\item alokację pamięci fizycznej: każdy może posiadać dostateczny kawałek pamięci fizycznej
 		\item dzieloną pamięć wirtualną: możliwość dzielenia pamięci pomiędzy procesami.
-		\item stronicowanie: podział pamieci na bloki ustalonego rozmiaru oraz odwoływanie się do nich nie bezpośrednio, lecz poprzez tablice mapujące
-		\item 
+		\item stronicowanie: podział pamięci na bloki ustalonego rozmiaru oraz odwoływanie się do nich nie bezpośrednio, lecz poprzez tablice mapujące
 	\end{itemize}
 
 	\section{Zasady korzystanie z kluczy i pakietów kryptograficznych PGP (Pretty Good Privacy)}
-	Odpowiedź
+	Program PGP może generować klucze asymetryczne -- generowana jest para kluczy. Jeden z nich stosowany jest do szyfrowania i autoryzacji (publiczny), drugi do podpisywania i deszyfrowania wiadomości (prywatny). PGP jest stosowany do podpisywania, szyfrowania i deszyfrowania wiadomości oraz całych partycji dyskowych. Poszczególne podmioty podpisują sobie nawzajem klucze, przez co progresywnie formuje się sieć indywidualnych kluczy publicznych połączonych ze sobą łączami stworzonymi przez podpisy (Web of Trust).
 
 	\section{Metody reprezentacji wiedzy i wnioskowanie.}
 	\begin{itemize}
@@ -868,10 +907,10 @@
 	\end{itemize}
 
 	\section{Metody podnoszenia niezawodności systemów wbudowanych.}
-	Testowanie, ograniczenie złożoności zadań, rozdzielanie zadań na mniejsze systemy, redundancja (jedno urządzenie przejmuje zadania drugiego w przypadku jego awarii). Stosoanie urządzen typu \textit{watchdog} - wykrywający błędne działanie systemu, próbujący je naprawić bez udziału człowieka i zapobiec poważniejszej awarii.
+	Testowanie, ograniczenie złożoności zadań, rozdzielanie zadań na mniejsze systemy, redundancja (jedno urządzenie przejmuje zadania drugiego w przypadku jego awarii). Stosowanie urządzeń typu \textit{watchdog} - wykrywający błędne działanie systemu, próbujący je naprawić bez udziału człowieka i zapobiec poważniejszej awarii.
 
 	\section{Ryzyko i odpowiedzialność związana z systemami informatycznymi}
-	Odpowiedź
+	Ryzyko to miara zagrożenia wynikającego z prawdopodobieństwa wystąpienia pewnych niekorzystnych zdarzeń. Za ocenę ryzyka i identyfikację zagrożeń dla projektu odpowiedzialny jest menedżer projektu.
 
 	\section{Klasyfikacja systemów oprogramowania użytkowego.}
 	\begin{itemize}
@@ -884,7 +923,34 @@
 	\end{itemize}
 
 	\section{Systemy wspomagające wytwarzanie oprogramowania – klasyfikacja, przykłady, funkcje.}
-	Odpowiedź
+	Systemy CASE (\textit{Computer Aided Software Engineering}). Klasyfikacja:
+	\begin{itemize}
+		\item narzędzia wspierające poszczególne zadania w cyklu życia oprogramowania, w tym
+		\begin{itemize}
+			\item Upper CASE: modelowanie logiki biznesowej, analiza,
+			\item Lower CASE: testowanie, integracja komponentów,
+		\end{itemize}
+		\item narzędzia wspierające dwa lub więcej zadań w cyklu życia oprogramowania,
+		\item środowiska wspierające cały cykl życia oprogramowania.
+	\end{itemize}
+	
+	Przykłady:
+	\begin{itemize}
+		\item Enterprise Architect
+		\item Visual Paradigm
+		\item Oracle Designer
+		\item Rose
+	\end{itemize}
+
+	Funkcje:
+	\begin{itemize}
+		\item modelowanie logiki biznesowej (graficzne narzędzia),
+		\item projektowanie i konstrukcja,
+		\item weryfikacja i walidacja,
+		\item metryka i miara (np. postępu),
+		\item zarządzanie projektem.
+	\end{itemize}
+
 
 	\section{Wymienić i scharakteryzować podstawowe techniki w grafice komputerowej.}
 	\begin{itemize}
@@ -1011,7 +1077,29 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	\end{itemize}
 
 	\section{Omówić problem uwierzytelniania na przykładach: uwierzytelniania SYK, uwierzytelniania SYH, uwierzytelniania SYA oraz pojęcia hasła, karty magnetycznej, karta elektronicznej, karty identyfikacyjnej SIM oraz omówić techniki biometryczne.}
-	Odpowiedź
+	Metody uwierzytelniania:
+	\begin{itemize}
+		\item \textbf{SYK} (\textit{something you know}) - na podstawie tego, co użytkownik zna (np. hasło),
+		\item \textbf{SYH} (\textit{something you have}) - na podstawie tego, co użytkownik ma (np. token, karta),
+		\item \textbf{SYA} (\textit{something you are}) - na podstawie tego, kim użytkownik jest (np. odcisk palca).
+	\end{itemize}
+
+\begin{description}
+	\item[Hasło] - ciąg znaków.
+	\item[Karta magnetyczna] - karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
+	\item[Karta elektroniczna] - bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
+	\item[Karta identyfikacyjna SIM] - karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
+\end{description}
+
+Techniki biometryczne:
+	\begin{itemize}
+		\item rozpoznawanie odcisku palca
+		\item skanowanie siatkówki oka
+		\item rozpoznawanie cech twarzy
+		\item rozpoznawanie geometrii ręki/palca
+		\item rozpoznawanie głosu
+		\item rozpoznawanie podpisu
+	\end{itemize}
 
 	\section{Formaty danych liczbowych.}
 	\begin{itemize}
@@ -1021,7 +1109,11 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	\end{itemize}
 
 	\section{Omówić zasady wykonania operacji arytmetycznych w kodzie U2.}
-	Odpowiedź
+	\begin{itemize}
+		\item Dodawanie i odejmowanie -- bezpośrednio, bitowe
+		\item Mnożenie -- liczby są rozszerzane do do dwukrotnie większej reprezentacji (nie zawsze konieczne), następnie przeprowadzone jest bitowe mnożenie
+		\item Dzielenie -- liczby są zamieniane na reprezentację bezznakową, po podzieleniu następuje przywrócenie znaku
+\end{itemize}		
 
 	\section{Omówić zasady wykonania operacji na liczbach zmiennopozycyjnych.}
 	Według standardu IEEE, dodawanie, odejmowanie, mnożenie i dzielenie wykonywane jest dokładnie a następnie jest zaokrąglane do najbliższej lub parzystej cyfry - w praktyce jest to nieefektywne; ten sam efekt można uzyskać wykorzystując dodatkowe bity kontrolne (guard, round, sticky). Po zaokrągleniu wynik jest normalizowany. Przy dodawaniu i odejmowaniu, liczby sprowadzane są do tego samego wykładnika. Przy mnożeniu/dzieleniu wykładnik jest dodawany/odejmowany. Operacja jest dalej przeprowadzana na wartościach mantysy. Operacje dodawania i mnożenia są przemienne ale nie koniecznie łączne ani rozdzielne,\\tj. a + b = b + a ale a + (b + c) != (a + b) + c, i a * (b + c) != a * b + a * c (równość tylko w pewnych przypadkach).
@@ -1055,13 +1147,18 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 
 	Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
 
-
 	\section{Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.}
 	\textbf{Akwizycja danych} – w informatyce i analizie sygnałów pierwszy etap przetwarzania danych polegający na ich przygotowaniu do dalszej obróbki czy interpretacji; obejmuje on m.in. przechwytywanie, próbkowanie, czy kwantowanie danych w dowolnej postaci, często różnorakich sygnałów, np. w postaci falowej.\\
 	Dane multimedialne maja zazwyczaj duży rozmiar. W aplikacji multimedialnej dane te sa kompresowane, transmitowane i prezentowane użytkownikowi. Akwizycja i kodowanie (w tym kompresja) sa potrzebne do efektywnej transmisji strumieniowej.
 
 	\section{Wymienić i omówić podstawowe parametry stosowane przy definiowaniu jakości usług.}
-	Odpowiedź
+	\begin{itemize}
+		\item utrata pakietów
+		\item fluktuacja opóźnień
+		\item opóźnienie
+		\item zmiana kolejności pakietów
+		\item BER (Bit Error Rate)
+	\end{itemize}
 
 	\section{Wymienić i omówić podstawowe metody szeregowania pakietów.}
 	\begin{itemize}
@@ -1079,6 +1176,17 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	Kod Graya charakteryzuje się tym, że dwa kolejne słowa kodowe różnią się jednym bitem. Stosowane są w korekcji błędów. Np. w modulacji cyfrowej QAM, gdzie dane są transmitowane w 4-bitowych symbolach, diagram konstelacji sygnału jest tak stworzony, aby kombinacje bitów w przylegających symbolach na konstelacji różniły się tylko jednym bitem. Po połączeniu tego z , która może korygować jednobitowe błędy, odbiornik może korygować błędy , które sprawiają, że punkty konstelacji odchylają się w stronę przyległych punktów. Dzięki temu system transmisji jest mniej podatny na zakłócenia.
 
 	\section{Różnica między kodami detekcyjnymi i korekcyjnymi - przykłady zastosowań.}
-	Odpowiedź
+	\begin{description}
+		\item[Kody detekcyjne.] Kody wykrawające błędy w odebranych danych. Najczęściej używane są sumy kontrolne wyliczone z transmitowanej wiadomości. Błąd może być pojedynczy lub seryjny - dotyczący grupy kolejnych bitów. Ochrona transmisji przed błędami polega na odpowiednim kodowaniu przesyłanej informacji
+		\begin{itemize}
+			\item dwukrotne przesyłanie danych - kosztowne, przepustowość kanału spada dwukrotnie
+			\item bit parzystości - do przesyłanego słówka dodajemy jeden bit o takim stanie, aby liczba wszystkich bitów o stanie 1 w tak powiększonym słowie informacyjnym była parzysta (czyli podzielna przez 2)
+		\end{itemize}
+		\item[Kody korekcyjne.] Technika dodawania nadmiarowości do transmitowanych cyfrowo informacji. Umożliwia całkowitą lub częściową detekcję i korekcję błędów powstałych w wyniku zakłóceń. Dzięki temu nie ma potrzeby wykorzystywania kanału zwrotnego, do poinformowania nadawcy o błędzie i konieczności ponownego przesłania informacji. Kodowanie korekcyjne jest więc wykorzystywane wtedy, gdy retransmisja jest kosztowna, kłopotliwa lub niemożliwa, np. ze względu na ograniczenia czasowe.
+		\begin{itemize}
+			\item potrójne przesyłanie danych - wysoce kosztowne, przepustowość kanału spada trzykrotnie
+			\item kod Hamminga - pozwala naprawić pojedyncze przekłamania bitów w odebranym słowie binarnym. 
+		\end{itemize}
+	\end{description}
 
 \end{document}
