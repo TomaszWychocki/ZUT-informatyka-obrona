@@ -203,12 +203,7 @@
 	\end{itemize}
 
 	\section{Środowiska programistyczne stosowane do obliczeń inżynierskich.}
-	\begin{itemize}
-		\item MathWorks MATLAB,
-		\item StatSoft Statistica,
-		\item Wolfram Mathematica,
-		\item język i środowisko R
-	\end{itemize}
+	MathWorks MATLAB, StatSoft Statistica,  Wolfram Mathematica, język i środowisko R, ...
 
 	\section{Rodzaje systemów operacyjnych (klasyfikacja i charakterystyka).}
 	\begin{itemize}
@@ -350,16 +345,7 @@
 	\end{itemize}
 
 	\section{Podstawowe składniki sprzętowe w sieciach komputerowych.}
-	\begin{itemize}
-		\item terminal,
-		\item urządzenia transmisji (np. kable)
-		\item karta sieciowa,
-		\item modem,
-		\item switch,
-		\item router,
-		\item hub,
-		\item most
-	\end{itemize}
+	terminal, urządzenia transmisji (np. kable), karta sieciowa, modem, switch, router, hub, most, ...
 
 	\section{Zastosowania mikroprocesorów.}
 	\begin{itemize}
@@ -617,7 +603,24 @@
 	\textbf{LCD} - zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
 
 	\section{Wymienić i scharakteryzować rodzaje pamięci półprzewodnikowych}
-	Odpowiedź
+	\begin{itemize}
+		\item \textbf{Ulotne - Pamięci RAM} \textit{Random Access Memory} - Pamięć o dowolnym dostępie - posiada możliwość odczytu i zapisu. Zawartość takiej pamięci jest tracona po zaniku zasilania. 
+		\begin{itemize}
+			\item \textbf{Statyczne - SRAM} - zbudowane z przerzutników bistabilnych przechowujących bity informacji. Ze względu na wysoki koszt produkcji pamięci nie są wykorzystywane jako pamięć podstawowa komputerów. Ze względu na dużą szybkość działania znalazły one zastosowanie w układach buforujących - pamięć cache. 
+			\item \textbf{Dynamiczne - DRAM} - zbudowane z macierzy kondensatorów przechowujących bity informacji w postaci ładunków elektrycznych. Znacznie tańsze od pamięci statycznych, ale również pamięć ta jest zbyt wolna do wielu zastosowań. Obecnie najszersze zastosowanie tej pamięci to pamięć podstawowa komputerów. 
+		\end{itemize}
+	\end{itemize}
+		\begin{itemize}
+		\item \textbf{Nieulotne - Pamięci ROM} \textit{Read Only Memory} - posiada jedynie możliwość odczytu, niektóre rodzaje posiadają możliwość zaprogramowania nowej zawartości przez użytkownika. Zawartość tej pamięci jest utrzymywana po wyłączeniu zasilania. 
+		\begin{itemize}
+			\item \textbf{ROM} - Pamięć tylko do odczytu. Informacja zawarta w tej pamięci jest zapisywana w czasie produkcji w formie maski na podstawie dostarczonego wzorca. Nie ma możliwości zmiany zawartości tej pamięci. Używana w urządzeniach produkowanych seryjnie. 
+			\item \textbf{PROM} - Pamięć stała, obecnie rzadko używana. Programowanie odbywa się przez przepalanie wbudowanych przełączeń bezpieczników. Zawartość pamięci nie może być zmieniana. 
+			\item \textbf{EPROM} - Pamięć stała, programowana elektrycznie. Użytkownik może sam zapisywać do niej informacje. Gdy układ posiada okienko ze szkła kwarcowego można pamięć kasować i programować ponownie. Kasowanie odbywa się przez naświetlanie ultrafioletem. Układy EPROM mogą być kasowane i ponownie programowane około 100 razy. 
+			\item \textbf{EEPROM} - Pamięć stała, z możliwością elektrycznego zapisywania i kasowania. Ilość cykli kasowania i programowania jest ograniczona do około 10000. Płytka półprzewodnikowa pamięci EEPROM jest większa niż EPROM i przez to droższa. 
+			\item \textbf{Flash-ROM} - Pamięć stała, obecnie coraz częściej używana ze względu na niski koszt produkcji i łatwość programowania. Do ponownego zaprogramowania tej pamięci nie są potrzebne specjalistyczne urządzenia, wystarczy odpowiednie oprogramowanie dla sprzętu, w którym kość została użyta.
+		\end{itemize}
+	\end{itemize}
+	
 
 	\section{Przedstaw tablice prawdy AND, OR, XOR, zilustruj oznaczenie bramki, wymień przykładowe zastosowanie.}
 	\begin{figure}[h!]
@@ -682,7 +685,33 @@
 	\end{table} 
 
 	\section{Wątki a procesy - na podstawie wybranego systemu. Wymienić wady, zalety.}
-	Odpowiedź
+	Wątki:
+	\begin{itemize}
+		\item jednostka wykonawcza w obrębie jednego procesu, będąca ciągiem instrukcji wykonywanym w obrębie tych samych danych
+		\item jednostka podrzędna w stosunku do procesów – żaden wątek nie może istnieć bez procesu nadrzędnego, ale jeden proces może mieć więcej niż jeden wątek podporządkowany
+		\item w systemach wieloprocesorowych, a także w systemach z wywłaszczaniem, wątki mogą być wykonywane współbieżnie.
+		\item oddzielne liczniki rozkazów, rejestry, stos i wskaźnik stosu, stan
+		\item wspólna przestrzeń adresowa, otwarte pliki, procesy potomne, obsługa sygnałów, zmienne globalne
+		\item zalety
+		\begin{itemize}
+			\item utworzenie i zakończenie wątku zajmuje znacznie mniej czasu niż w przypadku procesu
+			\item możliwość szybkiego przełączania kontekstu pomiędzy wątkami tego samego procesu
+			\item możliwość komunikacji wątków bez pośrednictwa systemu operacyjnego
+			\item możliwość wykorzystania maszyn wieloprocesorowych SMP
+		\end{itemize}
+		\item wady
+		\begin{itemize}
+			\item “Źle zachowujący się wątek” może zakłócić pracę innych wątków tego samego procesu.
+			\item 
+		\end{itemize}
+	\end{itemize}
+	
+	Procesy:
+	\begin{itemize}
+		\item program w trakcie wykonywania
+		\item każdy proces posiada rodzica
+		\item posiada własne zasoby (przestrzeń adresową, listę plików, przydzielone urządzenia)
+	\end{itemize}
 
 	\section{Budowa typowego układu FPGA.}
 	Cechą charakterystyczną architektury FPGA jest duża liczba regularnie rozmieszczonych (w formie matrycy) konfigurowalnych komórek logicznych opartych na tablicach LUT (Look up Table), określanych generatorami funkcji. Układ FPGA zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy połączeń. Bloki mogą być skomplikowanymi układami lub pojedynczymi bramkami logicznymi. Bloki zawierają również elementy pamięciowe (np. przerzutniki).
@@ -710,7 +739,21 @@
 	\textbf{Pamięć wirtualna} pozwala na traktowanie pamięci komputera w jednolity sposób. Jeżeli program wymaga większej pamięci niż tej dostępnej, system operacyjny może wykorzystać pamięć dyskową, jednak postępowanie pozostaje bez zmian.
 
 	\section{Omówić strukturę i funkcjonowanie systemu transmisyjnego.}
-	Odpowiedź
+	\begin{enumerate}
+		\item źródło wiadomości - generuje wiadomości
+		\item A/C - przetwornik analogowo-cyfrowy
+		\item koder źródła - kompresowanie danych
+		\item koder kanału - wysyła dodatkowe dane do sprawdzania i korekcji błędów
+		\item modulator - umieszczenie sygnału w odpowiednim paśmie częstotliwości i właściwe ukształtowanie jego widma
+		\item układ wysokiej częstotliwości - wzmacnia sygnał analogowy do wymaganego poziomu
+		\item \textit{fale w eterze}
+		\item układ wysokiej częstotliwości
+		\item demodulator
+		\item dekoder kanału - decyduje o poprawności przesyłanych danych i tworzy sekwencję kodową wysłanego sygnału
+		\item dekoder źródła - przetwarza informację binarną na pierwotnie wysłaną
+		\item \textit{C/A}
+		\item odbiorca wiadomości
+	\end{enumerate}
 
 	\section{Różnice między pamięcią statyczną i dynamiczną.}
 	\label{sec:statdyn}
@@ -793,7 +836,9 @@
 	Zakładając język C++, do składowych statycznych odwołanie następuje wg schematu nazwa-klasy::nazwa-składowej lub nazwa-obiektu.nazwa-składowej lub nazwa-wskaźnika->nazwa-składowej. Dla składowych klasy tworzonych dynamicznie tak jak wyżej z pominięciem przypadku z operatorem ::.
 
 	\section{Omów pojęcia agregacji i zawierania w diagramach UML.}
-	Odpowiedź
+	(Visual Paradigm) W diagramach klas \textbf{agregacja} nie oznacza, że klasa dziedziczy z innej klasy. Oznacza tylko, że obiekt klasy A zawiera obiekt klasy B, np auto 	posiada silnik, jednak bez auta, silnik też może istnieć.\\
+(Wykłady) W diagramach przypadków użycia zależność \textbf{zawierania} include umożliwia odwzorowanie sytuacji gry wraz z zawierającym przypadkiem użycia (bazowym) wykonywany jest przypadek zawierany. Związek jest związkiem obligatoryjnym - przypadek jest zawsze wykonywany.\\
+(Wykłady) W diagramach przypadków użycia - uogólnienia umożliwiają \textbf{agregację} wielu przypadków/aktorów specjalizowanych do jednego przypadku/aktora ogólnego.
 
 	\section{Budowa i zasady działania wybranego urządzenia (drukarka laserowa, dysk twardy, pamięć USB, streamer, ect.)}
 	p. \ref{sec:zasdziallcd}
@@ -964,7 +1009,16 @@
 	\end{itemize}
 
 	\section{Wymienić i scharakteryzować metody przetwarzania obrazów.}
-	Odpowiedź
+	\begin{itemize}
+		\item operacje na histogramie - rozciąganie, wyrównywanie, 
+		\item operacje geometryczne - w których położenie piksela (i, j) zmieniane jest zgodnie z zadaną relacją matematyczną, a jego intensywność nie ulega zmianie, (translacja, przeskalowanie, obroty, pochylenie)
+		\item operacje arytmetyczne/logiczne - w których nowa wartość intensywności piksela obliczana jest na podstawie jego poprzedniej wartości zgodnie z przyjętą relacją arytmetyczną., natomiast położenie geometryczne piksela nie ulega zmianie (podnoszenie do kwadratu - polepszenie kontrastu, dodawanie, mnożenie, ...)
+		\item normalizacja - sprowadzenie wartości obrazu do określonego przedziału wartości dozwolonych. Np. 8-bitową reprezentacje obrazu do przedziału liczb całkowitych z zakresu 0-255.
+		\item filtracja - stosowana jest przeważnie jako metoda wydobycia z oryginalnego obrazu szeregu informacji w celu ich dalszej obróbki. Informacjami takimi mogą być: położenie krawędzi, pozycje rogów obiektów, itp. 
+		\item wektoryzacja -  rastry opisujące daną bitmapę zostają zgrupowane w większe obiekty wektorowe na zasadzie podobieństwa koloru
+		\item rasteryzacja - jak najwierniejsze przedstawienie płaskiej figury geometrycznej na urządzeniu rastrowym, dysponującym skończoną rozdzielczością.
+		\item transformacja (na przykład Fouriera) - w celu kompresji, uwidocznienia cech niewidocznych w dziedzinie przestrzennej, projektowanie filtrów
+	\end{itemize}
 
 	\section{Zasady i metody tworzenia indeksów w bazach danych?}
 	Warto indeksować:
@@ -992,13 +1046,38 @@
 	\end{itemize}
 
 	\section{Rodzaje i sposób działania przerzutników.}
-	Odpowiedź
+	\begin{itemize}
+		\item  \textbf{RS} - Podstawowa wersja tego przerzutnika zawiera dwa wejścia: S i R. Wejście S (ang. SET - ustawić) powoduje ustawienie na wyjściu przerzutnika Q poziomu H (ang. HIGH - wysoki). Wejście R (ang. RESET - kasuj) służy do ustawiania na wyjściu sygnału L (ang. LOW - niski).  Są jego dwie wersje: asynchroniczna i synchroniczna (z wejściem zegarowym).
+		
+		\item  \textbf{D} - wyzwalany stanem wysokim na wejściu zegarowym. Przepisanie stanu wejścia D na wyjście Q następuje w czasie zmiany poziomu logicznego na wejściu zegarowym z niskiego na wysoki. Podstawowy przerzutnik RS może być wykorzystany jako podstawowa komórka pamięci. Wadą tego układu jest konieczność używania dwóch sygnałów wejściowych w celu wpisania do układu zera lub jedynki. 
+		
+		\item \textbf{T} - Synchroniczny przerzutnik typu T (ang. TOGGLE) ma dwa wejścia: zegarowe C i przełączające T. Przerzutnik typu T można skonstruować używając przerzutnik typu RS. Zmiana stanu przerzutnika odbywa się w momencie, kiedy sygnał zegara zmienia wartość z wysokiej na niską. Mówimy wówczas, że przerzutnik jest wyzwalany opadającym zboczem zegara.
+		
+		\item  \textbf{JK dwutaktowy} \textit{(master-slave)} - układ dwóch przerzutników oznaczonych w skrócie M (Master) i S (Slave) 
+		
+		\item  \textbf{}
+		
+		\item  \textbf{}
+	\end{itemize}
 
 	\section{Różnica pomiędzy automatem Mealy'ego a automatem Moore'a.}
 	Wyjścia w automacie Mealy'ego zależą od stanu wewnętrznego i sygnałów wejściowych, w automacie Moore'a wyjścia zależą wyłącznie od stanu wewnętrznego. Automaty te są równoważne - jeden można zamienić bezstratnie w drugi.
 
 	\section{Różnica pomiędzy układami typu PLA a układami PAL.}
-	Odpowiedź
+	\textbf{PLA (Programmable Logic Array)}:
+	\begin{itemize}
+		\item programowalna matryca AND i OR
+		\item wejścia i wyjścia są jednokierunkowe
+		\item możliwe współdzielenie termów przez funkcje wyjściowe
+	\end{itemize}
+	
+\textbf{PAL (Programmable Array Logic)}:
+	\begin{itemize}
+		\item programowalna matryca AND, matryca OR stała
+		\item dwukierunkowe wejścia i wyjścia
+		\item brak współdzielenia termów przez funkcje wyjściowe
+		\item szybsze i o mniejszym poborze mocy
+	\end{itemize}
 
 	\section{Wymienić i omówić znanych światowych wynalazców w dziedzinie informatyki i telekomunikacji}
 	\begin{itemize}
@@ -1058,7 +1137,32 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	\textbf{Przepływność kanału} - zdolność kanału do przenoszenia informacji (ilość przesłanych bitów na sekundę). Do obliczania przepływności stosuje się wzór $P = 2B \cdot log_{2}M$, gdzie B to szerokość pasma, M to liczba dyskretnych poziomów (jezeli M = 2, każdy sygnał zawiera bit). Maksymalna teoretyczna przepływność kanału jest ograniczona prawem Shannona $P = B \cdot log_{2}\left( 1+ \frac{S}{N} \right)$, gdzie $\frac{S}{N}$ to stosunek mocy sygnału do szumu.
 
 	\section{Omówić zagadnienie modulacji, ze szczególnym uwzględnieniem modulacji cyfrowych}
-	Odpowiedź
+	Modulacja to proces zmiany cech pewnego sygnału (zwanego sygnałem nośnym) innym sygnałem (zwanym sygnałem modulującym) w celu zawarcia informacji w sygnale nośnym.
+	
+	Do modulacji cyfrowych należą: 
+	\begin{itemize}
+		\item ASK (amplituda fali nośnej jest modulowana kwadratowym sygnałem modulującym)
+		\item PSK (to samo dla fazy)
+		\item FSK (to samo dla częstotliwości)
+		\item QAM (kodowanie amplitudą i fazą w celu zawarcia większej ilości informacji, często prezentowane przez diagramy konstelacyjne)
+	\end{itemize}
+
+	Do mediów transmisyjnych należą:
+	\begin{itemize}
+		\item przewodowe
+		\begin{itemize}
+			\item kable symetryczne (skrętka)
+			\item kable niesymetryczne
+			\item kable współosiowe (kabel koncentryczny)
+			\item kable światłowodowe
+			\item kable energetyczne
+		\end{itemize}
+		\item bezprzewodowe
+		\begin{itemize}
+			\item fale radiowe
+			\item fale świetlne
+		\end{itemize}
+	\end{itemize}
 
 	\section{Wymienić znane media transmisyjne.}
 	\begin{itemize}
@@ -1084,12 +1188,12 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 		\item \textbf{SYA} (\textit{something you are}) - na podstawie tego, kim użytkownik jest (np. odcisk palca).
 	\end{itemize}
 
-\begin{description}
-	\item[Hasło] - ciąg znaków.
-	\item[Karta magnetyczna] - karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
-	\item[Karta elektroniczna] - bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
-	\item[Karta identyfikacyjna SIM] - karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
-\end{description}
+	\begin{description}
+		\item[Hasło] - ciąg znaków.
+		\item[Karta magnetyczna] - karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
+		\item[Karta elektroniczna] - bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
+		\item[Karta identyfikacyjna SIM] - karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
+	\end{description}
 
 Techniki biometryczne:
 	\begin{itemize}
@@ -1170,7 +1274,28 @@ Techniki biometryczne:
 	\end{itemize}
 
 	\section{Różnica między standardami JPEG i JPEG2000, rodzaje transformacji obrazu wykorzystywane w kodowaniu obrazów.}
-	Odpowiedź
+	JPEG
+	\begin{itemize}
+		\item dyskretna transformata kosinusowa
+		\item kompresja stratna
+	\end{itemize}
+	
+	JPEG2000
+	\begin{itemize}
+		\item dyskretna transformata falkowa
+		\item kompresja stratna oraz bezstratna w tym samym strumieniu pliku
+		\item nowszy standard
+		\item lepsza jakość obrazu
+		\item wyższy współczynnik kompresji dla kompresji stratnej
+	\end{itemize}
+
+	Rodzaje transformacji:
+	\begin{itemize}
+		\item dyskretna transformacja kosinusowa - kompromis pomiędzy uzyskiwanym stopniem kompresji a złożonością obliczeniową
+		\item dyskretna transformacja falkowa - bardzo wysoki stopień kompresji, stosowana m.in. w standardach MPEG 2000, JPEG 2000
+		\item dyskretna transformacja Fouriera,
+		\item transformacja Hougha.
+	\end{itemize}
 
 	\section{Scharakteryzować kod Graya jako przykład elementu wchodzącego w skład metod cyfrowej modulacji sygnału.}
 	Kod Graya charakteryzuje się tym, że dwa kolejne słowa kodowe różnią się jednym bitem. Stosowane są w korekcji błędów. Np. w modulacji cyfrowej QAM, gdzie dane są transmitowane w 4-bitowych symbolach, diagram konstelacji sygnału jest tak stworzony, aby kombinacje bitów w przylegających symbolach na konstelacji różniły się tylko jednym bitem. Po połączeniu tego z , która może korygować jednobitowe błędy, odbiornik może korygować błędy , które sprawiają, że punkty konstelacji odchylają się w stronę przyległych punktów. Dzięki temu system transmisji jest mniej podatny na zakłócenia.
