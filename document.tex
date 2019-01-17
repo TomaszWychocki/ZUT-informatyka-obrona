@@ -1049,16 +1049,64 @@
 	\begin{itemize}
 		\item  \textbf{RS} - Podstawowa wersja tego przerzutnika zawiera dwa wejścia: S i R. Wejście S (ang. SET - ustawić) powoduje ustawienie na wyjściu przerzutnika Q poziomu H (ang. HIGH - wysoki). Wejście R (ang. RESET - kasuj) służy do ustawiania na wyjściu sygnału L (ang. LOW - niski).  Są jego dwie wersje: asynchroniczna i synchroniczna (z wejściem zegarowym).
 		
-		\item  \textbf{D} - wyzwalany stanem wysokim na wejściu zegarowym. Przepisanie stanu wejścia D na wyjście Q następuje w czasie zmiany poziomu logicznego na wejściu zegarowym z niskiego na wysoki. Podstawowy przerzutnik RS może być wykorzystany jako podstawowa komórka pamięci. Wadą tego układu jest konieczność używania dwóch sygnałów wejściowych w celu wpisania do układu zera lub jedynki. 
+		\item  \textbf{D} - Przerzutnik D jest przerzutnikiem synchronicznym o jednym wejściu informacyjnym, oznaczonym literą D. Spełnia on funkcję przepisywania informacji z wejścia D na wyjście Q z opóźnieniem jednego impulsu taktującego, stąd też pochodzi jego nazwa Przerzutnik D od słowa angielskiego Delay (pol. opóźniający). Podstawowy przerzutnik RS może być wykorzystany jako podstawowa komórka pamięci. Wadą tego układu jest konieczność używania dwóch sygnałów wejściowych w celu wpisania do układu zera lub jedynki. 
 		
-		\item \textbf{T} - Synchroniczny przerzutnik typu T (ang. TOGGLE) ma dwa wejścia: zegarowe C i przełączające T. Przerzutnik typu T można skonstruować używając przerzutnik typu RS. Zmiana stanu przerzutnika odbywa się w momencie, kiedy sygnał zegara zmienia wartość z wysokiej na niską. Mówimy wówczas, że przerzutnik jest wyzwalany opadającym zboczem zegara.
+		\item \textbf{T} - Synchroniczny przerzutnik typu T (ang. TOGGLE) ma dwa wejścia: zegarowe C i przełączające T. Przy każdym dodatnim zboczu sygnału zegarowego C (przejście ze stanu 0 do stanu 1) zmienia stany swoich wyjść na przeciwne. Przerzutnik typu T można skonstruować używając przerzutnik typu RS. Zmiana stanu przerzutnika odbywa się w momencie, kiedy sygnał zegara zmienia wartość z wysokiej na niską. Mówimy wówczas, że przerzutnik jest wyzwalany opadającym zboczem zegara.
 		
-		\item  \textbf{JK dwutaktowy} \textit{(master-slave)} - układ dwóch przerzutników oznaczonych w skrócie M (Master) i S (Slave) 
-		
-		\item  \textbf{}
-		
-		\item  \textbf{}
+		\item  \textbf{JK} - Podanie jedynki logicznej na wejście J powoduje ustawienie przerzutnika (co skutkuje pojawieniem się stanu wysokiego na wyjściu Q). Ustawienie wejścia K w stan wysoki przestawia przerzutnik w stan niski. Jeżeli jedynka logiczna zostanie ustawiona na obydwu wejściach (J i K) to nastąpi zmiana stanu przerzutnika na przeciwny.
+		JK jest przerzutnikiem synchronicznym, co oznacza, że reaguje na stan wejść tylko przy podaniu odpowiedniego sygnału na wejście zegarowe. Wyjątkiem są wejścia asynchroniczne R i S. Podanie stanu wysokiego na wejście Set powoduje ustawienie w stan wysoki przerzutnika niezależnie od tego, czy został dostarczony sygnał zegarowy. Wejście Reset w analogiczny sposób zeruje przerzutnik.
 	\end{itemize}
+
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textbf{S} & \textbf{R} & \textbf{Q(t)} & \textbf{Q(t+1)} & \textbf{Opis}   \\ \hline
+			0          & 0          & 0 lub 1       & Q(t)            & Bez zmian       \\ \hline
+			0          & 1          & 0 lub 1       & 0               & Zerowanie       \\ \hline
+			1          & 0          & 0 lub 1       & 1               & Ustawianie      \\ \hline
+			1          & 1          & 0 lub 1       & ?               & Stan zabroniony \\ \hline
+		\end{tabular}
+		\caption{Tablica charakterystyczna dla przerzutnika RS}
+	\end{table}
+
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{D} & \textbf{Q(t)} & \textbf{Q(t+1)} & \textbf{Operacja} \\ \hline
+			0          & 0 lub 1       & 0               & Zerowanie         \\ \hline
+			1          & 0 lub 1       & 1               & Ustawianie        \\ \hline
+		\end{tabular}
+		\caption{Tablica charakterystyczna dla przerzutnika D}
+	\end{table}
+
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{$Q_{n-1} \rightarrow Q_n$} & \textbf{T} \\ \hline
+			$0 \rightarrow 0$	& 0           \\ \hline
+			$0 \rightarrow 1$	& 1           \\ \hline
+			$1 \rightarrow 0$	& 1           \\ \hline
+			$1 \rightarrow 1$	& 0           \\ \hline
+			\multicolumn{2}{|c|}{Przy C: $0 \rightarrow 1$}            \\ \hline
+		\end{tabular}
+		\caption{Tablica wzbudzeń dla przerzutnika T}
+	\end{table}
+
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textbf{J} & \textbf{K} & \textbf{Q(t)} & \textbf{Q(t+1)} & \textbf{Opis}  \\ \hline
+			0          & 0          & 0 lub 1       & 0 lub 1         & Podtrzymanie   \\ \hline
+			0          & 1          & 0 lub 1       & 0               & Przejście na 0 \\ \hline
+			1          & 0          & 0 lub 1       & 1               & Przejście na 1 \\ \hline
+			1          & 1          & 0 lub 1       & 1 lub 0         & $\sim$Q        \\ \hline
+		\end{tabular}
+		\caption{Tablica wzbudzeń dla przerzutnika JK}
+	\end{table}
 
 	\section{Różnica pomiędzy automatem Mealy'ego a automatem Moore'a.}
 	Wyjścia w automacie Mealy'ego zależą od stanu wewnętrznego i sygnałów wejściowych, w automacie Moore'a wyjścia zależą wyłącznie od stanu wewnętrznego. Automaty te są równoważne - jeden można zamienić bezstratnie w drugi.
