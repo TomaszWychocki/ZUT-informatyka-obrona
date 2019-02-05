@@ -460,10 +460,10 @@
 			
 			\item \textbf{TCP/IP}:
 			\begin{enumerate}
-				\item Aplikacji (OSI 5, 6, 7)
+				\item Aplikacji (OSI 3, 2, 1)
 				\item Transportowa (OSI 4)
-				\item Internetowa (OSI 3)
-				\item Dostępu do sieci (OSI 1, 2)
+				\item Internetowa (OSI 5)
+				\item Dostępu do sieci (OSI 6, 7)
 			\end{enumerate}
 		
 			\vfill\null
@@ -482,7 +482,7 @@
 	\end{itemize}
 
 	\section{Charakterystyka warstwy fizycznej.}
-	Odbiera ramki danych z warstwy 2, czyli warstwy łącza danych, i przesyła szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne. Jest ona również odpowiedzialna za odbiór kolejnych bitów przychodzących strumieni danych.Określa w jaki sposób bity są przedstawiane w formie impulsów napięciowych, świetlnych czy też sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.\\	
+	Odbiera ramki danych z warstwy 6, czyli warstwy łącza danych, i przesyła szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne. Jest ona również odpowiedzialna za odbiór kolejnych bitów przychodzących strumieni danych. Określa w jaki sposób bity są przedstawiane w formie impulsów napięciowych, świetlnych czy też sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.\\	
 	W specyfikacji warstwy fizycznej są opisane takie cechy jak napięcia elektryczne, taktowania zegarów, szybkość i maksymalne odległości transmisji. Warstwa fizyczna używa czterech procesów (adresowanie, enkapsulacja, routing, dekapsulacja).
 
 	\section{Charakterystyka warstwy łącza danych.}
@@ -497,7 +497,7 @@
 	\section{Do czego służy protokół TCP, a do czego IP?}
 	\begin{itemize}
 		\item \textbf{TCP} - Aplikacje, które wymagają od protokołu transportowego niezawodnego dostarczania danych, używają protokołu TCP. Protokół ten sprawdza, czy dane dokładnie dotarły do miejsca przeznaczenia i czy zrobił to we właściwej kolejności. TCP zapewnia niezawodność za pomocą mechanizmu zwanego pozytywne potwierdzenie z retransmisją – wysyła on dane ponownie, dopóki nie otrzyma informacji, że dane zostały poprawnie odebrane. Jednostka danych wymieniana między współpracującymi modułami TCP nosi nazwę segmentu.
-		\item \textbf{IP} - jest protokołem komunikacyjnym warstwy Internet w modelu TCP/IP (odpowiada warstwie sieciowej modelu OSI). Protokół ten definiuje zasady i sposoby postępowania urządzeń sieciowych w celu nawiązania połączenia, utrzymania go i samej transmisji danych. Protokół IP stosowany jest w większości rodzajów sieci, w tym w sieci lokalnej i sieci Internet (każdy host, np. komputer, posiada swój własny, unikalny dla sieci adres IP). Dane z użyciem protokołu IP transmitowane są w pakietach (paczkach danych). Nie gwarantuje on jednak dotarcia danych do celu czy utrzymania kolejności pakietów. Może się zdążyć, ze odbiorca otrzyma kilkukrotnie ten sam pakiet z całej paczki danych, pakiety dotrą w innej kolejności lub nie dotrą w ogóle. W celu zapewnienia prawidłowej transmisji stosuje się różne techniki w wyższej warstwie, np. z użyciem protokołu TCP.
+		\item \textbf{IP} - jest protokołem komunikacyjnym warstwy Internet w modelu TCP/IP (odpowiada warstwie sieciowej modelu OSI). Protokół ten definiuje zasady i sposoby postępowania urządzeń sieciowych w celu nawiązania połączenia, utrzymania go i samej transmisji danych. Protokół IP stosowany jest w większości rodzajów sieci, w tym w sieci lokalnej i sieci Internet (każdy host, np. komputer, posiada swój własny, unikalny dla sieci adres IP). Dane z użyciem protokołu IP transmitowane są w pakietach (paczkach danych). Nie gwarantuje on jednak dotarcia danych do celu czy utrzymania kolejności pakietów. Może się zdarzyć, ze odbiorca otrzyma kilkukrotnie ten sam pakiet z całej paczki danych, pakiety dotrą w innej kolejności lub nie dotrą w ogóle. W celu zapewnienia prawidłowej transmisji stosuje się różne techniki w wyższej warstwie, np. z użyciem protokołu TCP.
 	\end{itemize}
 
 	\section{Rodzaje światłowodów - wady, zalety.}
@@ -537,10 +537,10 @@
 
 	\section{Podstawowe cechy standardów sieci bezprzewodowych WiFi.}
 	\begin{itemize}
-		\item \textbf{802.11a} - do 54mbps, 5ghz. 802.11a obejmuje 12 niezachodzących kanałów, 8 przeznaczonych do pracy w budynkach oraz 4 przeznaczone do pracy między dwoma punktami (ang. point to point). 
-		\item \textbf{802.11b} - 11mbps, 2.4ghz, zasięg 30-120m. Standard 802.11b wykorzystuje algorytmy do usuwania zakłóceń generowanych przez sygnały zagłuszające oraz unikania kolizji podczas komunikacji wielu radiowych kart sieciowych.
-		\item \textbf{802.11g} - 54mbps, 2.4ghz, najpopulardniejszy standard, wymaga silnego i stabilnego sygnału względem 802.11b,
-		\item \textbf{802.11n} - 300mpbs, 5ghz lub 150mbps, 2.4ghz, wymaga silnego i stabilnego sygnału.
+		\item \textbf{802.11a} - do 54Mbit/s, 5GHz. 802.11a obejmuje 12 niezachodzących kanałów, 8 przeznaczonych do pracy w budynkach oraz 4 przeznaczone do pracy między dwoma punktami (ang. point to point). 
+		\item \textbf{802.11b} - 11Mbit/s, 2.4GHz, zasięg 30-120m. Standard 802.11b wykorzystuje algorytmy do usuwania zakłóceń generowanych przez sygnały zagłuszające oraz unikania kolizji podczas komunikacji wielu radiowych kart sieciowych.
+		\item \textbf{802.11g} - 54Mbit/s, 2.4GHz, najpopulardniejszy standard, wymaga silnego i stabilnego sygnału względem 802.11b,
+		\item \textbf{802.11n} - 300Mbit/s, 5GHz lub 150Mbit/s, 2.4GHz, wymaga silnego i stabilnego sygnału.
 		\item \textbf{802.11ac} - Według specyfikacji IEEE 802.11ac przepustowość przy zastosowaniu wielu stacji ma być na poziomie przynajmniej 1 Gbit/s, a pojedynczej stacji 500 Mbit/s. Urządzenia standardu 802.11ac pracują na częstotliwości 5 GHz. MIMO, beamforming, 256-QAM.
 	\end{itemize}
 
@@ -702,7 +702,6 @@
 		\item wady
 		\begin{itemize}
 			\item “Źle zachowujący się wątek” może zakłócić pracę innych wątków tego samego procesu.
-			\item 
 		\end{itemize}
 	\end{itemize}
 	
