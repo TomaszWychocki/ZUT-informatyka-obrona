@@ -77,15 +77,15 @@
 	\section{Wymienić i omówić metody wdrażania systemów informatycznych.}
 	Odpowiedź niepewna (źr. \href{https://pl.wikipedia.org/wiki/Wdro\%C5\%BCenie_systemu}{Wikipedia}).
 
-	\begin{enumerate}
-		\item Całościowa: stary system jest porzucany i wdrażany jest nowy (wysokie ryzyko, niskie koszty).
-		\item Cząstkowa: stopniowe wdrażanie modułów systemu (średnie ryzyko, średnie koszty).
-		\item Równoległa: wdrażanie nowego systemu, przy jednoczesnym podtrzymaniu starego (niskie ryzyko, wysokie koszty).	
-	\end{enumerate}
+	\begin{itemize}
+		\item  \textbf{Całościowa} - stary system jest porzucany i wdrażany jest nowy (wysokie ryzyko, niskie koszty).
+		\item \textbf{Cząstkowa} - stopniowe wdrażanie modułów systemu (średnie ryzyko, średnie koszty).
+		\item \textbf{Równoległa} - wdrażanie nowego systemu, przy jednoczesnym podtrzymaniu starego (niskie ryzyko, wysokie koszty).	
+	\end{itemize}
 
 	\section{Scharakteryzować podstawowe modele baz danych.}
 	\begin{itemize}
-		\item  \textbf{Hierarchiczny} - w tym modelu przechowywane dane są zorganizowane w postaci drzewa. Informacja jest zawarta w dokumentach oraz w strukturze drzewa (podobnej do drzewa folderów na dysku komputera).
+		\item  \textbf{Hierarchiczny} -  przechowywane dane są zorganizowane w postaci drzewa. Informacja jest zawarta w dokumentach oraz w strukturze drzewa (podobnej do drzewa folderów na dysku komputera).
 		\item  \textbf{Sieciowy} - uogólniony model hierarchiczny, rekordy mogą przyjmować strukturę dowolnego grafu.
 		\item  \textbf{Relacyjny} - rekordy są grupowane w relacje (tabele). Dla każdej relacji musi zostać wybrany klucz główny, jednoznacznie identyfikujący dany rekord. Klucz obcy pozwala na powiązanie relacji między sobą (skrót myślowy). Większość relacyjnych baz danych korzysta z języka zapytań SQL. W modelu relacyjnym abstrahujemy od kolejności wierszy (rekordów) i kolumn (pól w rekordzie). Wiersz reprezentuje jeden rekord informacji np. osobę. Liczba kolumn jest z góry ustalona. Z każdą kolumną jest związana jej nazwa oraz dziedzina, określająca zbiór wartości, jakie mogą wystąpić w kolumnie.
 		\item  \textbf{Obiektowy} - dane przyjmują postać obiektów. W przeciwieństwie do modelu relacyjnego, rekordy i relacje między nimi przechowywane są bezpośrednio (w formie obiektów, czyli struktur zwanych klasami), bez podziału na wiersze i kolumny.
@@ -105,25 +105,25 @@
 
 	Użycie SQL, zgodnie z jego nazwą, polega na zadawaniu zapytań do bazy danych. Zapytania można zaliczyć do jednego z czterech głównych podzbiorów:
 	\begin{itemize}
-		\item SQL DML (ang. Data Manipulation Language – „język manipulacji danymi”)
+		\item SQL DML (\textit{Data Manipulation Language} – „język manipulacji danymi”)
 			\begin{itemize}
 				\item insert - umieszczenie danych
 				\item update - zmiana danych
 				\item delete - usunięcie danych
 			\end{itemize}
-		\item SQL DDL (ang. Data Definition Language – „język definicji danych”)
+		\item SQL DDL (\textit{Data Definition Language} – „język definicji danych”)
 			\begin{itemize}
 				\item create - utworzenie struktury
 				\item drop - usunięcie struktury
 				\item alter - zmiana struktury
 			\end{itemize}
-		\item SQL DCL (ang. Data Control Language – „język kontroli nad danymi”)
+		\item SQL DCL (\textit{Data Control Language} – „język kontroli nad danymi”)
 			\begin{itemize}
 				\item grant - nadawanie uprawnień użytkownikowi 
 				\item revoke - odbieranie wskazanych uprawnień konkretnemu użytkownikowi
 				\item deny - zabranianie wykonywania operacji
 			\end{itemize}
-		\item SQL DQL (ang. Data Query Language – „język definiowania zapytań”)
+		\item SQL DQL (\textit{Data Query Language} – „język definiowania zapytań”)
 			\begin{itemize}
 				\item select
 			\end{itemize}
@@ -165,7 +165,7 @@
 	Sterowniki dla baz danych to programy implementujące protokół pozwalający na połączenie z bazą danych. Łączy interfejs użytkownika z konkretną bazą danych (np. JDBC, MySQL). Sterownik tłumaczy zapytania zadane przez użytkownika na język zrozumiały dla danego DBMS. Pozwala to na ujednolicenie interfejsu programistycznego komunikacji z systemami bazodanowymi.
 
 	\section{Zarządzanie procesami w systemach operacyjnych.}
-	Procesami zarządza planista (scheduler), który jest odpowiedzialny za rozpoczynanie, wznawianie i kończenie procesów oraz przełączanie kontekstu pomiędzy procesami. System operacyjny dostarcza mechanizmy umożliwiające komunikację między procesami oraz synchronizację. Planowanie procesów polega na wskazywaniu procesu, któremu ma być w danej chwili przydzielony procesor. W szczególności oznacza to decydowanie, kiedy i który proces ma przejść ze stanu gotowy do stanu aktywny. W systemie w każdej chwili może być aktywnych co najwyżej tyle procesów ile jest procesorów. W każdej chwili proces jest w jakimś stanie. Ten stan zmienia się w miarę postępu wykonania procesu. Oto możliwe stany:
+	Procesami zarządza planista (scheduler), który jest odpowiedzialny za rozpoczynanie, wznawianie i kończenie procesów oraz przełączanie kontekstu pomiędzy procesami. System operacyjny dostarcza mechanizmy umożliwiające komunikację między procesami oraz synchronizację. Planowanie procesów polega na wskazywaniu procesu, któremu ma być w danej chwili przydzielony procesor. W szczególności oznacza to decydowanie, kiedy i który proces ma przejść ze stanu gotowy do stanu aktywny. W systemie w każdej chwili może być aktywnych co najwyżej tyle procesów ile jest procesorów. W każdej chwili proces jest w jakimś stanie. Ten stan zmienia się w miarę postępu wykonania procesu. Możliwe stany:
 	
 	\begin{itemize}
 		\item \textbf{Nowy} (proces właśnie utworzono) - może przejść jedynie do stanu gotowy. Dzieje się tak, gdy system załaduje program do pamięci.
@@ -189,17 +189,17 @@
 
 	\section{Powody tworzenia systemów rozproszonych.}
 	\begin{itemize}
-		\item \textbf{Dzielenie zasobów} (ang. resource sharing) – wielu użytkowników systemu może korzystać z danego zasobu (np. drukarek, plików, usług, itp.).
+		\item \textbf{Dzielenie zasobów} (\textit{resource sharing}) – wielu użytkowników systemu może korzystać z danego zasobu (np. drukarek, plików, usług, itp.).
 		
-		\item \textbf{Otwartość} (ang. openness) – podatność na rozszerzenia, możliwość rozbudowy systemu zarówno pod względem sprzętowym, jak i oprogramowania.
+		\item \textbf{Otwartość} (\textit{openness}) – możliwość rozbudowy systemu zarówno pod względem sprzętowym, jak i oprogramowania.
 		
-		\item \textbf{Współbieżność} (ang. concurrency) – zdolność do przetwarzania wielu zadań jednocześnie.
+		\item \textbf{Współbieżność} (\textit{concurrency}) – zdolność do przetwarzania wielu zadań jednocześnie.
 		
-		\item \textbf{Skalowalność} (ang. scalability) – cecha systemu umożliwiająca zachowanie podobnej wydajności systemu przy zwiększaniu skali systemu (np. liczby procesów, komputerów, itp.).
+		\item \textbf{Skalowalność} (\textit{scalability}) – możliwość zachowania podobnej wydajności systemu przy zwiększaniu skali systemu (np. liczby procesów, komputerów, itp.).
 		
-		\item \textbf{Tolerowanie awarii} (ang. fault tolerance) – właściwość systemu umożliwiająca działania systemu mimo pojawiania się błędów i (lub) uszkodzeń (np. przez utrzymywanie nadmiarowego sprzętu).
+		\item \textbf{Tolerowanie awarii} (\textit{fault tolerance}) – właściwość systemu umożliwiająca działania systemu mimo pojawiania się błędów i (lub) uszkodzeń (np. przez utrzymywanie nadmiarowego sprzętu).
 		
-		\item \textbf{Przezroczystość} (ang. transparency) – właściwość systemu powodująca postrzeganie systemu przez użytkownika jako całości, a nie poszczególnych składowych.
+		\item \textbf{Przezroczystość} (\textit{transparency}) – właściwość systemu powodująca postrzeganie systemu przez użytkownika jako całości, a nie poszczególnych składowych.
 	\end{itemize}
 
 	\section{Środowiska programistyczne stosowane do obliczeń inżynierskich.}
@@ -207,29 +207,29 @@
 
 	\section{Rodzaje systemów operacyjnych (klasyfikacja i charakterystyka).}
 	\begin{itemize}
-		\item Klasyfikacja ze względu na sposób przetwarzania:
+		\item Klasyfikacja ze względu na \textbf{sposób przetwarzania}:
 		\begin{itemize}
-			\item Systemy przetwarzania bezpośredniego - użytkownik wprowadza zadanie do systemu i oczekuje na wyniki. W trakcie przetwarzania jest zatem możliwa interakcja pomiędzy użytkownikiem a systemem (aplikacją). Użytkownik może być na przykład poproszony o wprowadzenie jakiś danych na terminalu, wybranie czegoś z menu itp.
-			\item Systemy przetwarzania pośredniego -  zadanie jest realizowane w czasie wybranym przez system. Po przedłożeniu zadania ingerencja użytkownika jest niemożliwa. Wszystkie dane muszą być zatem dostępne w momencie przedkładania zadania, a jakikolwiek błąd programowy (np. niekompletność danych) oznacza konieczność przedłożenia i wykonania zadania ponownie.
+			\item \textbf{Systemy przetwarzania bezpośredniego} - użytkownik wprowadza zadanie do systemu i oczekuje na wyniki. W trakcie przetwarzania jest zatem możliwa interakcja pomiędzy użytkownikiem a systemem (aplikacją). Użytkownik może być na przykład poproszony o wprowadzenie jakiś danych na terminalu, wybranie czegoś z menu itp.
+			\item \textbf{Systemy przetwarzania pośredniego} -  zadanie jest realizowane w czasie wybranym przez system. Po przedłożeniu zadania ingerencja użytkownika jest niemożliwa. Wszystkie dane muszą być zatem dostępne w momencie przedkładania zadania, a jakikolwiek błąd programowy (np. niekompletność danych) oznacza konieczność przedłożenia i wykonania zadania ponownie.
 		\end{itemize}
 	
-		\item Klasyfikacja ze względu na liczbę wykonywanych programów:
+		\item Klasyfikacja ze względu na \textbf{liczbę wykonywanych programów}:
 		\begin{itemize}
-			\item  Systemy jednozadaniowe — niedopuszczalne jest rozpoczęcie wykonywania następnego zadania użytkownika przed zakończeniem poprzedniego.
-			\item Systemy wielozadaniowe — dopuszczalne jest istnienie jednocześnie wielu zadań (procesów), którym zgodnie z pewną strategią przydzielany jest procesor.
+			\item  \textbf{Systemy jednozadaniowe} — niedopuszczalne jest rozpoczęcie wykonywania następnego zadania użytkownika przed zakończeniem poprzedniego.
+			\item \textbf{Systemy wielozadaniowe} — dopuszczalne jest istnienie jednocześnie wielu zadań (procesów), którym zgodnie z pewną strategią przydzielany jest procesor.
 		\end{itemize}
 	
-		\item Klasyfikacja ze względu na liczbę użytkowników:
+		\item Klasyfikacja ze względu na \textbf{liczbę użytkowników}:
 		\begin{itemize}
-			\item Systemy dla jednego użytkownika — zasoby przeznaczone są dla jednego użytkownika (np. w przypadku komputerów osobistych), nie ma mechanizmów autoryzacji, a mechanizmy ochrony informacji są ograniczone.
-			\item Systemy wielodostępne — wielu użytkowników może korzystać ze zasobów systemu komputerowego, a system operacyjny gwarantuje ich ochronę przed nieupoważnioną ingerencją.
+			\item \textbf{Systemy dla jednego użytkownika} — zasoby przeznaczone są dla jednego użytkownika (np. w przypadku komputerów osobistych), nie ma mechanizmów autoryzacji, a mechanizmy ochrony informacji są ograniczone.
+			\item \textbf{Systemy wielodostępne} — wielu użytkowników może korzystać ze zasobów systemu komputerowego, a system operacyjny gwarantuje ich ochronę przed nieupoważnioną ingerencją.
 		\end{itemize}
 	
 		\item Inne:
 		\begin{itemize}
-			\item Systemy czasu rzeczywistego (ang. real-time systems) zorientowane na przetwarzanie z uwzględnieniem czasu zakończenie zadania, tzw. linii krytycznej (ang. deadline).
-			\item Systemy sieciowe i rozproszone (ang. network and distributed systems) — umożliwiają zarządzanie zbiorem rozproszonych jednostek przetwarzających, czyli zbiorem jednostek (komputerów), które są zintegrowane siecią komputerową i nie współdzielą fizycznie zasobów.
-			\item Systemy operacyjne komputerów naręcznych — tworzone dla rozwiązań typu PDA, czy telefonów komórkowych, podlegają istotnym ograniczeniom zasobowym.
+			\item \textbf{Systemy czasu rzeczywistego} (\textit{real-time systems}) zorientowane na przetwarzanie z uwzględnieniem czasu zakończenie zadania, tzw. linii krytycznej (ang. deadline).
+			\item \textbf{Systemy sieciowe i rozproszone} (\textit{network and distributed systems}) — umożliwiają zarządzanie zbiorem rozproszonych jednostek przetwarzających, czyli zbiorem jednostek (komputerów), które są zintegrowane siecią komputerową i nie współdzielą fizycznie zasobów.
+			\item \textbf{Systemy operacyjne komputerów naręcznych} — tworzone dla rozwiązań typu PDA, czy telefonów komórkowych, podlegają istotnym ograniczeniom zasobowym.
 		\end{itemize}
 	\end{itemize}
 
@@ -239,7 +239,7 @@
 		\item \textbf{1GL}: poziom maszynowy; języki maszynowe, czyli języki procesorów. Instrukcje są w nich zapisywane w postaci liczb binarnych. 
 		\item \textbf{2GL}: poziom niski (assemblerowy); języki symboliczne, asemblery. Języki niskiego poziomu, pod względem składni tożsame z maszynowymi.
 		\item \textbf{3GL}: języki wysokiego poziomu; proceduralne (imperatywne). W językach tych jedna instrukcja jest tłumaczona na kilka instrukcji procesora, najczęściej od 5 do 10. Pierwszym językiem tego typu był ALGOL. Do tej grupy należą między innymi: FORTH, BASIC - języki niestrukturalne, Pascal, C, FORTRAN - języki strukturalne, C++, Java - języki zorientowane obiektowo. 
-		\item \textbf{4GL}: języki zadaniowe (SQL, Excel);  języki bardzo wysokiego poziomu, nieproceduralne (deklaratywne). Korzystając z tych języków programista skupia się na problemie, a nie na sposobie jego rozwiązania (języki zorientowane problemowo, ang. task oriented languages). Syntaktyka wielu języków czwartej generacji przypomina składnię języka naturalnego. Są one często używane do dostępu do baz danych. Przykładem języka z tej grupy jest: SQL. 
+		\item \textbf{4GL}: języki zadaniowe (SQL, Excel);  języki bardzo wysokiego poziomu, nieproceduralne (deklaratywne). Korzystając z tych języków programista skupia się na problemie, a nie na sposobie jego rozwiązania (języki zorientowane problemowo, ang. task oriented languages). Syntaktyka wielu języków czwartej generacji przypomina składnię języka naturalnego. Są one często używane do dostępu do baz danych.
 		\item \textbf{5GL}: wizualny interface;  języki sztucznej inteligencji, języki systemów ekspertowych. Języki najbardziej zbliżone do języka naturalnego. Przykładem języka piątej generacji jest PROLOG.
 	\end{itemize}
 
@@ -260,8 +260,8 @@
 	
 	Sposób wykonywania:
 		\begin{itemize}
-			\item interpretowane (JS, PHP)
-			\item kompilowane (C, C++, Java)
+			\item \textbf{interpretowane} (JS, PHP)
+			\item \textbf{kompilowane} (C, C++, Java)
 		\end{itemize}
 
 	\section{Paradygmaty programowania obiektowego.}
@@ -270,9 +270,9 @@
 		
 		\item \textbf{Hermetyzacja} - oddzielenie „co” od „jak”. Enkapsulacja zapewnia, że obiekt nie może zmieniać stanu innych obiektów w nieokreślony sposób. Każdy typ obiektu dostarcza interfejsu, który określa sposób współpracy z innymi obiektami. Jedynie za pomocą określonych metod mamy możliwość zmienić stan obiektu, bezpośredni dostęp do zmiennych jest zabroniony.
 		
-		\item \textbf{Dziedziczenie(kompozycja)} - umożliwia stworzenie hierarchii obiektów w programie. Polega na przejęciu właściwości i funkcjonalności obiektów innej klasy i ewentualnej modyfikacji tych właściwości i funkcjonalności w taki sposób, by były one bardziej wyspecjalizowane.
+		\item \textbf{Dziedziczenie(kompozycja)} - umożliwia stworzenie hierarchii obiektów w programie. Polega na przejęciu właściwości i funkcjonalności obiektów innej klasy i ewentualnej modyfikacji tych właściwości i funkcjonalności, w taki sposób, by były one bardziej wyspecjalizowane.
 		
-		\item \textbf{Polimorfizm(wielopostaciowość)} - referencje i wskaźniki obiektów mogą dotyczyć obiektów różnego typu, a wywołanie metody dla referencji spowoduje zachowanie odpowiednie dla pełnego typu obiektu wywoływanego. Zazwyczaj można wyróżnić dwa rodzaje polimorfizmu: dynamiczne- wykonywane podczas działania programu, a także statyczne- na etapie kompilacji.
+		\item \textbf{Polimorfizm(wielopostaciowość)} - referencje i wskaźniki obiektów mogą dotyczyć obiektów różnego typu, a wywołanie metody dla referencji spowoduje zachowanie odpowiednie dla pełnego typu obiektu wywoływanego. Zazwyczaj można wyróżnić dwa rodzaje polimorfizmu: dynamiczne- wykonywane podczas działania programu, statyczne- na etapie kompilacji.
 	\end{itemize}
 
 	\section{Zadania systemu zarządzania bazami danych (DBMS).}
@@ -359,18 +359,18 @@
 
 	\section{Metody kompresji danych.}
 	\begin{itemize}
-		\item \textbf{bezstratna}, np. kodowanie Huffmana, PNG: w której z postaci skompresowanej można odzyskać identyczną postać pierwotną, bajty występujące częściej mają krótszą reprezentację niż te występujące rzadziej. 
-		\item \textbf{stratna} - w której takie odzyskanie jest niemożliwe, jednak główne właściwości zostają zachowane, może dotyczyć różnych sygnałów (np. dźwięk, obraz), np. kompresja falkowa,kodowanie transformatorowe, JPEG, mp3.
+		\item \textbf{Bezstratna}, np. kodowanie Huffmana, PNG: w której z postaci skompresowanej można odzyskać identyczną postać pierwotną, bajty występujące częściej mają krótszą reprezentację niż te występujące rzadziej. 
+		\item \textbf{Stratna} - w której takie odzyskanie jest niemożliwe, jednak główne właściwości zostają zachowane, może dotyczyć różnych sygnałów (np. dźwięk, obraz), np. kompresja falkowa, kodowanie transformatorowe, JPEG, mp3.
 	\end{itemize}
 
 	\section{Sprzętowe środki przyspieszania obliczeń.}
 	\begin{itemize}
-		\item Wykorzystanie wielu rdzeni procesora.
-		\item Wykorzystanie obliczeń na karcie graficznej GPGPU - (ang. general-purpose computation on graphics processing units) obliczenia ogólnego przeznaczenia na układach GPU, zwany także GPGP, rzadziej GP2. Technika, dzięki której GPU, zwykle zajmujący się tylko obliczeniami związanymi z grafiką komputerową, umożliwia wykonywanie obliczeń ogólnego przeznaczenia, tak jak CPU. Dzięki temu wiele obliczeń, głównie obliczenia równoległe, można przeprowadzić znacznie szybciej.
+		\item Wykorzystanie \textbf{wielu rdzeni} procesora.
+		\item Wykorzystanie obliczeń na karcie graficznej \textbf{GPGPU} - (\textit{general-purpose computation on graphics processing units}) obliczenia ogólnego przeznaczenia na układach GPU. Technika, dzięki której GPU, zwykle zajmujący się tylko obliczeniami związanymi z grafiką komputerową, umożliwia wykonywanie obliczeń ogólnego przeznaczenia, tak jak CPU. Dzięki temu wiele obliczeń, głównie obliczenia równoległe, można przeprowadzić znacznie szybciej.
 		\item Wykorzystanie układów FPGA, ASIC
 		\begin{itemize}
-			\item FPGA (ang. Field-Programmable Gate Array) - jeden z rodzajów układów PLD. Układy FPGA zawierają w sobie matrycę programowalnych bloków logicznych i konfigurowalnych połączeń między nimi. Układy FPGA ze względu na poziom skomplikowania oraz możliwości tych układów określa się jako najbardziej zaawansowane ze wszystkich rodzin PLD.
-			\item ASIC (ang. Application Specific Integrated Circuit) - rodzaj układów scalonych, w których nie ma możliwości ich rekonfiguracji. Ich zaletami jest to, że wykonują funkcje szybciej i przy mniejszym użyciu zasobów niż w przypadku np. mikrokontrolerów. Układy ASIC mieszczą w sobie często kompletne funkcjonalności dla których byłoby konieczne użycie mikrokontrolera i dodatkowych układów, co umożliwia stworzenie kompletnego urządzenia w jednym chipie.
+			\item \textbf{FPGA} (\textit{Field-Programmable Gate Array}) - jeden z rodzajów układów PLD. Układy FPGA zawierają w sobie matrycę programowalnych bloków logicznych i konfigurowalnych połączeń między nimi. Układy FPGA ze względu na poziom skomplikowania oraz możliwości tych układów określa się jako najbardziej zaawansowane ze wszystkich rodzin PLD.
+			\item \textbf{ASIC} (\textit{Application Specific Integrated Circuit}) - rodzaj układów scalonych, w których nie ma możliwości ich rekonfiguracji. Ich zaletami jest to, że wykonują funkcje szybciej i przy mniejszym użyciu zasobów niż w przypadku np. mikrokontrolerów. Układy ASIC mieszczą w sobie często kompletne funkcjonalności dla których byłoby konieczne użycie mikrokontrolera i dodatkowych układów, co umożliwia stworzenie kompletnego urządzenia w jednym chipie.
 		\end{itemize}
 	\end{itemize}
 
@@ -387,24 +387,24 @@
 	Jeśli chodzi o budowę fizyczną, mikroprocesor to nic innego jak krzemowa płytka z milionem tranzystorów, które blokują lub umożliwiają przepływ prądu. Z tranzystorów budowane są bramki logiczne, a te z kolei są łączone w bardziej rozbudowane układy.
 	
 	\begin{itemize}
-		\item \textbf{ALU} (ang. Arithmetic Logic Unit) - wykonuje podstawowe operacje arytmetyczne (dodawanie, odejmowanie, dzielenie oraz mnożenie oraz logiczne (OR, AND, XOR, NOT) oraz przesunięcia bitowe. ALU współpracuje z roboczym rejestrem zwanym akumulatorem (lub wieloma akumulatorami), który przechowuje jeden z operandów (argumentów) wykonywanej operacji oraz wyniku tej operacji.
+		\item \textbf{ALU} (\textit{Arithmetic Logic Unit}) - wykonuje podstawowe operacje arytmetyczne (dodawanie, odejmowanie, dzielenie, mnożenie), logiczne (OR, AND, XOR, NOT) oraz przesunięcia bitowe. ALU współpracuje z roboczym rejestrem zwanym akumulatorem (lub wieloma akumulatorami), który przechowuje jeden z operandów (argumentów) wykonywanej operacji oraz wyniku tej operacji.
 		
-		\item \textbf{CU} (ang. Control Unit) - dekoduje zawartość rejestru rozkazów i generuje odpowiednie sygnały sterujące zapewniające prawidłowy przebieg operacji zdefiniowanej kodem rozkazu.
+		\item \textbf{CU} (\textit{Control Unit}) - dekoduje zawartość rejestru rozkazów i generuje odpowiednie sygnały sterujące zapewniające prawidłowy przebieg operacji zdefiniowanej kodem rozkazu.
 		
-		\item \textbf{Rejestry} (ang. Register) - komórki pamięci do przechowywania tymczasowych wyników obliczeń, adresów lokacji w pamięci RAM itp. Rejestry są najszybszym rodzajem pamięci.
+		\item \textbf{Rejestry} (\textit{Register}) - komórki pamięci do przechowywania tymczasowych wyników obliczeń, adresów lokacji w pamięci RAM itp. Rejestry są najszybszym rodzajem pamięci.
 		\begin{itemize}
-			\item \textbf{Rejestr instrukcji IR} (ang. Instruction Register) - przechowuje aktualnie wykonywaną instrukcję.
-			\item\textbf{ Licznik rozkazów PC} (ang. Program Counter) - przechowuje adres w pamięci, gdzie przechowywany jest kolejny rozkaz do pobrania. Rozkazy są przechowywane w postaci kodów binarnych.
-			\item \textbf{Akumulator A} (ang. Accumulator) - przechowuje argument (operand) do operacji ALU lub wynik operacji.
-			\item \textbf{Wskaźnik stosu SP} (ang. Stack Pointer) - wskazuje na szczyt stosu (adres ostatniej zapełnionej komórki stosu).
-			\item \textbf{Rejestr flagowy} - przechowuje informacje dotyczące operacji ALU np. flaga przeniesienia lub pożyczki CF (ang. Carry Flag), flaga parzystości PF (ang. Parity Flag), flaga przepełnienia OF (ang. Overflow Flag) itp.
+			\item \textbf{Rejestr instrukcji IR} (\textit{Instruction Register}) - przechowuje aktualnie wykonywaną instrukcję.
+			\item \textbf{Licznik rozkazów PC} (\textit{Program Counter}) - przechowuje adres w pamięci, gdzie przechowywany jest kolejny rozkaz do pobrania. Rozkazy są przechowywane w postaci kodów binarnych.
+			\item \textbf{Akumulator A} (\textit{Accumulator}) - przechowuje argument (operand) do operacji ALU lub wynik operacji.
+			\item \textbf{Wskaźnik stosu SP} (\textit{Stack Pointer}) - wskazuje na szczyt stosu (adres ostatniej zapełnionej komórki stosu).
+			\item \textbf{Rejestr flagowy} - przechowuje informacje dotyczące operacji ALU np. flaga przeniesienia lub pożyczki CF (\textit{Carry Flag}), flaga parzystości PF (\textit{Parity Flag}), flaga przepełnienia OF (\textit{Overflow Flag}) itp.
 		\end{itemize}
 		
-		\item \textbf{Magistrale} (ang. Bus) - wewnętrzne szyny łączące.
+		\item \textbf{Magistrale} (\textit{Bus}) - wewnętrzne szyny łączące.
 		\begin{itemize}
-			\item \textbf{szyna danych} (ang. data bus) - magistrala komunikacyjna wykorzystywana d przesyłania właściwych danych,
-			\item \textbf{szyna adresowa} (ang. address bus) - łączy CPU z pamięcią. Określa pod jaki adres mają zostać wysłane dane szyną danych. Szerokość magistrali (liczba linii) określa maksymalną pojemność pamięci systemu (przestrzeń adresową)
-			\item \textbf{szyna sterująca} (ang. control bus) - zapewnia regulację dostępu do szyny adresowej i szyny danych.
+			\item \textbf{szyna danych} (\textit{data bus}) - magistrala komunikacyjna wykorzystywana do przesyłania właściwych danych,
+			\item \textbf{szyna adresowa} (\textit{address bus}) - łączy CPU z pamięcią. Określa pod jaki adres mają zostać wysłane dane szyną danych. Szerokość magistrali (liczba linii) określa maksymalną pojemność pamięci systemu (przestrzeń adresową)
+			\item \textbf{szyna sterująca} (\textit{control bus}) - zapewnia regulację dostępu do szyny adresowej i szyny danych.
 		\end{itemize}
 	\end{itemize}
 
@@ -441,7 +441,6 @@
 
 	\section{Porównanie modeli odniesienia: ISO/OSI oraz TCP/IP.}
 	Model TCP/IP określany jest jako model protokołów. Każda z jego warstw wykonuje konkretne zadania, do realizacji który wykorzystywane są konkretne protokoły. Model ISO/OSI natomiast zwany modelem odniesienia, stosowany jest raczej do analizy, która pozwala lepiej zrozumieć procesy komunikacyjne zachodzące w sieci oraz stanowi wzór do projektowania rozwiązań sieciowych zarówno sprzętowych jak i programowych.\\
-	Oba modele są do siebie dość podobne. Różnice jakie występują widoczne są w górnych warstwach gdzie w przypadku modelu ISO/OSI dokonano podziału, aż na 3 warstwy, a w przypadku modelu TCP/IP te same funkcje realizowane jest tylko poprzez jedną warstwę. Podobne różnice widać w dolnych warstwach, gdzie w modelu ISO/OSI mamy dwie oddzielne warstwy łącza danych i fizyczną, a w przypadku modelu TCP/IP tylko jedną, warstwę dostępu do sieci.
 	
 	\begin{multicols}{2}
 		\begin{itemize}
@@ -482,22 +481,27 @@
 	\end{itemize}
 
 	\section{Charakterystyka warstwy fizycznej.}
-	Odbiera ramki danych z warstwy 6, czyli warstwy łącza danych, i przesyła szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne. Jest ona również odpowiedzialna za odbiór kolejnych bitów przychodzących strumieni danych. Określa w jaki sposób bity są przedstawiane w formie impulsów napięciowych, świetlnych czy też sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.\\	
-	W specyfikacji warstwy fizycznej są opisane takie cechy jak napięcia elektryczne, taktowania zegarów, szybkość i maksymalne odległości transmisji. Warstwa fizyczna używa czterech procesów (adresowanie, enkapsulacja, routing, dekapsulacja).
+	\begin{itemize}
+		\item Odbieranie ramek danych z warstwy 6 (łącza danych) i przesyłanie szeregowo, bit po bicie, całą ich strukturę oraz zawartość przez medium transmisyjne.
+		\item Odbieranie kolejnych bitów przychodzących strumieni danych.
+		\item Określenie w jaki sposób bity są przedstawiane: w formie impulsów napięciowych, świetlnych czy sygnałów radiowych. Kodowane bity mogą być reprezentowane poprzez zmiane amplitudy, częstotliwości lub fazy.
+		\item W specyfikacji warstwy fizycznej są opisane takie cechy jak napięcia elektryczne, taktowania zegarów, szybkość i maksymalne odległości transmisji.
+		\item Używa czterech procesów (adresowanie, enkapsulacja, routing, dekapsulacja).
+	\end{itemize}
 
 	\section{Charakterystyka warstwy łącza danych.}
 	\begin{itemize}
-		\item zasadniczą rolą warstwy łącza danych jest zapewnienie warstwom górnym dostępu do medium transmisyjnego, umieszcza w nośniku dane pochodzące z warstw wyższych
-		\item nadzoruje jakość przekazywanych informacji w warstwie niższej (fizycznej)
-		\item rozpoznaje błędy związane z gubieniem pakietów i uszkodzeniem ramek oraz zajmuje się ich naprawą
-		\item zachodzi enkapsulacja pakietów z warstwy sieciowej tak, aby uzyskać ramki zgodne ze standardem
-		\item dodaje do pakietów adres MAC
+		\item Zapewnienie warstwom górnym dostępu do medium transmisyjnego - umieszczanie w nośniku dane pochodzące z warstw wyższych.
+		\item Nadzorowanie jakości przekazywanych informacji w warstwie niższej (fizycznej)
+		\item Rozpoznawanie błędów związane z gubieniem pakietów i uszkodzeniem ramek oraz ich naprawa.
+		\item Enkapsulacja pakietów z warstwy sieciowej tak, aby uzyskać ramki zgodne ze standardem.
+		\item Dodawanie do pakietów adresu MAC.
 	\end{itemize}
 
 	\section{Do czego służy protokół TCP, a do czego IP?}
 	\begin{itemize}
 		\item \textbf{TCP} - Aplikacje, które wymagają od protokołu transportowego niezawodnego dostarczania danych, używają protokołu TCP. Protokół ten sprawdza, czy dane dokładnie dotarły do miejsca przeznaczenia i czy zrobił to we właściwej kolejności. TCP zapewnia niezawodność za pomocą mechanizmu zwanego pozytywne potwierdzenie z retransmisją – wysyła on dane ponownie, dopóki nie otrzyma informacji, że dane zostały poprawnie odebrane. Jednostka danych wymieniana między współpracującymi modułami TCP nosi nazwę segmentu.
-		\item \textbf{IP} - jest protokołem komunikacyjnym warstwy Internet w modelu TCP/IP (odpowiada warstwie sieciowej modelu OSI). Protokół ten definiuje zasady i sposoby postępowania urządzeń sieciowych w celu nawiązania połączenia, utrzymania go i samej transmisji danych. Protokół IP stosowany jest w większości rodzajów sieci, w tym w sieci lokalnej i sieci Internet (każdy host, np. komputer, posiada swój własny, unikalny dla sieci adres IP). Dane z użyciem protokołu IP transmitowane są w pakietach (paczkach danych). Nie gwarantuje on jednak dotarcia danych do celu czy utrzymania kolejności pakietów. Może się zdarzyć, ze odbiorca otrzyma kilkukrotnie ten sam pakiet z całej paczki danych, pakiety dotrą w innej kolejności lub nie dotrą w ogóle. W celu zapewnienia prawidłowej transmisji stosuje się różne techniki w wyższej warstwie, np. z użyciem protokołu TCP.
+		\item \textbf{IP} - jest protokołem komunikacyjnym warstwy Internet w modelu TCP/IP (warstwa sieciowa modelu OSI). Protokół ten definiuje zasady i sposoby postępowania urządzeń sieciowych w celu nawiązania połączenia, utrzymania go i samej transmisji danych. Protokół IP stosowany jest w większości rodzajów sieci, w tym w sieci lokalnej i sieci Internet (każdy host, np. komputer, posiada swój własny, unikalny dla sieci adres IP). Dane z użyciem protokołu IP transmitowane są w pakietach (paczkach danych). Nie gwarantuje on jednak dotarcia danych do celu czy utrzymania kolejności pakietów. Może się zdarzyć, ze odbiorca otrzyma kilkukrotnie ten sam pakiet z całej paczki danych, pakiety dotrą w innej kolejności lub nie dotrą w ogóle. W celu zapewnienia prawidłowej transmisji stosuje się różne techniki w wyższej warstwie, np. z użyciem protokołu TCP.
 	\end{itemize}
 
 	\section{Rodzaje światłowodów - wady, zalety.}
@@ -513,9 +517,9 @@
 	\label{sec:siecsysplik}
 	Umożliwia dostęp do danych komputerom zdalnym. Dane znajdują się na jednym lub wielu serwerach. Charakteryzuje je m.in.:
 	\begin{itemize}
-		\item przeźroczystość dostępu: dostęp do plików jest taki sam jak dla plików lokalnych
-		\item przeźroczystość lokacji: pliki zdalne i lokalne łączy jedna przestrzeń -- nazwa pliku nie określa jego lokacji
-		\item przeźroczystość współbieżności: stan systemu plików jest taki sam dla wszystkich klientów
+		\item przeźroczystość dostępu - dostęp do plików jest taki sam jak dla plików lokalnych
+		\item przeźroczystość lokacji - pliki zdalne i lokalne łączy jedna przestrzeń -- nazwa pliku nie określa jego lokacji
+		\item przeźroczystość współbieżności - stan systemu plików jest taki sam dla wszystkich klientów
 	\end{itemize}
 
 	Przykładowe sieciowe systemy plików:
@@ -527,8 +531,8 @@
 	\section{Wymień i opisz warstwy modelu OSI.}
 	\begin{enumerate}
 	\item \textbf{Warstwa fizyczna.} Jest odpowiedzialna za transmisję strumienia bitów między węzłami sieci. Definiuje protokoły opisujące interfejsy fizyczne. Do funkcji tej warstwy należą: sprzęgniecie z medium transmisji danych, dekodowanie sygnałów, określanie zakresu amplitudy prądu lub napięcia i określanie parametrów mechanicznych łączówek (kształtu, wymiarów i liczby styków) oraz inne kwestie związane z transmisją bitów. 
-	\item \textbf{Warstwa łącza danych.} Zapewnia niezawodne łącze pomiędzy sąsiednimi węzłami. Nadzoruje przepływ informacji przez łącze i w związku z podatnością warstwy fizycznej na zakłócenia i wynikające stąd błędy oferuje własne mechanizmy kontroli błędów w przesyłanych ramkach lub pakietach.
-	\item \textbf{Warstwa sieciowa.} Dostarcza środków do ustanawiania, utrzymania i rozłączania połączeń sieciowych miedzy systemami otwartymi, w których rezydują komunikujące się aplikacje, i odpowiada, za obsługę błędów komunikacji. Ponadto warstwa sieciowa jest odpowiedzialna za funkcje routingu, który wyznacza optymalną pod względem liczby połączeń drogę przesyłania pakietu przez sieć.
+	\item \textbf{Warstwa łącza danych.} Zapewnia niezawodne łącze pomiędzy sąsiednimi węzłami. Nadzoruje przepływ informacji przez łącze i w związku z podatnością warstwy fizycznej na zakłócenia i wynikające stąd błędy, oferuje własne mechanizmy kontroli błędów w przesyłanych ramkach lub pakietach.
+	\item \textbf{Warstwa sieciowa.} Dostarcza środków do ustanawiania, utrzymania i rozłączania połączeń sieciowych miedzy systemami otwartymi, w których rezydują komunikujące się aplikacje, i odpowiada za obsługę błędów komunikacji. Ponadto warstwa sieciowa jest odpowiedzialna za funkcje routingu, który wyznacza optymalną pod względem liczby połączeń drogę przesyłania pakietu przez sieć.
 	\item \textbf{Warstwa transportowa.} Zapewnia przezroczysty transfer danych między stacjami sesyjnymi, odciąża je od zajmowania się problemami niezawodnego i efektywnego pod względem kosztów transferu danych. Warstwa ta zapewnia usługi połączeniowe. Wszystkie protokoły w warstwie transportowej są typu end-to-end. Oznacza to, że działają one tylko między końcowymi systemami otwartymi.
 	\item \textbf{Warstwa sesji.} Umożliwia aplikacjom organizację dialogu oraz wymianę danych między nimi. Do najważniejszych usług warstwy sesji należą: sterowanie wymianą danych, ustalanie punktów synchronizacji danych (dla celów retransmisji w wypadku przemijających przekłamań na łączach) oraz umożliwienie odzyskania danych (utraconych w wyniku przerwy w łączności) przez ponowne ich przesłanie.
 	\item \textbf{Warstwa prezentacji.} Zapewnia możliwość reprezentowania informacji, którą się posługują stacje aplikacyjne podczas komunikacji Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składnię.
@@ -569,6 +573,7 @@
 	\end{itemize}
 
 	\section{Rodzaje i zastosowania macierzy dyskowych.}
+	\href{https://poradnik.kz1.pl/index.php?page=macierzeraid}{Rysunki}
 	\begin{itemize}
 		\item \textbf{RAID 0.} Charakteryzuje się przyśpieszeniem pracy systemu. W RAID 0 łączymy ze sobą dwa (lub więcej) dyski fizyczne w jeden logiczny napęd. Przykładowo łącząc ze sobą dwa dyski po 500 GB, otrzymamy jeden dysk wielkości 1000 GB, a dane będą zapisywane jednocześnie na obu dyskach, co znacznie przyśpieszy prędkość i odczyt danych. Wadą RAID 0 jest to, że dane nie są zabezpieczone w żaden sposób. Jeśli jeden dysk ulegnie uszkodzeniu, traci się wszystkie dane.
 		\item \textbf{RAID 1.} Składa się również z dwóch dysków twardych połączonych ze sobą. Ale w przeciwieństwie do RAID 0, dane na dyskach są zapisywane równolegle na każdym dysku. Czyli towrzy się tak jakby lustro (mirror) danych. Jest to podstawowe zabezpieczenie przed utratą danych - jeśli jeden z dysków ulegnie awarii, wtedy system nadal może działać, gdyż takie same dane są na drugim działającym dysku. Utworzona macierz ma pojemność równą wielkości najmniejszego dysku.
@@ -600,24 +605,24 @@
 
 	\section{Omów zasadę działania monitora (CRT lub LCD).}
 	\label{sec:zasdziallcd}
-	\textbf{LCD} - zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
+	\textbf{LCD.} Zbudowany z macierzy komórek zawierających ciekły kryształ o kolorowych filtrach. Elektrody wytwarzają pole elektryczne, które wywołuje zmianę cząsteczek ciekłego kryształu, co z kolei powoduje zmianę polaryzacji światła przez nie przechodzącego, a co za tym idzie, ilości przepuszczanego światła. Z tyłu ekranu montowane jest dodatkowe podświetlenie, które ten efekt podkreśla.
 
 	\section{Wymienić i scharakteryzować rodzaje pamięci półprzewodnikowych}
 	\begin{itemize}
-		\item \textbf{Ulotne - Pamięci RAM} \textit{Random Access Memory} - Pamięć o dowolnym dostępie - posiada możliwość odczytu i zapisu. Zawartość takiej pamięci jest tracona po zaniku zasilania. 
+		\item \textbf{Ulotna - Pamięć RAM} (\textit{Random Access Memory}). Pamięć o dowolnym dostępie - posiada możliwość odczytu i zapisu. Zawartość takiej pamięci jest tracona po zaniku zasilania. 
 		\begin{itemize}
-			\item \textbf{Statyczne - SRAM} - zbudowane z przerzutników bistabilnych przechowujących bity informacji. Ze względu na wysoki koszt produkcji pamięci nie są wykorzystywane jako pamięć podstawowa komputerów. Ze względu na dużą szybkość działania znalazły one zastosowanie w układach buforujących - pamięć cache. 
-			\item \textbf{Dynamiczne - DRAM} - zbudowane z macierzy kondensatorów przechowujących bity informacji w postaci ładunków elektrycznych. Znacznie tańsze od pamięci statycznych, ale również pamięć ta jest zbyt wolna do wielu zastosowań. Obecnie najszersze zastosowanie tej pamięci to pamięć podstawowa komputerów. 
+			\item \textbf{Statyczna - SRAM.} Zbudowana z przerzutników bistabilnych przechowujących bity informacji. Ze względu na wysoki koszt produkcji pamięci nie są wykorzystywane jako pamięć podstawowa komputerów, ale ze względu na dużą szybkość działania znalazły zastosowanie w układach buforujących (pamięć cache). 
+			\item \textbf{Dynamiczna - DRAM.} Zbudowana z macierzy kondensatorów przechowujących bity informacji w postaci ładunków elektrycznych. Znacznie tańsza od pamięci statycznej, ale również pamięć ta jest zbyt wolna do wielu zastosowań. Obecnie najszersze zastosowanie tej pamięci to pamięć podstawowa komputerów. 
 		\end{itemize}
 	\end{itemize}
 		\begin{itemize}
-		\item \textbf{Nieulotne - Pamięci ROM} \textit{Read Only Memory} - posiada jedynie możliwość odczytu, niektóre rodzaje posiadają możliwość zaprogramowania nowej zawartości przez użytkownika. Zawartość tej pamięci jest utrzymywana po wyłączeniu zasilania. 
+		\item \textbf{Nieulotna - Pamięć ROM} (\textit{Read Only Memory}). Posiada jedynie możliwość odczytu, niektóre rodzaje posiadają możliwość zaprogramowania nowej zawartości przez użytkownika. Zawartość tej pamięci jest utrzymywana po wyłączeniu zasilania. 
 		\begin{itemize}
-			\item \textbf{ROM} - Pamięć tylko do odczytu. Informacja zawarta w tej pamięci jest zapisywana w czasie produkcji w formie maski na podstawie dostarczonego wzorca. Nie ma możliwości zmiany zawartości tej pamięci. Używana w urządzeniach produkowanych seryjnie. 
-			\item \textbf{PROM} - Pamięć stała, obecnie rzadko używana. Programowanie odbywa się przez przepalanie wbudowanych przełączeń bezpieczników. Zawartość pamięci nie może być zmieniana. 
-			\item \textbf{EPROM} - Pamięć stała, programowana elektrycznie. Użytkownik może sam zapisywać do niej informacje. Gdy układ posiada okienko ze szkła kwarcowego można pamięć kasować i programować ponownie. Kasowanie odbywa się przez naświetlanie ultrafioletem. Układy EPROM mogą być kasowane i ponownie programowane około 100 razy. 
-			\item \textbf{EEPROM} - Pamięć stała, z możliwością elektrycznego zapisywania i kasowania. Ilość cykli kasowania i programowania jest ograniczona do około 10000. Płytka półprzewodnikowa pamięci EEPROM jest większa niż EPROM i przez to droższa. 
-			\item \textbf{Flash-ROM} - Pamięć stała, obecnie coraz częściej używana ze względu na niski koszt produkcji i łatwość programowania. Do ponownego zaprogramowania tej pamięci nie są potrzebne specjalistyczne urządzenia, wystarczy odpowiednie oprogramowanie dla sprzętu, w którym kość została użyta.
+			\item \textbf{ROM.} Pamięć tylko do odczytu. Informacja zawarta w tej pamięci jest zapisywana w czasie produkcji w formie maski na podstawie dostarczonego wzorca. Nie ma możliwości zmiany zawartości tej pamięci. Używana w urządzeniach produkowanych seryjnie. 
+			\item \textbf{PROM.} Pamięć stała, obecnie rzadko używana. Programowanie odbywa się przez przepalanie wbudowanych przełączeń bezpieczników. Zawartość pamięci nie może być zmieniana. 
+			\item \textbf{EPROM.} Pamięć stała, programowana elektrycznie. Użytkownik może sam zapisywać do niej informacje. Gdy układ posiada okienko ze szkła kwarcowego można pamięć kasować i programować ponownie. Kasowanie odbywa się przez naświetlanie światłem UV. Układy EPROM mogą być kasowane i ponownie programowane około 100 razy. 
+			\item \textbf{EEPROM.} Pamięć stała, z możliwością elektrycznego zapisywania i kasowania. Ilość cykli kasowania i programowania jest ograniczona do około 10000. Płytka półprzewodnikowa pamięci EEPROM jest większa niż EPROM i przez to droższa. 
+			\item \textbf{Flash-ROM.} Pamięć stała, obecnie coraz częściej używana ze względu na niski koszt produkcji i łatwość programowania. Do ponownego zaprogramowania tej pamięci nie są potrzebne specjalistyczne urządzenia, wystarczy odpowiednie oprogramowanie dla sprzętu, w którym kość została użyta.
 		\end{itemize}
 	\end{itemize}
 	
@@ -685,11 +690,11 @@
 	\end{table} 
 
 	\section{Wątki a procesy - na podstawie wybranego systemu. Wymienić wady, zalety.}
-	Wątki:
+	Wątek:
 	\begin{itemize}
 		\item jednostka wykonawcza w obrębie jednego procesu, będąca ciągiem instrukcji wykonywanym w obrębie tych samych danych
 		\item jednostka podrzędna w stosunku do procesów – żaden wątek nie może istnieć bez procesu nadrzędnego, ale jeden proces może mieć więcej niż jeden wątek podporządkowany
-		\item w systemach wieloprocesorowych, a także w systemach z wywłaszczaniem, wątki mogą być wykonywane współbieżnie.
+		\item w systemach wieloprocesorowych, a także w systemach z wywłaszczaniem, wątki mogą być wykonywane współbieżnie
 		\item oddzielne liczniki rozkazów, rejestry, stos i wskaźnik stosu, stan
 		\item wspólna przestrzeń adresowa, otwarte pliki, procesy potomne, obsługa sygnałów, zmienne globalne
 		\item zalety
@@ -713,16 +718,16 @@
 	\end{itemize}
 
 	\section{Budowa typowego układu FPGA.}
-	Cechą charakterystyczną architektury FPGA jest duża liczba regularnie rozmieszczonych (w formie matrycy) konfigurowalnych komórek logicznych opartych na tablicach LUT (Look up Table), określanych generatorami funkcji. Układ FPGA zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy połączeń. Bloki mogą być skomplikowanymi układami lub pojedynczymi bramkami logicznymi. Bloki zawierają również elementy pamięciowe (np. przerzutniki).
+	Cechą charakterystyczną architektury FPGA jest duża liczba regularnie rozmieszczonych (w formie matrycy) konfigurowalnych komórek logicznych opartych na tablicach LUT (\textit{Look up Table}), określanych generatorami funkcji. Układ FPGA zbudowany jest z programowalnych bloków logicznych oraz programowalnej macierzy połączeń. Bloki mogą być skomplikowanymi układami lub pojedynczymi bramkami logicznymi. Bloki zawierają również elementy pamięciowe (np. przerzutniki).
 
 	\section{Podstawowe tryby adresowania systemów mikroprocesorowych.}
 	\begin{itemize}
-		\item \textbf{natychmiastowy (immediate)} - pole adresowe zawiera bezpośrednio operand czyli daną dla rozkazu. Ten tryb adresowania stosujemy, gdy np. chcemy bezpośrednio z rozkazu (bez odwoływania się do pamięci) załadować do rejestru prostą daną - bajt lub parę bajtów.
-		\item \textbf{bezpośredni (direct)} - zawartość pola adresowego stanowi już finalny adres argumentu rozkazu w pamięci operacyjnej i nie podlega przekształceniu. Stosowany, gdy nie zależy nam na tym, aby program był przesuwalny w pamięci operacyjnej, lecz jest przeznaczony do wykonania przy zapisie w ściśle określone miejsce w pamięci.
-		\item \textbf{pośredni (indirect)} - rozkaz zawiera adres komórki pamięci operacyjnej, w której zawarty jest finalny adres operandu rozkazu. W tym przypadku komórka pamięci wskazana przez adres rozkazu pośredniczy w określeniu finalnego adresu. Stosujemy, aby finalny adres operandu rozkazu mógł być dynamicznie wstawiony do komórki pośredniczącej w adresowaniu w czasie wykonywania programu.
-		\item \textbf{rejestrowy (register)} - stosuje się, gdy dana dla rozkazu jest przechowywana w rejestrze. Część adresowa rejestru zawiera wtedy jedno lub więcej pól, w których znajdują się identyfikatory rejestrów. Adresowanie rejestrowe jest często stosowane w tym samym rozkazie razem z innymi trybami adresowania dotyczącymi pamięci operacyjnej. Wówczas rozkaz dotyczy zarówno pamięci operacyjnej jak i rejestrów procesora.
-		\item \textbf{rejestrowy pośredni (register indirect)} - jako miejsce pobrania finalnego adresu operandu rozkazu stosuje się rejestr procesora, którego identyfikator umieszczony jest w polu adresowym rozkazu. Przy pomocy tego trybu adresowania można dynamicznie określić finalny adres operandu poprzez odpowiednie załadowanie zawartości rejestru, w zależności od przebiegu obliczeń w programie.
-		\item \textbf{z przesunieciem (indeksowanie) (displacement (indexed))} - wykorzystuje się specjalne rejestry procesora, które zawierają przesunięcie, które trzeba dodać do adresu istniejącego w rozkazie, aby wyliczyć adres finalny operandu. Używając tego trybu we wszystkich rozkazach programu, można osiągnąć możliwość wykonania programu przy załadowaniu w dowolne miejsce pamięci. W tym celu należy napisać program wstawiając do rozkazów programu adresy, które odpowiadają umieszczeniu pierwszej instrukcji programu pod adresem zerowym w pamięci. Wiedząc, pod jakim adresem jest umieszczony pierwszy rozkaz programu, umieszczamy ten adres w rejestrze indeksowym. Dzięki operacji temu, wszystkie adresy operandów zostaną przesunięte o tę sama wartość.
+		\item \textbf{Natychmiastowy (\textit{immediate}).} Pole adresowe zawiera bezpośrednio operand czyli daną dla rozkazu. Ten tryb adresowania stosujemy, gdy np. chcemy bezpośrednio z rozkazu (bez odwoływania się do pamięci) załadować do rejestru prostą daną - bajt lub parę bajtów.
+		\item \textbf{Bezpośredni (\textit{direct}).} Zawartość pola adresowego stanowi już finalny adres argumentu rozkazu w pamięci operacyjnej i nie podlega przekształceniu. Stosowany, gdy nie zależy nam na tym, aby program był przesuwalny w pamięci operacyjnej, lecz jest przeznaczony do wykonania przy zapisie w ściśle określone miejsce w pamięci.
+		\item \textbf{Pośredni (\textit{indirect}).} Rozkaz zawiera adres komórki pamięci operacyjnej, w której zawarty jest finalny adres operandu rozkazu. W tym przypadku komórka pamięci wskazana przez adres rozkazu pośredniczy w określeniu finalnego adresu. Stosujemy, aby finalny adres operandu rozkazu mógł być dynamicznie wstawiony do komórki pośredniczącej w adresowaniu w czasie wykonywania programu.
+		\item \textbf{Rejestrowy (\textit{register}).} Stosuje się, gdy dana dla rozkazu jest przechowywana w rejestrze. Część adresowa rejestru zawiera wtedy jedno lub więcej pól, w których znajdują się identyfikatory rejestrów. Adresowanie rejestrowe jest często stosowane w tym samym rozkazie razem z innymi trybami adresowania dotyczącymi pamięci operacyjnej. Wówczas rozkaz dotyczy zarówno pamięci operacyjnej jak i rejestrów procesora.
+		\item \textbf{Rejestrowy pośredni (\textit{register indirect}).} Jako miejsce pobrania finalnego adresu operandu rozkazu stosuje się rejestr procesora, którego identyfikator umieszczony jest w polu adresowym rozkazu. Przy pomocy tego trybu adresowania można dynamicznie określić finalny adres operandu poprzez odpowiednie załadowanie zawartości rejestru, w zależności od przebiegu obliczeń w programie.
+		\item \textbf{Z przesunieciem (indeksowanie) (\textit{displacement (indexed)}).} Wykorzystuje się specjalne rejestry procesora, które zawierają przesunięcie, które trzeba dodać do adresu istniejącego w rozkazie, aby wyliczyć adres finalny operandu. Używając tego trybu we wszystkich rozkazach programu, można osiągnąć możliwość wykonania programu przy załadowaniu w dowolne miejsce pamięci. W tym celu należy napisać program wstawiając do rozkazów programu adresy, które odpowiadają umieszczeniu pierwszej instrukcji programu pod adresem zerowym w pamięci. Dzięki operacji temu, wszystkie adresy operandów zostaną przesunięte o tę sama wartość.
 	\end{itemize}
 
 	\section{Hierarchia pamięci w systemie komputerowym, stronicowanie oraz koncepcja pamięci wirtualnej.}
@@ -806,14 +811,15 @@
 
 	\section{Co oznaczają skróty ERD oraz DFD? Do czego się ich używa?}
 	\begin{itemize}
-		\item \textbf{ERD} - Entity-Relationship Diagram - rodzaj graficznego przedstawienia związków pomiędzy encjami używany w projektowaniu systemów informacyjnych (np. beaz danych) do zademonstrowania konceptualnych modeli danych używanych w systemie.
-		\item \textbf{DFD} - Data Flow Diagram - Przedstawia on, w jaki sposób dane przepływają w systemie oraz opisuje procesy przetwarzające dane. Tworzenie diagramu DFD opiera się na następujących kategoriach pojęciowych: proces, przepływ danych, magazyn danych, terminator.
+		\item \textbf{ERD (\textit{Entity-Relationship Diagram}).} Rodzaj graficznego przedstawienia związków pomiędzy encjami używany w projektowaniu systemów informacyjnych (np. baz danych) do zademonstrowania konceptualnych modeli danych używanych w systemie.
+		\item \textbf{DFD (\textit{Data Flow Diagram}).} Przedstawia, w jaki sposób dane przepływają w systemie oraz opisuje procesy przetwarzające dane. Tworzenie diagramu DFD opiera się na następujących kategoriach pojęciowych: proces, przepływ danych, magazyn danych, terminator.
 	\end{itemize}
 
 	\section{Przeciążanie funkcji i operatorów w języku C++.}
 	\label{sec:przecfuncpp}
-	Przeciążanie funkcji polega na definicji funkcji o takiej samej nazwie co już istniejąca, o innych parametrach wejściowych lub wyjściowych (ale nie wyłącznie wyjściem). Przy wywołaniu funkcji, wybierana jest ta, o odpowiedniej liczbie i typach argumentów.
-	Przeciążanie operatorów polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich m.in. operator ':?' oraz '.'.
+	\textbf{Przeciążanie funkcji }polega na definicji funkcji o takiej samej nazwie co już istniejąca, o innych parametrach wejściowych lub wyjściowych (ale nie wyłącznie wyjściem). Przy wywołaniu funkcji, wybierana jest ta, o odpowiedniej liczbie i typach argumentów.
+	
+    \textbf{Przeciążanie operatorów} polega na określeniu funkcji o specjalnej nazwie operator @ dla pewnego operatora @ i typu lub typów. Niektórych operatorów nie można przeciążać, należą do nich \textit{?:}, .\textit{(dot)}, \textit{::}, \textit{sizeof}.
 
 	\section{Scharakteryzować instrukcje iteracyjne w przykładowym języku programowania}
 	Język C:
@@ -832,7 +838,7 @@
 	p. \ref{sec:przecfuncpp}
 
 	\section{Scharakteryzować mechanizmy dostępu do składowych klasy tworzonych statycznie i dynamicznie}
-	Zakładając język C++, do składowych statycznych odwołanie następuje wg schematu nazwa-klasy::nazwa-składowej lub nazwa-obiektu.nazwa-składowej lub nazwa-wskaźnika->nazwa-składowej. Dla składowych klasy tworzonych dynamicznie tak jak wyżej z pominięciem przypadku z operatorem ::.
+	Na przykładzie języka C++. Do składowych statycznych odwołanie następuje wg schematu \textit{nazwa-klasy::nazwa-składowej} lub \textit{nazwa-obiektu.nazwa-składowej} lub \textit{nazwa-wskaźnika->nazwa-składowej}. Dla składowych klasy tworzonych dynamicznie tak jak wyżej z pominięciem przypadku z operatorem \textit{::}.
 
 	\section{Omów pojęcia agregacji i zawierania w diagramach UML.}
 	(Visual Paradigm) W diagramach klas \textbf{agregacja} nie oznacza, że klasa dziedziczy z innej klasy. Oznacza tylko, że obiekt klasy A zawiera obiekt klasy B, np auto 	posiada silnik, jednak bez auta, silnik też może istnieć.\\
@@ -864,7 +870,7 @@
 	\end{itemize}
 
 	\section{Co to są drzewa decyzyjne i do czego służą?}
-	Jest to graficzna metoda wspomagania procesu decyzyjnego zawierającego decyzje i ich możliwe konsekwencje. Proces decyzyjny jest przedstawiony za pomocą grafu (drzewa), gdzie wierzchołki określają aktualny stan a krawędzie pewne decyzje.
+	Jest to graficzna metoda wspomagania procesu decyzyjnego zawierającego decyzje i ich możliwe konsekwencje. Proces decyzyjny jest przedstawiony za pomocą grafu (drzewa), gdzie wierzchołki określają aktualny stan, a krawędzie pewne decyzje.
 
 	\section{Rekurencja i jej implementacja w językach wysokiego poziomu}
 	Rekurencja jest to sytuacja, w której funkcja wywołuje samą siebie w celu rozwiązania pewnego problemu. Każda funkcja rekurencyjna musi posiadać warunek zatrzymania (warunek stopu) – stan danych, dla którego nie dojdzie do ponownego wywołania funkcji. W przeciwnym razie będzie się wywoływała do momentu przepełnienia stosu.
@@ -873,29 +879,30 @@
 	Algorytmy podejmujące w każdym kroku taką decyzję, która w danej chwili wydaje się najkorzystniejsza. Dokonują zawsze wyborów lokalnie optymalnych licząc, że doprowadzi to do znalezienia rozwiązania globalnie optymalnego. Przykład: ciągły problem plecakowy (znajduje rozwiązanie optymalne), dyskretny problem plecakowy (nie gwarantuje optymalnego rozwiązania).
 
 	\section{Na czym polega haszowanie i gdzie ma ono zastosowanie?}
-	Haszowanie jest metodą szybkiego wyszukiwania danych w tablicach. Polega to na tym, iż mamy tzw. funkcję haszującą, która dla danego zestawu danych tworzy liczbę zwaną haszem. Liczbę tą używamy jako indeks w tablicy haszowanej do dostępu do danych. Podstawowym problemem haszowania jest kolizyjność. Polega ona na tym, iż funkcja haszująca tworzy te same wartości dla wielu różnych danych. Takie ograniczenie jest konieczne, ponieważ w przypadku przeciwnym hasz przyjmowałby wartości z bardzo dużego zakresu, a to z kolei przekładałoby się na tablicę o bardzo dużym rozmiarze, zwykle większym, niż może pomieścić pamięć komputera.
+	Haszowanie jest metodą szybkiego wyszukiwania danych w tablicach. Polega na tym, że mamy tzw. funkcję haszującą, która dla danego zestawu danych tworzy liczbę zwaną haszem. Liczbę tą używamy jako indeks w tablicy haszowanej do dostępu do danych. Podstawowym problemem haszowania jest kolizyjność. Polega ona na tym, że funkcja haszująca tworzy te same wartości dla wielu różnych danych. Takie ograniczenie jest konieczne, ponieważ w przypadku przeciwnym hasz przyjmowałby wartości z bardzo dużego zakresu, a to z kolei przekładałoby się na tablicę o bardzo dużym rozmiarze, zwykle większym, niż może pomieścić pamięć komputera.
 
 	\section{Co to są problemy obliczeniowo trudne – podać przykład takiego problemu.}
 	Problemami klasy NP nazywamy problemy decyzyjne w których sprawdzenie poprawności określonego rozwiązania wymaga złożoności obliczeniowej wielomianowej. Z powyższego stwierdzenia wynika więc, że znalezienie rozwiązania dla problemów NP wymaga złożoności co najmniej wielomianowej. Np. problem komiwojażera, plecakowy.
 
-	\section{Maszynowa reprezentacja danych}
-	Ciąg bitów, często o rozmiarze $2^n$ bitów. Może reprezentować liczby całkowite bez znaku (bezpośrednia reprezentacja, kod BCD lub kod Graya), liczby całkowite ze znakiem (np. kod uzupełnień do 2 U2), liczby stałoprzecinkowe (np. bezpośrednia reprezentacja, z separatorem ustalonym na danej pozycji), liczby zmiennoprzecinkowe (np. standard IEEE 754 -- bit znaku, bity cechy i mantysy), znaki (7-bitowa reprezentacja ASCII lub inne kodowanie, np. UTF-8 mapowane na znaki Unicode).
+	\section{Maszynowa reprezentacja danych.}
+	Ciąg bitów, często o rozmiarze $2^n$ bitów, może reprezentować liczby całkowite bez znaku (bezpośrednia reprezentacja, kod BCD lub kod Graya), liczby całkowite ze znakiem (np. kod uzupełnień do 2 U2), liczby stałoprzecinkowe (np. bezpośrednia reprezentacja, z separatorem ustalonym na danej pozycji), liczby zmiennoprzecinkowe (np. standard IEEE 754 -- bit znaku, bity cechy i mantysy), znaki (7-bitowa reprezentacja ASCII lub inne kodowanie, np. UTF-8 mapowane na znaki Unicode).
 
 	\section{Assembler, interpreter, kompilator – porównać i wyjaśnić pojęcia.}
 	\begin{itemize}	
-		\item \textbf{assembler}: program zamieniający kod w języku assembly na kod maszynowy,
-		\item \textbf{interpreter}: program interpretujący kod pewnego języka programowania w trakcie jego wykonywania,
-		\item \textbf{kompilator}: program zamieniający kod pewnego języka programowania na postać pośrednią (np. bytecode) lub kod maszynowy przed jego wykonaniem.
+		\item \textbf{assembler} -- program zamieniający kod w języku assembly na kod maszynowy,
+		\item \textbf{interpreter} -- program interpretujący kod pewnego języka programowania w trakcie jego wykonywania,
+		\item \textbf{kompilator} -- program zamieniający kod pewnego języka programowania na postać pośrednią (np. bytecode) lub kod maszynowy przed jego wykonaniem.
 	\end{itemize}	
+
 
 	\section{Zarządzanie pamięcią w Unix/Linux.}
 	Podsystem zarządzania pamięcią zapewnia:
 	\begin{itemize}
 		\item 	dużą przestrzeń adresową: wykorzystując pamięć wirtualną, system operacyjny sprawia wrażenie posiadania znacznie większej ilości pamięci,
 		\item ochronę pamięci (segmentacja): każdy proces ma do dyspozycji własną wirtualną przestrzeń adresową. Przestrzenie te są odseparowane i jedna aplikacja nie może wpłynąć na inną. Pamięć może także być oznaczona jako chroniona przed zapisem.
-		\item mapowanie pamięci: zawartość pliku może być bezpośrednio włączona w przestrzeń adresową procesu
+		\item mapowanie pamięci: zawartość pliku może być bezpośrednio włączona w przestrzeń adresową procesu,
 		\item alokację pamięci fizycznej: każdy może posiadać dostateczny kawałek pamięci fizycznej
-		\item dzieloną pamięć wirtualną: możliwość dzielenia pamięci pomiędzy procesami.
+		\item dzieloną pamięć wirtualną: możliwość dzielenia pamięci pomiędzy procesami,
 		\item stronicowanie: podział pamięci na bloki ustalonego rozmiaru oraz odwoływanie się do nich nie bezpośrednio, lecz poprzez tablice mapujące
 	\end{itemize}
 
@@ -979,7 +986,6 @@
 		\item narzędzia wspierające dwa lub więcej zadań w cyklu życia oprogramowania,
 		\item środowiska wspierające cały cykl życia oprogramowania.
 	\end{itemize}
-	
 	Przykłady:
 	\begin{itemize}
 		\item Enterprise Architect
@@ -987,7 +993,6 @@
 		\item Oracle Designer
 		\item Rose
 	\end{itemize}
-
 	Funkcje:
 	\begin{itemize}
 		\item modelowanie logiki biznesowej (graficzne narzędzia),
@@ -1034,28 +1039,27 @@
 		\item pól, które zawierają tylko kilka wartości unikatowych
 		\item pól zawierających dane typu image, bit czy obiekt OLE 
 	\end{itemize}
-
 	Podział (metody tworzenia?) indeksów:
 	\begin{itemize}
-		\item Indeks gęsty (dense) – zawiera wpis dla każdej wartości klucza wyszukiwania, czyli dla każdego rekordu.
-		\item Indeks rzadki (sparse) – posiada wpis jedynie dla niektórych wartości wyszukiwania (np. bloków).
-		\item Indeks podstawowy (primary index) – założony na atrybucie porządkującym unikalnym
-		\item Indeks zgrupowany (clustering index) – założony na atrybucie porządkującym nieunikalnym
-		\item Indeks wtórny (secondary index) – założony na atrybucie nieporządkującym
+		\item Indeks gęsty (\textit{dense}) – zawiera wpis dla każdej wartości klucza wyszukiwania, czyli dla każdego rekordu.
+		\item Indeks rzadki (\textit{sparse}) – posiada wpis jedynie dla niektórych wartości wyszukiwania (np. bloków).
+		\item Indeks podstawowy (\textit{primary index}) – założony na atrybucie porządkującym unikalnym
+		\item Indeks zgrupowany (\textit{clustering index}) – założony na atrybucie porządkującym nieunikalnym
+		\item Indeks wtórny (\textit{secondary index}) – założony na atrybucie nieporządkującym
 		\item Indeksy jednopoziomowe – jeden plik indeksu dla jednego pliku danych
 		\item Indeksy wielopoziomowe – indeks do indeksu
 	\end{itemize}
 
 	\section{Rodzaje i sposób działania przerzutników.}
 	\begin{itemize}
-		\item  \textbf{RS} - Podstawowa wersja tego przerzutnika zawiera dwa wejścia: S i R. Wejście S (ang. SET - ustawić) powoduje ustawienie na wyjściu przerzutnika Q poziomu H (ang. HIGH - wysoki). Wejście R (ang. RESET - kasuj) służy do ustawiania na wyjściu sygnału L (ang. LOW - niski).  Są jego dwie wersje: asynchroniczna i synchroniczna (z wejściem zegarowym).
+		\item  \textbf{RS.} Podstawowa wersja tego przerzutnika zawiera dwa wejścia: S i R. Wejście S (\textit{SET} - ustawić) powoduje ustawienie na wyjściu przerzutnika Q poziomu H (\textit{HIGH} - wysoki). Wejście R (\textit{RESET} - kasuj) służy do ustawiania na wyjściu sygnału L (\textit{LOW} - niski).  Są jego dwie wersje: asynchroniczna i synchroniczna (z wejściem zegarowym).
 		
-		\item  \textbf{D} - Przerzutnik D jest przerzutnikiem synchronicznym o jednym wejściu informacyjnym, oznaczonym literą D. Spełnia on funkcję przepisywania informacji z wejścia D na wyjście Q z opóźnieniem jednego impulsu taktującego, stąd też pochodzi jego nazwa Przerzutnik D od słowa angielskiego Delay (pol. opóźniający). Podstawowy przerzutnik RS może być wykorzystany jako podstawowa komórka pamięci. Wadą tego układu jest konieczność używania dwóch sygnałów wejściowych w celu wpisania do układu zera lub jedynki. 
+		\item  \textbf{D.} Przerzutnik D jest przerzutnikiem synchronicznym o jednym wejściu informacyjnym, oznaczonym literą D. Spełnia on funkcję przepisywania informacji z wejścia D na wyjście Q z opóźnieniem jednego impulsu taktującego, stąd też pochodzi jego nazwa Przerzutnik D od słowa angielskiego Delay (opóźniający). Podstawowy przerzutnik RS może być wykorzystany jako podstawowa komórka pamięci. Wadą tego układu jest konieczność używania dwóch sygnałów wejściowych w celu wpisania do układu zera lub jedynki. 
 		
-		\item \textbf{T} - Synchroniczny przerzutnik typu T (ang. TOGGLE) ma dwa wejścia: zegarowe C i przełączające T. Przy każdym dodatnim zboczu sygnału zegarowego C (przejście ze stanu 0 do stanu 1) zmienia stany swoich wyjść na przeciwne. Przerzutnik typu T można skonstruować używając przerzutnik typu RS. Zmiana stanu przerzutnika odbywa się w momencie, kiedy sygnał zegara zmienia wartość z wysokiej na niską. Mówimy wówczas, że przerzutnik jest wyzwalany opadającym zboczem zegara.
+		\item \textbf{T.} Synchroniczny przerzutnik typu T (\textit{TOGGLE}) ma dwa wejścia: zegarowe C i przełączające T. Przy każdym dodatnim zboczu sygnału zegarowego C (przejście ze stanu 0 do stanu 1) zmienia stany swoich wyjść na przeciwne. Przerzutnik typu T można skonstruować używając przerzutnik typu RS. Zmiana stanu przerzutnika odbywa się w momencie, kiedy sygnał zegara zmienia wartość z wysokiej na niską. Mówimy wówczas, że przerzutnik jest wyzwalany opadającym zboczem zegara.
 		
-		\item  \textbf{JK} - Podanie jedynki logicznej na wejście J powoduje ustawienie przerzutnika (co skutkuje pojawieniem się stanu wysokiego na wyjściu Q). Ustawienie wejścia K w stan wysoki przestawia przerzutnik w stan niski. Jeżeli jedynka logiczna zostanie ustawiona na obydwu wejściach (J i K) to nastąpi zmiana stanu przerzutnika na przeciwny.
-		JK jest przerzutnikiem synchronicznym, co oznacza, że reaguje na stan wejść tylko przy podaniu odpowiedniego sygnału na wejście zegarowe. Wyjątkiem są wejścia asynchroniczne R i S. Podanie stanu wysokiego na wejście Set powoduje ustawienie w stan wysoki przerzutnika niezależnie od tego, czy został dostarczony sygnał zegarowy. Wejście Reset w analogiczny sposób zeruje przerzutnik.
+		\item  \textbf{JK.} Podanie jedynki logicznej na wejście J powoduje ustawienie przerzutnika (co skutkuje pojawieniem się stanu wysokiego na wyjściu Q). Ustawienie wejścia K w stan wysoki przestawia przerzutnik w stan niski. Jeżeli jedynka logiczna zostanie ustawiona na obydwu wejściach (J i K) to nastąpi zmiana stanu przerzutnika na przeciwny.
+		JK jest przerzutnikiem synchronicznym, co oznacza, że reaguje na stan wejść tylko przy podaniu odpowiedniego sygnału na wejście zegarowe. Wyjątkiem są wejścia asynchroniczne R i S. Podanie stanu wysokiego na wejście \textit{Set} powoduje ustawienie w stan wysoki przerzutnika niezależnie od tego, czy został dostarczony sygnał zegarowy. Wejście \textit{Reset} w analogiczny sposób zeruje przerzutnik.
 	\end{itemize}
 
 	\begin{table}[!h]
@@ -1113,14 +1117,14 @@
 	Wyjścia w automacie Mealy'ego zależą od stanu wewnętrznego i sygnałów wejściowych, w automacie Moore'a wyjścia zależą wyłącznie od stanu wewnętrznego. Automaty te są równoważne - jeden można zamienić bezstratnie w drugi.
 
 	\section{Różnica pomiędzy układami typu PLA a układami PAL.}
-	\textbf{PLA (Programmable Logic Array)}:
+	\textbf{PLA (\textit{Programmable Logic Array})}:
 	\begin{itemize}
 		\item programowalna matryca AND i OR
 		\item wejścia i wyjścia są jednokierunkowe
 		\item możliwe współdzielenie termów przez funkcje wyjściowe
 	\end{itemize}
 	
-\textbf{PAL (Programmable Array Logic)}:
+\textbf{PAL (\textit{Programmable Array Logic})}:
 	\begin{itemize}
 		\item programowalna matryca AND, matryca OR stała
 		\item dwukierunkowe wejścia i wyjścia
@@ -1156,8 +1160,8 @@
 	\begin{itemize}
 		\item Analogowa - informacje w tej postaci mogą być:
 		\begin{itemize}
-			\item Prosta - mocno wyróżniona jedna częstotliwość i niewielki zestaw harmonicznych (np. dźwięk jednego klawisza pianina)
-			\item Złożona - składają się z wielu częstotliwości o różnym natężeniu (np. głos ludzki).
+			\item prosta - mocno wyróżniona jedna częstotliwość i niewielki zestaw harmonicznych (np. dźwięk jednego klawisza pianina)
+			\item złożona - składają się z wielu częstotliwości o różnym natężeniu (np. głos ludzki).
 		\end{itemize}
 		\item Cyfrowa - informacja z postaci impulsów elektrycznych (wartości binarnych), dyskretna.
 	\end{itemize}
@@ -1182,8 +1186,9 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	$$L_{dB} = 10 \cdot log_{10}\left( \frac{P_1}{P_2} \right) $$
 
 	\section{Co to jest szerokość pasma oraz przepływności kanału transmisyjnego.}
-	\textbf{Szerokość pasma} - różnica między górną a dolną częstotliwością pasma, które kanał jest zdolny przenieść z nierównomiernością nie gorszą niż 3dB.\\
-	\textbf{Przepływność kanału} - zdolność kanału do przenoszenia informacji (ilość przesłanych bitów na sekundę). Do obliczania przepływności stosuje się wzór $P = 2B \cdot log_{2}M$, gdzie B to szerokość pasma, M to liczba dyskretnych poziomów (jezeli M = 2, każdy sygnał zawiera bit). Maksymalna teoretyczna przepływność kanału jest ograniczona prawem Shannona $P = B \cdot log_{2}\left( 1+ \frac{S}{N} \right)$, gdzie $\frac{S}{N}$ to stosunek mocy sygnału do szumu.
+	\textbf{Szerokość pasma} -- różnica między górną a dolną częstotliwością pasma, które kanał jest zdolny przenieść z nierównomiernością nie gorszą niż 3dB.\\
+    
+	\textbf{Przepływność kanału} -- zdolność kanału do przenoszenia informacji (ilość przesłanych bitów na sekundę). Do obliczania przepływności stosuje się wzór $P = 2B \cdot log_{2}M$, gdzie B to szerokość pasma, M to liczba dyskretnych poziomów (jezeli M = 2, każdy sygnał zawiera bit). Maksymalna teoretyczna przepływność kanału jest ograniczona prawem Shannona $P = B \cdot log_{2}\left( 1+ \frac{S}{N} \right)$, gdzie $\frac{S}{N}$ to stosunek mocy sygnału do szumu.
 
 	\section{Omówić zagadnienie modulacji, ze szczególnym uwzględnieniem modulacji cyfrowych}
 	Modulacja to proces zmiany cech pewnego sygnału (zwanego sygnałem nośnym) innym sygnałem (zwanym sygnałem modulującym) w celu zawarcia informacji w sygnale nośnym.
@@ -1198,14 +1203,14 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 
 	\section{Wymienić znane media transmisyjne.}
 	\begin{itemize}
-		\item przewodowe:
+		\item Przewodowe:
 		\begin{itemize}
 			\item kable symetryczne - składają się z dwóch przewodów, w których płyną prądy o takim samym natężeniu, ale w przeciwnych kierunkach,
 			\item kable niesymetryczne - prąd płynie przez przewód sygnałowy. Drugi przewód jest uziemieniem,
 			\item kable koncentryczne - składa się z dwóch koncentrycznych przewodów co zapewnia większą odporność na zakłócenia – tym samym wyższą jakość transmisji,
 			\item kable światłowodowe - przezroczysta zamknięta struktura z włókna szklanego wykorzystywana do propagacji światła jako nośnika informacji
 		\end{itemize}
-		\item bezprzewodowe:
+		\item Bezprzewodowe:
 		\begin{itemize}
 			\item fale z zakresu podczerwieni,
 			\item fale radiowe,
@@ -1221,11 +1226,11 @@ Wynika stąd, że liczba częstotliwości biorących udział w obliczeniach jest
 	\end{itemize}
 
 	\begin{description}
-		\item[Hasło] - ciąg znaków.
-		\item[Karta magnetyczna] - karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
-		\item[Karta elektroniczna] - bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
-		\item[Karta identyfikacyjna SIM] - karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
-	\end{description}
+		\item[Hasło.] Ciąg znaków.
+		\item[Karta magnetyczna.] Karta z paskiem magnetycznym, na podstawie którego przebiega autoryzacja.
+		\item[Karta elektroniczna.] bezpieczniejsza niż magnetyczna, zawiera układ elektroniczny, który pozwala na lepszą autoryzację.
+		\item[Karta identyfikacyjna SIM.] Karty z możliwością zapisu haseł dostępu, adresacji numerów, algorytmów szyfrowania, książki telefonicznej, pamięci komunikatów SMS, wielu stopni uprawnień.
+	\end{description}//
 
 Techniki biometryczne:
 	\begin{itemize}
@@ -1240,8 +1245,8 @@ Techniki biometryczne:
 	\section{Formaty danych liczbowych.}
 	\begin{itemize}
 		\item Liczby całkowite bez znaku/ze znakiem (kod U2), 
-		\item liczby stałoprzecinkowe - zakłada określenie ile bitów tworzy część całkowitą liczby, a ile część ułamkową. 
-		\item liczby zmiennoprzecinkowe - zapisujemy w pamięci przy pomocy trzech składowych: znaku, wykładnika, mantysy
+		\item Liczby stałoprzecinkowe - zakłada określenie ile bitów tworzy część całkowitą liczby, a ile część ułamkową. 
+		\item Liczby zmiennoprzecinkowe - zapisujemy w pamięci przy pomocy trzech składowych: znaku, wykładnika, mantysy
 	\end{itemize}
 
 	\section{Omówić zasady wykonania operacji arytmetycznych w kodzie U2.}
@@ -1259,16 +1264,15 @@ Techniki biometryczne:
 
 	\section{Wymienić standardowe postacie wyrażeń boolowskich.}
 	\begin{itemize}
-		\item \textbf{DNF} (disjunctive normal form) -- suma iloczynów logicznych,
-		\item \textbf{FDNF} (full DNF) -- suma iloczynów logicznych, gdzie w każdej sumie znajduje się każda zmienna dokładnie raz,
-		\item \textbf{CNF} (conjunctive normal form) -- iloczyn sum logicznych,
+		\item \textbf{DNF} (\textit{Disjunctive Normal Form}) -- suma iloczynów logicznych,
+		\item \textbf{FDNF} (\textit{Full DNF}) -- suma iloczynów logicznych, gdzie w każdej sumie znajduje się każda zmienna dokładnie raz,
+		\item \textbf{CNF} (\textit{Conjunctive Normal Form}) -- iloczyn sum logicznych,
 		\item \textbf{FCNF} -- analogicznie do FDNF. Jedyne operacje dozwolone w tych postaciach to AND, OR i NOT.
 	\end{itemize}
 
 	\section{Omówić kombinacyjne i sekwencyjne układy logiczne.}
-	Kombinacyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy wyłącznie od stanu wejść.
-
-	Sekwencyjne układy logiczne - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy od stanu wejść układu oraz od poprzedniego stanu, zwanego stanem wewnętrznym, pamiętanego w zespole rejestrów (pamięci).
+	\textbf{Kombinacyjne układy logiczne} - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy wyłącznie od stanu wejść.\\
+	\textbf{Sekwencyjne układy logiczne} - rodzaj układów cyfrowych charakteryzujący się tym, że stan wyjść zależy od stanu wejść układu oraz od poprzedniego stanu, zwanego stanem wewnętrznym, pamiętanego w zespole rejestrów (pamięci).
 
 	\section{Scharakteryzować poszczególne etapy procesu konwersji analogowo-cyfrowej.}
 	\begin{enumerate}
@@ -1279,19 +1283,17 @@ Techniki biometryczne:
 	\end{enumerate}
 
 	\section{Omówić ogólną charakterystykę filtrów w cyfrowych.}
-	Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.
-
-	Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
+	Filtr cyfrowy to system, który przeprowadza operacje na spróbkowanym sygnale prowadzące do redukcji lub uwydatnienia pewnych elementów tego sygnału. Filtrowanie może przebiegać w dziedzinie czasu lub częstotliwości. W dziedzinie częstotliwości właściwości filtru opisuje transmitancja.\\
+    Algorytm realizowany przez program komputerowy lub cyfrowy układ sekwencyjny, który w reakcji na ciąg próbek sygnału dyskretnego podanego na wejście odpowiada ciągiem próbek wyjściowych, zgodnie z deterministyczną funkcją przejścia, która może być liniowa lub nieliniowa.
 
 	\section{Opisać proces akwizycji i kodowania danych multimedialnych w kontekście zastosowania ich w systemach transmisji strumieniowej.}
-	\textbf{Akwizycja danych} – w informatyce i analizie sygnałów pierwszy etap przetwarzania danych polegający na ich przygotowaniu do dalszej obróbki czy interpretacji; obejmuje on m.in. przechwytywanie, próbkowanie, czy kwantowanie danych w dowolnej postaci, często różnorakich sygnałów, np. w postaci falowej.\\
-	Dane multimedialne maja zazwyczaj duży rozmiar. W aplikacji multimedialnej dane te sa kompresowane, transmitowane i prezentowane użytkownikowi. Akwizycja i kodowanie (w tym kompresja) sa potrzebne do efektywnej transmisji strumieniowej.
+	\textbf{Akwizycja danych} – w informatyce i analizie sygnałów pierwszy etap przetwarzania danych polegający na ich przygotowaniu do dalszej obróbki czy interpretacji; obejmuje m.in. przechwytywanie, próbkowanie, czy kwantowanie danych w dowolnej postaci, często różnych sygnałów, np. w postaci falowej.\\
+	Dane multimedialne mają zazwyczaj duży rozmiar. W aplikacji multimedialnej dane te są kompresowane, transmitowane i prezentowane użytkownikowi. Akwizycja i kodowanie (w tym kompresja) są potrzebne do efektywnej transmisji strumieniowej.
 
 	\section{Wymienić i omówić podstawowe parametry stosowane przy definiowaniu jakości usług.}
 	\begin{itemize}
 		\item utrata pakietów
-		\item fluktuacja opóźnień
-		\item opóźnienie
+		\item opóżnienie i jego zmienność
 		\item zmiana kolejności pakietów
 		\item BER (Bit Error Rate)
 	\end{itemize}
@@ -1306,13 +1308,12 @@ Techniki biometryczne:
 	\end{itemize}
 
 	\section{Różnica między standardami JPEG i JPEG2000, rodzaje transformacji obrazu wykorzystywane w kodowaniu obrazów.}
-	JPEG
+	JPEG:
 	\begin{itemize}
 		\item dyskretna transformata kosinusowa
 		\item kompresja stratna
 	\end{itemize}
-	
-	JPEG2000
+	JPEG2000:
 	\begin{itemize}
 		\item dyskretna transformata falkowa
 		\item kompresja stratna oraz bezstratna w tym samym strumieniu pliku
@@ -1320,7 +1321,6 @@ Techniki biometryczne:
 		\item lepsza jakość obrazu
 		\item wyższy współczynnik kompresji dla kompresji stratnej
 	\end{itemize}
-
 	Rodzaje transformacji:
 	\begin{itemize}
 		\item dyskretna transformacja kosinusowa - kompromis pomiędzy uzyskiwanym stopniem kompresji a złożonością obliczeniową
@@ -1330,14 +1330,14 @@ Techniki biometryczne:
 	\end{itemize}
 
 	\section{Scharakteryzować kod Graya jako przykład elementu wchodzącego w skład metod cyfrowej modulacji sygnału.}
-	Kod Graya charakteryzuje się tym, że dwa kolejne słowa kodowe różnią się jednym bitem. Stosowane są w korekcji błędów. Np. w modulacji cyfrowej QAM, gdzie dane są transmitowane w 4-bitowych symbolach, diagram konstelacji sygnału jest tak stworzony, aby kombinacje bitów w przylegających symbolach na konstelacji różniły się tylko jednym bitem. Po połączeniu tego z , która może korygować jednobitowe błędy, odbiornik może korygować błędy , które sprawiają, że punkty konstelacji odchylają się w stronę przyległych punktów. Dzięki temu system transmisji jest mniej podatny na zakłócenia.
+	Kod Graya charakteryzuje się tym, że dwa kolejne słowa kodowe różnią się jednym bitem. Stosowane są w korekcji błędów. Np. w modulacji cyfrowej QAM, gdzie dane są transmitowane w 4-bitowych symbolach, diagram konstelacji sygnału jest tak stworzony, aby kombinacje bitów w przylegających symbolach na konstelacji różniły się tylko jednym bitem. Po połączeniu tego z korekcją Hamminga, która może korygować jednobitowe błędy, odbiornik może korygować błędy, które sprawiają, że punkty konstelacji odchylają się w stronę przyległych punktów. Dzięki temu system transmisji jest mniej podatny na zakłócenia.
 
 	\section{Różnica między kodami detekcyjnymi i korekcyjnymi - przykłady zastosowań.}
 	\begin{description}
 		\item[Kody detekcyjne.] Kody wykrawające błędy w odebranych danych. Najczęściej używane są sumy kontrolne wyliczone z transmitowanej wiadomości. Błąd może być pojedynczy lub seryjny - dotyczący grupy kolejnych bitów. Ochrona transmisji przed błędami polega na odpowiednim kodowaniu przesyłanej informacji
 		\begin{itemize}
 			\item dwukrotne przesyłanie danych - kosztowne, przepustowość kanału spada dwukrotnie
-			\item bit parzystości - do przesyłanego słówka dodajemy jeden bit o takim stanie, aby liczba wszystkich bitów o stanie 1 w tak powiększonym słowie informacyjnym była parzysta (czyli podzielna przez 2)
+			\item bit parzystości - do przesyłanego słowa dodajemy jeden bit o takim stanie, aby liczba wszystkich bitów o stanie 1 w tak powiększonym słowie informacyjnym była parzysta (czyli podzielna przez 2)
 		\end{itemize}
 		\item[Kody korekcyjne.] Technika dodawania nadmiarowości do transmitowanych cyfrowo informacji. Umożliwia całkowitą lub częściową detekcję i korekcję błędów powstałych w wyniku zakłóceń. Dzięki temu nie ma potrzeby wykorzystywania kanału zwrotnego, do poinformowania nadawcy o błędzie i konieczności ponownego przesłania informacji. Kodowanie korekcyjne jest więc wykorzystywane wtedy, gdy retransmisja jest kosztowna, kłopotliwa lub niemożliwa, np. ze względu na ograniczenia czasowe.
 		\begin{itemize}
